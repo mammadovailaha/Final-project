@@ -1,6 +1,12 @@
 import DropdownMenu from "../components/DropdownMenu";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { IoMdMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const XidmetlerItems = [
     { label: "Xidmət 1", path: "/xidmetler/xidmet1" },
     { label: "Xidmət 2", path: "/xidmetler/xidmet2" },
@@ -28,23 +34,39 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full h-[100px] bg-[#015715]">
-      <div className="w-full h-full  flex justify-around items-center">
-        <div>
-          <h1 className="text-white font-[averta] text-[45px] tracking-normal leading-6">
+    <div className="w-full h-18 lg:h-24 bg-[#015715] flex justify-center overflow-visible">
+      <div className="relative w-full h-full flex  justify-between items-center">
+        <div className="flex flex-col gap-0.5">
+          <h1 className="text-white font-[averta] text-[22px] lg:text-[45px] tracking-normal leading-6">
             EDU COMPANY
           </h1>
-          <span className="text-white font-[averta] text-[12px tracking-normal]">
-            Education & Consulting Centre
+          <span className="text-white font-[averta] text-[9px] lg:text-[12px] tracking-normal]">
+            Education & Consulting Center
           </span>
         </div>
-        <div className="flex items-center">
-          <ul className="flex gap-7">
+        <div className="lg:hidden">
+          {/* İkona kliklənəndə menyu açılıb bağlanır */}
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+            {isOpen ? <IoMdClose size={28} /> : <IoMdMenu size={28} />}
+          </button>
+        </div>
+        <div
+          className={`
+  absolute top-[70px]  lg:top-[40%] lg:left-[40%] left-0 w-full lg:w-auto bg-[#015715] lg:block 
+  transition-all duration-300 ease-in-out transform origin-top 
+  ${
+    isOpen
+      ? "opacity-100 scale-y-100 pointer-events-auto"
+      : "opacity-0 scale-y-0 pointer-events-none"
+  } 
+`}
+        >
+          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-7">
             <DropdownMenu title="Haqqımızda" items={AboutItems} />
             <li>
               <Link
                 to="/career"
-                className="font-[averta] text-[15px] text-white"
+                className="font-[averta] text-[15px] text-white "
               >
                 Kariyera
               </Link>
@@ -70,7 +92,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="font-[averta] text-[15px] text-white"
+                className="font-[averta] text-[15px] text-white "
               >
                 Əlaqə
               </Link>
