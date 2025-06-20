@@ -18,7 +18,7 @@ export default function Banner() {
     slidesToScroll: 1,
   };
   return (
-    <div className="overflow-hidden w-full absolute z-0">
+    <div className="overflow-hidden w-full  z-0">
       <Slider {...settings}>
         {BannerImgs.map((Image, index) => (
           <img key={index} src={Image} alt="slider image" />
