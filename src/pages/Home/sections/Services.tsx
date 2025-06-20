@@ -1,6 +1,9 @@
-import React from "react";
+
 import Card from "../../../components/Card";
 import { useInView } from 'react-intersection-observer';
+import { FaArrowRight } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+
 const images = [
   { id: 1, url: "https://www.educompany.az/assets/front/image/course/4cf4e11c876789ecf272eadb281ef9a1.jpg" , alt:" sahmat dersleri"},
   { id: 2, url: "https://www.educompany.az/assets/front/image/course/4cf4e11c876789ecf272eadb281ef9a1.jpg" , alt:" sahmat dersleri"},
@@ -18,6 +21,11 @@ const Services = () => {
     threshold: 0.1, 
     triggerOnce: true,
   });
+
+  const navigate = useNavigate();
+  const navigateServices = () => {
+    navigate("/services");
+  };
   return (
     <div className="w-full flex flex-col justify-center items-center gap-2.5 md:gap-5">
       <h1 className="text-2xl lg:text-[40px]  text-[#1EB2A6]">Xidmətlərimiz</h1>
@@ -32,7 +40,10 @@ const Services = () => {
             />
         ))}
         </div>
+      
       </div>
+      <button onClick={navigateServices} className="group w-2xs h-12 border border-[#1eb2a6] text-[#1eb2a6] font-medium text-lg bg-white flex  justify-center items-center gap-2 rounded-[7px]
+        hover:bg-[#1eb2a6] hover:text-white">Bütün xidmətləri gör <FaArrowRight className="text-[#1eb2a6] group-hover:text-white" /></button>
     </div>
   );
 };
