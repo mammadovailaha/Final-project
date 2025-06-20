@@ -15,12 +15,12 @@ const images = [
 
 const Services = () => {
       const { ref, inView } = useInView({
-    threshold: 0.1, // 10% görünəndə işə düşsün
+    threshold: 0.1, 
     triggerOnce: true,
   });
   return (
     <div className="w-full flex flex-col justify-center items-center gap-2.5 md:gap-5">
-      <h1 className="text-2xl lg:text-[40px] text-[#1EB2A6]">Xidmətlərimiz</h1>
+      <h1 className="text-2xl lg:text-[40px]  text-[#1EB2A6]">Xidmətlərimiz</h1>
       <div className="flex justify-center items-center">
         <div ref={ref} className={`w-full  grid grid-cols-1 grid-rows-1 md:grid-cols-3 md:grid-rows-2 gap-2 md:gap-4 transition-all duration-1500 ease
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-30'}`}>
