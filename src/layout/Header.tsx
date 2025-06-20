@@ -24,15 +24,15 @@ export default function Header() {
     <div className="w-full h-8 md:h-14 bg-[#F9FCFF] flex justify-between items-center px-1 md:px-4">
       <div className="w-[90%] h-full flex justify-around items-center">
         <div>
-          <Link className="text-[8px] md:text-[16px] text-[#015715] font-[averta]" to={"/"}>
+          <Link className="text-[6px] md:text-[16px] text-[#015715] font-[averta]" to={"/"}>
             Sınaq dərs istə
           </Link>
         </div>
-        <div className="flex flex-col items-center">
-          <span className="text-[8px] md:text-[16px] text-[#015715] font-[averta]">
+        <div className="flex flex-col items-center gap-0.2">
+          <span className="text-[6px] md:text-[16px] text-[#015715] font-[averta]">
             09:00-21:00
           </span>
-          <span className="text-[8px] md:text-[16px] text-[#015715] font-[averta]">
+          <span className="text-[6px] md:text-[16px] text-[#015715] font-[averta]">
             iş saatları
           </span>
         </div>

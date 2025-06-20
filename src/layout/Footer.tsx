@@ -106,10 +106,10 @@ export default function Footer() {
                     <FaBuildingColumns className="text-lg" />
                     {item.name}
                   </p>
-                  <span className="text-[12px] font-[averta] tracking-normal">
+                  <span className="text-[12px] font-[averta] tracking-normal font-normal">
                     {item.phone1}
                   </span>
-                  <span className="text-[12px] font-[averta] tracking-normal">
+                  <span className="text-[12px] font-[averta] tracking-normal font-normal">
                     {item.phone2}
                   </span>
                 </div>
