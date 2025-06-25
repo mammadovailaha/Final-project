@@ -47,7 +47,7 @@ const Services = () => {
     navigate("/services");
   };
   return (
-    <div className="w-full  flex flex-col justify-center items-center gap-2.5 md:gap-5">
+    <div className="w-full md:h-screen  flex flex-col justify-center items-center gap-2.5 md:gap-5">
       <h1 className="text-2xl lg:text-[40px]  text-[#1EB2A6]">Xidmətlərimiz</h1>
       <div className="flex justify-center items-center">
         <div
