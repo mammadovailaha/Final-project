@@ -1,13 +1,15 @@
-
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home/Home";
+import Structure from "../pages/About/Structure";
+import Brands from "../pages/About/Brands";
+
 export default function AppRouter() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about/structure" element={<Structure />} />
+      <Route path="/about/brands" element={<Brands />} />
+    </Routes>
   );
 }
