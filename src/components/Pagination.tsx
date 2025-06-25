@@ -1,0 +1,128 @@
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import { useState } from "react";
+import BrandsCard from "./BrandsCard";
+const brandsİnfo = [
+  {
+    id: 1,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 2,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 3,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 4,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 6,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 6,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 7,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 8,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 9,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+  {
+    id: 10,
+    url: "https://www.educompany.az/assets/front/image/projects/3d29cbeecd928abccf5778e1e9d54b69.jpg",
+    alt: "brand sekili",
+    path: "/brands/edu-kids",
+    title: "EDU kids",
+    text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
+  },
+];
+const itemsPerPage = 5;
+export default function PaginationRounded() {
+  const [page, setPage] = useState(1);
+
+  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
+
+  const startIndex = (page - 1) * itemsPerPage;
+  const paginatedItems = brandsİnfo.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  return (
+    <div className="flex  flex-col justify-center items-center gap-10">
+      <Stack spacing={2}>
+        <div className="w-full flex justify-center items-center flex-wrap gap-5 md:gap-10 ">
+          {paginatedItems.map((item) => (
+            <BrandsCard
+              key={item.id}
+              src={item.url}
+              alt={item.alt}
+              path={item.path}
+              title={item.title}
+              text={item.text}
+               
+            />
+            
+          ))}
+        </div>
+    
+      </Stack>
+       <Pagination
+          count={Math.ceil(brandsİnfo.length / itemsPerPage)}
+          page={page}
+          onChange={handleChange}
+          shape="rounded"
+        />
+    </div>
+  );
+}

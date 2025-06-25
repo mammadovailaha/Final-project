@@ -1,4 +1,4 @@
-import React from "react";
+
 import PartnersCard from "../../../components/PartnersCard";
 
 const partners = [
