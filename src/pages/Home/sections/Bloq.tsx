@@ -37,7 +37,7 @@ const Bloq = () => {
   };
   return (
     <div
-      className="w-full  bg-center bg-no-repeat bg-cover flex flex-col justify-around items-center gap-8 md:gap-11"
+      className="w-full lg:h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-around items-center gap-8 md:gap-11"
       style={{
         backgroundImage:
           "url('https://www.educompany.az/assets/front/image/blog_bg.webp')",
