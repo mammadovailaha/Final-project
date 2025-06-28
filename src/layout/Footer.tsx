@@ -100,16 +100,16 @@ export default function Footer() {
               {branches.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center gap-2.5 w-43"
+                  className="flex flex-col items-center justify-center gap-2.5 w-43 group"
                 >
-                  <p className="flex justify-center items-center gap-1 text-[16px] tracking-normal font-medium">
+                  <p className="flex justify-center items-center gap-1 text-[16px] tracking-normal font-medium transition-all duration-500 group-hover:text-[#22caba]">
                     <FaBuildingColumns className="text-lg" />
                     {item.name}
                   </p>
-                  <span className="text-[12px] font-[averta] tracking-normal font-normal">
+                  <span className="text-[12px] font-[averta] tracking-normal font-normal transition-all duration-500 group-hover:text-[#22caba]">
                     {item.phone1}
                   </span>
-                  <span className="text-[12px] font-[averta] tracking-normal font-normal">
+                  <span className="text-[12px] font-[averta] tracking-normal font-normal transition-all duration-500 group-hover:text-[#22caba]">
                     {item.phone2}
                   </span>
                 </div>

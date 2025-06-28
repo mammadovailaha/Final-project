@@ -5,6 +5,7 @@ import Structure from "../pages/About/Structure";
 import Brands from "../pages/About/Brands";
 import StaffDetail from "../pages/About/StaffDetail";
 import BrandPage from "../pages/About/BrandPage";
+import Contact from "../pages/Contact/Contact";
 
 export default function AppRouter() {
   return (
@@ -14,6 +15,7 @@ export default function AppRouter() {
       <Route path="/about/brands" element={<Brands />} />
       <Route path="/staffDetail/:id" element={<StaffDetail/>}/>
       <Route path="/brandInfo/:id" element={<BrandPage/>}/>
+      <Route path="/contact" element={<Contact/>}/>
     </Routes>
   );
 }
