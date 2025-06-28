@@ -1,5 +1,6 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import QuickRegistration from "../../components/QuickRegistration";
 
 const brandsİnfo = [
   {
@@ -74,16 +75,20 @@ const brandsİnfo = [
   },
 ];
 const BrandPage = () => {
-    
-  const {id}= useParams();
-const  data=brandsİnfo.find((item) => item.id === Number(id));  
+  const { id } = useParams();
+  const data = brandsİnfo.find((item) => item.id === Number(id));
 
   return (
-    <div>
-      <h2>{data?.title}</h2>
-      <p>{data?.text}</p>
+    <div className="w-full md:h-screen flex flex-col md:flex-row justify-center items-start gap-4  bg-[#f7fcff]">
+      <div className="w-[98%] md:w-[60%] flex flex-col justify-center items-center gap-4">
+        <h2 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">{data?.title}</h2>
+        <p className="text-center text-sm md:text-[16px]">{data?.text}</p>
+      </div>
+      <div className="w-[98%] bottom-3 md:w-[33%]">
+        <QuickRegistration />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default BrandPage
+export default BrandPage;
