@@ -1,7 +1,5 @@
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
-import { useState } from "react";
-import BrandsCard from "./BrandsCard";
+import React from 'react'
+import { useParams } from 'react-router-dom';
 
 const brandsİnfo = [
   {
@@ -75,44 +73,17 @@ const brandsİnfo = [
     text: "•Erkən inkişaf hazırlığına ana dili və nitqin inkişafı, ilkin riyazi biliklərin öyrədilməsi, ingilis dili, ətraf aləmlə tanışlıq, məntiqi təfəkkürün inkişafı, quraşdırma və aplikasiya daxildir.•Məktəbəqədər hazırlığın əsas məqsədi uşaqlarda öyrənmək marağını artırmaq və bacarıqlarını kəşf etmələrinə imkan yaratmaqdan ibarətdir. Uşaqlar yazı, oxu, məntiqi təfəkkür, ingilis dili, ətraf aləm bilikləri ilə yanaşı sosial, fiziki, zehni və başqa bir çox bacarıqlarını inkişaf etdirirlər.Erkən inkişaf və məktəbəqədər dərslərimiz həftədə 3 dəfə 2 saat olmaqla keçirilir.",
   },
 ];
-const itemsPerPage = 5;
-export default function PaginationRounded() {
-  const [page, setPage] = useState(1);
-
-  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
-  };
-
-  const startIndex = (page - 1) * itemsPerPage;
-  const paginatedItems = brandsİnfo.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
+const BrandPage = () => {
+    
+  const {id}= useParams();
+const  data=brandsİnfo.find((item) => item.id === Number(id));  
 
   return (
-    <div className="flex  flex-col justify-center items-center gap-10">
-      <Stack spacing={2}>
-        <div className="w-full flex justify-center items-center flex-wrap gap-5 md:gap-10 ">
-          {paginatedItems.map((item) => (
-            <BrandsCard
-              key={item.id}
-              src={item.url}
-              alt={item.alt}
-              title={item.title}
-              text={item.text}
-              path={`/brandInfo/${item.id}`}// Adjust the path as needed
-            />
-            
-          ))}
-        </div>
-    
-      </Stack>
-       <Pagination
-          count={Math.ceil(brandsİnfo.length / itemsPerPage)}
-          page={page}
-          onChange={handleChange}
-          shape="rounded"
-        />
+    <div>
+      <h2>{data?.title}</h2>
+      <p>{data?.text}</p>
     </div>
-  );
+  )
 }
+
+export default BrandPage
