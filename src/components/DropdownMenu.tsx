@@ -24,7 +24,7 @@ export default function DropdownMenu({ title, items }: Props) {
 
       <ul
         className={`
-          absolute left-0 mt-1 bg-white rounded shadow-md z-[999] min-w-[180px]
+          absolute left-0 mt-1 bg-[#22caba] rounded shadow-md z-[999] min-w-[180px] min-h-[150px]
           font-[averta] transition-all duration-300 ease-in-out
           ${isOpen ? "block" : "hidden"} 
           lg:group-hover:block
@@ -34,7 +34,7 @@ export default function DropdownMenu({ title, items }: Props) {
           <li key={subItem.path}>
             <Link
               to={subItem.path}
-              className="block whitespace-nowrap px-4 py-2 text-black hover:bg-gray-100 text-sm"
+              className="block whitespace-nowrap px-4 py-2 text-white hover:bg-[#8cc7c1] text-sm"
               onClick={() => setIsOpen(false)}
             >
               {subItem.label}
