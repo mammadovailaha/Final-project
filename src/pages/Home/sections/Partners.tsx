@@ -36,7 +36,7 @@ const partners = [
 
 const Partners = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center gap-11 md:gap-16">
+    <div className="w-full h-screen flex flex-col justify-center items-center gap-11 md:gap-16 bg-[#f7fcff]">
       <h1 className="text-4xl md:text-5xl text-[#22caba]">Partnyorlar</h1>
       <div className="flex justify-center items-center flex-wrap gap-3">
         {

@@ -8,6 +8,7 @@ interface Props {
   fullName: string;
   role: string;
   path: string;
+  onClick:()=>void;
 }
 
 const StructureCard: React.FC<Props> = ({
@@ -17,9 +18,10 @@ const StructureCard: React.FC<Props> = ({
   fullName,
   role,
   path,
+  onClick,
 }) => {
   return (
-    <div key={key} className="w-40 h-64 md:w-66 md:h-80 bg-white hover:bg-[#1EB2A6] group transition-all duration-500 ease-in-out">
+    <div onClick={onClick} key={key} className="w-40 h-64 md:w-66 md:h-80 bg-white hover:bg-[#1EB2A6] group transition-all duration-500 ease-in-out">
       <Link to={path}  className="w-full h- full flex flex-col justify-center items-center gap-10">
         <div className="w-full h-32 md:h-40">
           <img 

@@ -6,9 +6,9 @@ import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
+    <div className="min-h-screen">
       <Header />
-      <Navbar />
+     <div className="w-full h-18 lg:h-22"> <Navbar /></div>
       <AppRouter />
       <Footer />
     </div>

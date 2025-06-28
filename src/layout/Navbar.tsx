@@ -34,8 +34,9 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full h-18 lg:h-22 bg-[#015715] flex justify-center overflow-visible absolute z-40 " >
-      <div className="w-[90%] h-full flex justify-between items-center lg:overflow-hiddenr">
+    <div className="w-full h-18 lg:h-22 bg-[#015715] flex justify-center absolute z-[1000] overflow-visible" >
+      <div className="w-[90%] h-full flex justify-between items-center">
+    <Link to={"/"}>
         <div className="flex flex-col gap-1"> 
           <h1 className="text-white font-[averta] text-[22px] lg:text-[45px] tracking-normal leading-5 lg:leading-9">
             EDU COMPANY
@@ -44,14 +45,15 @@ export default function Navbar() {
             Education & Consulting Center
           </span>
         </div>
-        <div className="lg:hidden  flex justify-end relative z-60">
+    </Link>
+        <div className="lg:hidden  flex justify-end relative z-90">
           {/* İkona kliklənəndə menyu açılıb bağlanır */}
           <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? <IoMdClose size={28} /> : <IoMdMenu size={28} />}
           </button>
         </div>
         <div
-          className={`w-full h-full absolute z-50 lg:top-[40%] lg:left-[40%] left-0  lg:w-auto  transition-all duration-300 ease-in-out transform origin-top lg:overflow-hidden 
+          className={`w-full h-full absolute z-50 lg:top-[40%] lg:left-[40%] left-0  lg:w-auto  transition-all duration-300 ease-in-out transform origin-top 
   ${
     isOpen
       ? "opacity-100 scale-y-100 pointer-events-auto"
