@@ -1,82 +1,45 @@
 import React from "react";
 import { FaBuildingColumns } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import SosialMedia from "../../components/SosialMedia";
+import MoreInfoButton from "../../components/MoreInfoButton";
 
-const branches = [
-  {
-    name: "Elmlər A filialı",
-    phone1: "+994 12 539 40 23",
-    phone2: "+994 77 412 12 02",
-  },
-  {
-    name: "Nizami filialı",
-    phone1: "+994 77 567 12 02",
-    phone2: "+994 77 478 12 02",
-  },
-  {
-    name: "28 May filialı",
-    phone1: "+994 70 876 78 05",
-    phone2: "+994 70 438 12 02",
-  },
-  {
-    name: "N.Nərimanov filialı",
-    phone1: "+994 12 564 93 67",
-    phone2: "+994 70 844 12 02",
-  },
-  {
-    name: "Neftçilər filialı",
-    phone1: "+994 77 485 12 02",
-    phone2: "+994 77 410 12 02",
-  },
-  {
-    name: "Xalqlar filialı",
-    phone1: "+994 77 432 12 02",
-    phone2: "+994 77 412 02 71",
-  },
-  {
-    name: "Sumqayıt filialı",
-    phone1: "+994 77 677 12 02",
-    phone2: "+994 77 395 12 02",
-  },
-  {
-    name: "Gəncə filialı",
-    phone1: "+994 70 565 12 02",
-    phone2: "+994 77 556 05 02",
-  },
-  {
-    name: "Göyçay filialı",
-    phone1: "+994 20 274 61 42",
-    phone2: "+994 51 444 10 44",
-  },
-  {
-    name: "Xırdalan filialı",
-    phone1: "+994 77 407 12 02",
-    phone2: "+994 77 244 12 02",
-  },
-  {
-    name: "Elmlər B filialı",
-    phone1: "+994 77 588 53 56",
-    phone2: "+994 77 424 12 02",
-  },
-];
+interface ContactCardProps {
+  name: string;
+  phone1: string;
+  phone2: string;
+  key: number;
+}
 
-const ContactCard = () => {
+const ContactCard: React.FC<ContactCardProps> = ({
+  name,
+  phone1,
+  phone2,
+  key,
+}) => {
   return (
-    <div>
-      {branches.map((branch) => (
-        <div
-          className="w-80  h-72 flex flex-col justify-center items-center gap-2.5 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 group"
-          key={branch.name}
-        >
-          <div>
-            <div>
-              <FaBuildingColumns className="text-lg" />
-            </div>
-            <p>{branch.name}</p>
-          </div>
-          <p>{branch.phone1}</p>
-          <p>{branch.phone2}</p>
+    <div
+      key={key}
+      className="w-80  h-78 flex flex-col justify-around items-center gap-1  bg-[#fcfcfc] p-4  shadow-lg hover:shadow-2xl transition-shadow duration-300 group relative"
+    >
+      <div className="w-full h-14 flex items-center justify-between gap-2 bg-white shadow-xl ">
+        <div className="w-30 h-30 rounded-full bg-white flex items-center justify-center shadow-md absolute top-[-20px] left-[-20px] ">
+          <FaBuildingColumns className=" text-5xl text-[#1eb2a6]" />
         </div>
-      ))}
+        <p className="text-[#1eb2a6] absolute left-32 text-lg font-bold">{name}</p>
+      </div>
+      <div className="w-full flex flex-col items-center justify-center gap-4">
+        <div className="flex items-center gap-2">
+          <FaPhoneAlt className="text-[#1eb2a6]" />
+          <p className="text-[#1eb2a6]">{phone1}</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <FaPhoneAlt className="text-[#1eb2a6]" />
+          <p className="text-[#1eb2a6]">{phone2}</p>
+        </div>
+        <SosialMedia />
+        <MoreInfoButton text="Ətraflı" className="w-35 md:w-40 h-10 md:h-12 border bg-white outline-none border-[#22caba] text-[#22caba] text-sm  md:text-lg rounded-[5px] hover:bg-[#22caba] hover:text-white transition-all duration-500" />
+      </div>
     </div>
   );
 };

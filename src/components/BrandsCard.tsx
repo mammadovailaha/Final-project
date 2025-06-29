@@ -33,7 +33,7 @@ const BrandsCard: React.FC<Props> = ({ src, alt, key, title, text, path }) => {
         <p className="text-center text-sm md:text-[16px] leading-3.5 md:leading-4">{firstSentence}</p>
       </div>
       <Link to={path}>
-        <MoreInfoButton className="w-20 md:w-28 h-6 md:h-9 outline-none bg-[#22caba] text-white text-sm  md:text-lg rounded-[5px] hover:bg-[#734884]  transition-all duration-500" />
+        <MoreInfoButton text="Daha ətraflı" className="w-20 md:w-28 h-6 md:h-9 outline-none bg-[#22caba] text-white text-sm  md:text-lg rounded-[5px] hover:bg-[#734884]  transition-all duration-500" />
       </Link>
     </div>
   );
