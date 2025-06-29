@@ -1,8 +1,7 @@
-import { FaFacebook } from "react-icons/fa";
-import { TfiYoutube } from "react-icons/tfi";
-import { FaInstagram } from "react-icons/fa";
+
 import { FaThumbsUp } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
+import SosialMedia from "../components/SosialMedia";
 
 const branches = [
   {
@@ -65,8 +64,8 @@ const branches = [
 export default function Footer() {
   return (
     <div>
-      <div className="w-full min-h-[300px] flex flex-col items-center gap-5 bg-[#F7FCFF] ">
-        <div className="flex flex-col items-center gap-3.5">
+      <div className="w-full min-h-[350px] flex flex-col  justify-center  items-center gap-5 bg-[#F7FCFF] p ">
+        <div className="flex flex-col items-center justify-center gap-3.5 p-10">
           <div className="w-40 h-32">
             <img
               className="w-full h-full object-cover"
@@ -74,14 +73,8 @@ export default function Footer() {
               alt="edu compony logo"
             />
           </div>
-          <div className="flex justify-center gap-1">
-            <FaFacebook className="text-[#1EB2A6] text-[40px]" />
-            <div className="w-10 h-10 bg-[#1EB2A6] flex justify-center items-center rounded-[100%] text-2xl">
-              <TfiYoutube className="text-white" />
-            </div>
-            <div className="w-10 h-10 bg-[#1EB2A6] flex justify-center items-center rounded-[100%] text-2xl">
-              <FaInstagram className="text-white text-2xl" />
-            </div>
+          <div className="">
+            <SosialMedia />
           </div>
           <div className="flex justify-center items-center gap-1.5">
             <button className="w-24 h-7 rounded-[7px] bg-[#0D6EFD] border-none outline-none text-white flex justify-center items-center gap-1">

@@ -3,11 +3,12 @@ import React from 'react'
 
 interface Props{
     className:string;
+    text:string;
 }
-const MoreInfoButton:React.FC<Props> = ({className}) => {
+const MoreInfoButton:React.FC<Props> = ({className, text}) => {
   return (
     <div>
-      <button className={className}>Daha ətraflı</button>
+      <button className={className}>{text}</button>
     </div>
   )
 }
