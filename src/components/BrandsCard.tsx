@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import MoreInfoButton from "./MoreInfoButton";
+
 interface Props {
   key: number;
   src: string;
   alt: string;
   title: string;
   text: string;
-  path: string;
+onClick?: () => void; 
 }
 
-const BrandsCard: React.FC<Props> = ({ src, alt, key, title, text, path }) => {
+const BrandsCard: React.FC<Props> = ({ src, alt, key, title, text, onClick }) => {
   const getFirstSentenceWithDots = (text: string): string => {
     const match = text.match(/.*?[.!?,](\s|$)/);
     const firstPart = match ? match[0] : text;
@@ -32,9 +32,9 @@ const BrandsCard: React.FC<Props> = ({ src, alt, key, title, text, path }) => {
         <h3 className=" text-[16px] md:text-lg leading-3 md:leading-4">{title}</h3>
         <p className="text-center text-sm md:text-[16px] leading-3.5 md:leading-4">{firstSentence}</p>
       </div>
-      <Link to={path}>
-        <MoreInfoButton text="Daha ətraflı" className="w-20 md:w-28 h-6 md:h-9 outline-none bg-[#22caba] text-white text-sm  md:text-lg rounded-[5px] hover:bg-[#734884]  transition-all duration-500" />
-      </Link>
+   
+        <MoreInfoButton onClick={onClick} text="Daha ətraflı" className="w-20 md:w-28 h-6 md:h-9 outline-none bg-[#22caba] text-white text-sm  md:text-lg rounded-[5px] hover:bg-[#734884]  transition-all duration-500" />
+    
     </div>
   );
 };

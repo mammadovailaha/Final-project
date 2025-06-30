@@ -81,6 +81,7 @@ const Contact = () => {
             name={branch.name}
             phone1={branch.phone1}
             phone2={branch.phone2}
+            onClick={() => window.location.href = `/contact/branches/${branch.id}`}
           />
         ))}
       </div>

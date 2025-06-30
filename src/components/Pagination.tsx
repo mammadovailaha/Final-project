@@ -2,6 +2,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import BrandsCard from "./BrandsCard";
+import { useNavigate } from "react-router-dom";
 
 const brandsİnfo = [
   {
@@ -88,6 +89,8 @@ export default function PaginationRounded() {
     startIndex,
     startIndex + itemsPerPage
   );
+const navigate=useNavigate();
+
 
   return (
     <div className="flex  flex-col justify-center items-center gap-10">
@@ -100,12 +103,14 @@ export default function PaginationRounded() {
               alt={item.alt}
               title={item.title}
               text={item.text}
-              path={`/brandInfo/${item.id}`}// Adjust the path as needed
+              onClick={() => {
+                navigate(`/brandInfo/${item.id}`);
+              }}
             />
-            
+
           ))}
         </div>
-    
+
       </Stack>
        <Pagination
           count={Math.ceil(brandsİnfo.length / itemsPerPage)}
@@ -116,3 +121,4 @@ export default function PaginationRounded() {
     </div>
   );
 }
+

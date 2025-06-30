@@ -4,11 +4,13 @@ import { FaPhoneAlt } from "react-icons/fa";
 import SosialMedia from "../../components/SosialMedia";
 import MoreInfoButton from "../../components/MoreInfoButton";
 
+
 interface ContactCardProps {
   name: string;
   phone1: string;
   phone2: string;
   key: number;
+  onClick: () => void;
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({
@@ -16,7 +18,11 @@ const ContactCard: React.FC<ContactCardProps> = ({
   phone1,
   phone2,
   key,
+  onClick,
 }) => {
+
+ 
+
   return (
     <div
       key={key}
@@ -38,7 +44,11 @@ const ContactCard: React.FC<ContactCardProps> = ({
           <p className="text-[#1eb2a6]">{phone2}</p>
         </div>
         <SosialMedia />
-        <MoreInfoButton text="Ətraflı" className="w-35 md:w-40 h-10 md:h-12 border bg-white outline-none border-[#22caba] text-[#22caba] text-sm  md:text-lg rounded-[5px] hover:bg-[#22caba] hover:text-white transition-all duration-500" />
+        <MoreInfoButton
+        onClick={onClick}
+          text="Ətraflı"
+          className="w-35 md:w-40 h-10 md:h-12 border bg-white outline-none border-[#22caba] text-[#22caba] text-sm  md:text-lg rounded-[5px] hover:bg-[#22caba] hover:text-white transition-all duration-500"
+        />
       </div>
     </div>
   );
