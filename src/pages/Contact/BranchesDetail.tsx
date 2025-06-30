@@ -231,18 +231,22 @@ const BranchesDetail = () => {
         </div>
       </div>
 
-      <div className="w-[90%] flex flex-col justify-center items-start gap-4">
-        <p>{data?.description}</p>
-        <h3>Xidmətlər</h3>
-        <ul>
+      <div className="w-[90%] flex flex-col justify-center items-start gap-2 md:gap-4 ">
+        <p className="text-xs md:text-sm">{data?.description}</p>
+        <h3 className="text-sm md:text-lg font-medium  font-[averta] ">Xidmətlər</h3>
+        <ul className="list-disc flex flex-col justify-center items-start gap-1">
           {data?.services.map((service, index) => (
-            <li key={index}>{service}</li>
+            <li key={index} className="text-xs md:text-sm font-[averta] ">{service}</li>
           ))}
         </ul>
-        <h3>Ünvanlar</h3>
-        <ul>
+        <h3 className="text-sm md:text-lg font-medium  font-[averta] ">Ünvanlar</h3>
+        <ul className="list-disc flex flex-col justify-center items-start gap-1">
+        
           {data?.locations.map((location, index) => (
-            <li key={index}>
+            <li
+              className="text-xs md:text-sm font-[averta]"
+              key={index}
+            >
               {location.address} - {location.phones.join(", ")}
             </li>
           ))}
