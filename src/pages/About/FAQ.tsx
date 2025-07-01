@@ -77,6 +77,10 @@ const faqData = [
 ];
 
 const FAQ = () => {
+  const [activeId, setActiveId] = React.useState<number | null>(null);
+  const handleToggle = (id: number) => {
+    setActiveId((prev) => (prev === id ? null : id)); // eyni id kliklənəndə bağla
+  };
   return (
     <div className="w-full flex flex-col items-center justify-center bg-[#f0f8ff] ">
       <h1 className="text-2xl leading-8 font-bold md:text-3xl md:leading-16">
@@ -86,8 +90,11 @@ const FAQ = () => {
         {faqData.map((item) => (
           <FaqItem
             key={item.id}
+            id={item.id}
             question={item.question}
             answer={item.answer}
+            isOpen={item.id === activeId}
+            onToggle={handleToggle}
           />
         ))}
       </div>
