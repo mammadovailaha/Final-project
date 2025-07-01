@@ -20,17 +20,19 @@ export default function Navbar() {
     { label: "Məqsəd və dəyərlərimiz", path: "/about/ Mission-and-Values" },
     { label: "Tanıtım filmi", path: "/about/film" },
     { label: "Bloq", path: "/about/bloq" },
+    { label: " FAQ", path: "/about/faq" },
   ];
   const FilialItems = [
-    { label: "Elmlər A", path: "/branches/elmler-a" },
-    { label: "28 May", path: "/branches/28-may" },
-    { label: "Nizami", path: "/branches/nizami" },
-    { label: "Nəriman Nərimanov", path: "/branches/n-nermanov" },
-    { label: "Gəncə", path: "/branches/gence" },
-    { label: "Sumqayıt", path: "/branches/sumqait" },
-    { label: "Elmlər B", path: "/branches/elmler-b" },
-    { label: "Göyçay", path: "/branches/goycay" },
-    { label: "Xırdalan", path: "/branches/xirdalan" },
+    { label: "Elmlər A", path: "/contact/branches/:id" },
+    { label: "28 May", path: "/contact/branches/:id" },
+    { label: "Nizami", path: "/contact/branches/:id" },
+    { label: "Nəriman Nərimanov", path: "/contact/branches/:id" },
+    { label: "Gəncə", path: "/contact/branches/:id" },
+    { label: "Sumqayıt", path: "/contact/branches/:id" },
+    { label: "Elmlər B", path: "/contact/branches/:id" },
+    { label: "Göyçay", path: "/contact/branches/:id" },
+    { label: "Xırdalan", path: "/contact/branches/:id" },
+    { label: "Xalqlar", path: "/contact/branches/:id" },
   ];
 
   return (
