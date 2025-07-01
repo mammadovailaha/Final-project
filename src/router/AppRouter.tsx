@@ -6,6 +6,7 @@ import StaffDetail from "../pages/About/StaffDetail";
 import BrandPage from "../pages/About/BrandPage";
 import Contact from "../pages/Contact/Contact";
 import BranchesDetail from "../pages/Contact/BranchesDetail";
+import FAQ from "../pages/About/FAQ";
 
 export default function AppRouter() {
   return (
@@ -17,6 +18,7 @@ export default function AppRouter() {
       <Route path="/brandInfo/:id" element={<BrandPage/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/contact/branches/:id" element={<BranchesDetail/>}/>
+      <Route path="/about/faq" element={<FAQ/>}/>
     </Routes>
   );
 }
