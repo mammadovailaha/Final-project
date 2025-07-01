@@ -37,13 +37,11 @@ const Bloq = () => {
   };
   return (
     <div
-      className="w-full lg:h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-around items-center gap-8 md:gap-11"
-      style={{
-        backgroundImage:
-          "url('https://www.educompany.az/assets/front/image/blog_bg.webp')",
-      }}
+      className="w-full lg:h-screen  flex flex-col justify-around items-center gap-8 md:gap-11 "
     >
-      <h1 className="text-white  font-bold text-2xl md:text-5xl ">Bloq</h1>
+         <div className="absolute opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#16d4ce] to-[#19933f] w-70 md:w-140 h-70 md:h-140  top-[510%] md:top-[310%] -z-[999] right-0 rounded-full  blur-[100px] rotate-45 "/>
+      <div className="absolute opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#16d4ce] to-[#19933f] w-70 md:w-140 h-70 md:h-140 bottom-0 -z-[999] left-[0] top-[620%] md:top-[370%] blur-[100px] rounded-full rotate-45"/>
+      <h1 className="text-[#22caba]  font-bold text-2xl md:text-5xl ">Bloq</h1>
       <div className="flex justify-center items-center flex-wrap gap-6 md:gap-10">
         {cardData.map((card) => (
           <BloqCard
@@ -55,7 +53,7 @@ const Bloq = () => {
         ))}
       </div>
       <ShowMoreButton
-        className="bg-amber-50"
+        className="bg-amber-50 "
         onClick={navigateBloq}
         text="Bütün məqalələri gör"
       />

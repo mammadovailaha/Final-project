@@ -33,7 +33,7 @@ const BrandsCard: React.FC<Props> = ({ src, alt, key, title, text, onClick }) =>
         <p className="text-center text-sm md:text-[16px] leading-3.5 md:leading-4">{firstSentence}</p>
       </div>
    
-        <MoreInfoButton onClick={onClick} text="Daha ətraflı" className="w-20 md:w-28 h-6 md:h-9 outline-none bg-[#22caba] text-white text-sm  md:text-lg rounded-[5px] hover:bg-[#734884]  transition-all duration-500" />
+        <MoreInfoButton onClick={onClick} text="Daha ətraflı" className="w-20 md:w-28 h-6 md:h-9 outline-none  text-white text-sm  md:text-lg rounded-[5px] bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out" />
     
     </div>
   );

@@ -46,7 +46,7 @@ export default function Header() {
                 <Link
                   to={item.path}
                   className={`text-center flex justify-center items-center h-full  w-[97%] text-[8px] md:text-[16px] text-[#015715] font-[averta] ${
-                    index === 0 ? "bg-[#015715] text-white" : ""
+                    index === 0 ? "bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out text-white" : ""
                   }`}
                 >
                   {item.title}

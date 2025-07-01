@@ -211,7 +211,7 @@ const BranchesDetail = () => {
               <p className="text-xs md:text-sm">Nömrəmdə whatssap var</p>
             </div>
             <button
-              className="w-[70%] h-9 md:h-11 bg-[#22caba] text-white  rounded-md"
+              className="w-[70%] h-9 md:h-11  text-white  rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
               type="submit"
             >
               Göndər

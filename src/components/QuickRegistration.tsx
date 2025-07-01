@@ -44,7 +44,7 @@ const QuickRegistration = () => {
             className="w-full h-8 pl-4 border rounded outline-none  text-black text-sm  border-green-700 transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] "
           />
           {formik.touched.fullname && formik.errors.fullname && (
-            <div>{formik.errors.fullname}</div>
+            <div className="text-red-500 text-xs font-[averta]">{formik.errors.fullname}</div>
           )}
         </div>
         <div className="w-[75%] flex flex-col items-start justify-center">
@@ -58,10 +58,10 @@ const QuickRegistration = () => {
             className="w-full h-8 pl-4 border rounded outline-none  transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] border-green-700"
             onChange={formik.handleChange}
             value={formik.values.phone}
-            {...(formik.touched.phone && formik.errors.phone && (
-              <div>{formik.errors.phone}</div>
-            ))}
           />
+          {formik.touched.phone && formik.errors.phone && (
+            <div className="text-red-500 text-xs font-[averta]">{formik.errors.phone}</div>
+          )}
         </div>
         <div className="w-[75%] flex flex-col items-start justify-center">
           <label htmlFor="note" className="text-sm ">
@@ -75,9 +75,16 @@ const QuickRegistration = () => {
             value={formik.values.note}
           />
           {formik.touched.note && formik.errors.note && (
-            <div>{formik.errors.note}</div>
+            <div className="text-red-500 text-xs font-[averta]">{formik.errors.note}</div>
           )}
         </div>
+        <div className="w-[75%] h-11 flex items-center justify-center"> 
+          <button
+            className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
+              type="submit"
+            >
+              Göndər
+            </button></div>
       </div>
     </form>
   );
