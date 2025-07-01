@@ -63,8 +63,8 @@ const branches = [
 
 export default function Footer() {
   return (
-    <div>
-      <div className="w-full min-h-[350px] flex flex-col  justify-center  items-center gap-5 bg-[#F7FCFF] p ">
+    <div className="w-full min-h-[350px]">
+      <div className="w-full pt-10 flex flex-col  justify-center  items-center gap-5 bg-[#F7FCFF]">
         <div className="flex flex-col items-center justify-center gap-3.5 p-10">
           <div className="w-40 h-32">
             <img

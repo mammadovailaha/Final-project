@@ -82,7 +82,7 @@ const FAQ = () => {
     setActiveId((prev) => (prev === id ? null : id)); // eyni id kliklənəndə bağla
   };
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-[#f0f8ff] ">
+    <div className="w-full flex flex-col items-center justify-center bg-[#F7FCFF] ">
       <h1 className="text-2xl leading-8 font-bold md:text-3xl md:leading-16">
         TEZ-TEZ VERİLƏN SUALLAR (FAQ)
       </h1>
