@@ -22,7 +22,7 @@ const InputField:React.FC<InputFieldProps> = ({htmlFor,label, id, name, type, on
             type={type}
             onChange={onChange}
             value={value}
-            className="w-full h-9 pl-4 border rounded outline-none  text-black text-sm  border-green-700 transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] "
+            className="w-full h-9 md:h-12 pl-4 border rounded outline-none  text-black text-sm  border-green-700 transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] "
           />
     </>
   )

@@ -48,13 +48,13 @@ const QuickContact = () => {
   return (
 
       <form
-        className="w-[85%] md:w-full flex-col justify-center items-center gap-8 md:gap-10"
+        className="w-[85%] lg:w-full flex-col justify-center items-center gap-8 md:gap-10"
         action=""
       >
         <h1 className="text-2xl leading-8 font-bold md:text-3xl md:leading-20 text-center">
           Sürətli Əlaqə
         </h1>
-        <div className="w-full md:w-[80%] flex flex-col gap-2">
+        <div className="w-full lg:w-[80%] flex flex-col  justify-center gap-2">
           <div className="w-full  flex flex-col justify-center ">
             <InputField
               htmlFor="fullname"
@@ -109,7 +109,7 @@ const QuickContact = () => {
               placeholder="Qeydiyyat"
               {...formik.getFieldProps("reason")}
               list="reason"
-              className=" h-9 md:h-11 w-full border rounded outline-none  text-black text-sm  border-green-700 transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] placeholder:text-xs  md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
+              className=" h-9 md:h-12 w-full border rounded outline-none  text-black text-sm  border-green-700 transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] placeholder:text-xs  md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
             />
             <datalist id="reason">
               {applicationReasons.map((item) => (
@@ -132,7 +132,7 @@ const QuickContact = () => {
               </div>
             )}
           </div>
-          <div className="w-full h-11 md:h-14 flex justify-center items-center">
+          <div className="w-full h-11 md:h-13 flex justify-center items-center">
             <button
               className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
               type="submit"
