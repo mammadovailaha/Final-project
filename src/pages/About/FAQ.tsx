@@ -83,12 +83,12 @@ const FAQ = () => {
     setActiveId((prev) => (prev === id ? null : id)); // eyni id kliklənəndə bağla
   };
   return (
-    <div className="w-full  flex flex-col lg:flex-row justify-center items-start bg-[#F7FCFF]  gap-10 ">
-      <div className="w-full md:w-[70%] flex flex-col items-center justify-center  ">
+    <div className="w-full  flex flex-col lg:flex-row justify-center items-center lg:items-start bg-[#F7FCFF]  gap-10 ">
+      <div className="w-full lg:w-[70%] flex flex-col items-center justify-center  ">
       <h1 className="text-lg leading-10 font-bold md:text-3xl md:leading-20 text-center">
         TEZ-TEZ VERİLƏN SUALLAR (FAQ)
       </h1>
-      <div className="w-[90%] flex flex-col items-center justify-center gap-5 px-5 md:px-10">
+      <div className="w-[95%] lg:w-[90%] flex flex-col items-center justify-center gap-5 px-5 md:px-10">
         {faqData.map((item) => (
           <FaqItem
             key={item.id}
@@ -101,7 +101,7 @@ const FAQ = () => {
         ))}
       </div>
     </div>
-    <div className="w-full md:w-[30%] flex justify-center items-center">
+    <div className="w-[90%] md:w-[80%] lg:w-[30%] flex justify-center items-center">
       <QuickContact />
     </div>
     </div>
