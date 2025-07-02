@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import InputField from "./InputField";
 
 const QuickRegistration = () => {
   const formik = useFormik({
@@ -29,38 +30,40 @@ const QuickRegistration = () => {
       onSubmit={formik.handleSubmit}
       className="w-full flex flex-col justify-center items-center gap-4"
     >
-      <h1 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">Sürətli Qeydiyyat</h1>
+      <h1 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">
+        Sürətli Qeydiyyat
+      </h1>
       <div className="w-full flex flex-col justify-center items-center gap-2">
         <div className="w-[75%] flex flex-col items-start justify-center">
-          <label htmlFor="fullname" className="text-sm">
-            Ad Soyad
-          </label>
-          <input
+          <InputField
+            htmlFor="fullname"
+            label="Ad Soyad"
             id="fullname"
             name="fullname"
             type="text"
             onChange={formik.handleChange}
             value={formik.values.fullname}
-            className="w-full h-8 pl-4 border rounded outline-none  text-black text-sm  border-green-700 transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] "
           />
           {formik.touched.fullname && formik.errors.fullname && (
-            <div className="text-red-500 text-xs font-[averta]">{formik.errors.fullname}</div>
+            <div className="text-red-500 text-xs font-[averta]">
+              {formik.errors.fullname}
+            </div>
           )}
         </div>
         <div className="w-[75%] flex flex-col items-start justify-center">
-          <label htmlFor="phone" className="text-sm">
-            Telefon
-          </label>
-          <input
-            type="text"
+          <InputField
+            htmlFor="phone"
+            label="Telefon"
             id="phone"
             name="phone"
-            className="w-full h-8 pl-4 border rounded outline-none  transition-shadow duration-300 hover:shadow-[-5px_6px_31px_-5px_rgba(17,159,86,0.31)] border-green-700"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.phone}
           />
           {formik.touched.phone && formik.errors.phone && (
-            <div className="text-red-500 text-xs font-[averta]">{formik.errors.phone}</div>
+            <div className="text-red-500 text-xs font-[averta]">
+              {formik.errors.phone}
+            </div>
           )}
         </div>
         <div className="w-[75%] flex flex-col items-start justify-center">
@@ -75,16 +78,19 @@ const QuickRegistration = () => {
             value={formik.values.note}
           />
           {formik.touched.note && formik.errors.note && (
-            <div className="text-red-500 text-xs font-[averta]">{formik.errors.note}</div>
+            <div className="text-red-500 text-xs font-[averta]">
+              {formik.errors.note}
+            </div>
           )}
         </div>
-        <div className="w-[75%] h-11 flex items-center justify-center"> 
+        <div className="w-[75%] h-11 flex items-center justify-center">
           <button
             className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
-              type="submit"
-            >
-              Göndər
-            </button></div>
+            type="submit"
+          >
+            Göndər
+          </button>
+        </div>
       </div>
     </form>
   );
