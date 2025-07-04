@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Publish = () => {
+const PublishBookDetail = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Publish = () => {
   )
 }
 
-export default Publish
+export default PublishBookDetail

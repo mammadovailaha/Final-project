@@ -1,4 +1,4 @@
-import PaginationRounded from "../../components/Pagination";
+import PaginationRounded from "../../components/BrandCardsWithPagination";
 
 const Brands = () => {
  
