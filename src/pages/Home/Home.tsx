@@ -8,7 +8,7 @@ import VideoGalary from "./sections/VideoGalary";
 import Partners from "./sections/Partners";
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <Banner/>
       <Services/>
       <StudyAbroad/>
