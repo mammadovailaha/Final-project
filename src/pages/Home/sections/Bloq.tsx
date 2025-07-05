@@ -39,8 +39,8 @@ const Bloq = () => {
     <div
       className="w-full lg:h-screen  flex flex-col justify-around items-center gap-8 md:gap-11 overflow-x-hidden"
     >
-         <div className="absolute opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#16d4ce] to-[#19933f] w-40 md:w-70 h-40 md:h-70  top-[510%] md:top-[365%] -z-[999] right-0 rounded-full  blur-[100px] rotate-45 "/>
-      <div className="absolute opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#16d4ce] to-[#19933f] w-40 md:w-70 h-40 md:h-70 bottom-0 -z-[999] left-0 top-[700%] md:top-[480%] blur-[100px] rounded-full rotate-45"/>
+         <div className="absolute opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#16d4ce] to-[#19933f] w-40 md:w-100 h-40 md:h-100  top-[510%] md:top-[325%] -z-[999] right-0 rounded-full  blur-[100px] rotate-45 "/>
+      <div className="absolute opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#16d4ce] to-[#19933f] w-40 md:w-100 h-40 md:h-100 bottom-0 -z-[999] left-0 top-[700%] md:top-[350%] blur-[100px] rounded-full rotate-45"/>
       <h1 className="text-[#22caba]  font-bold text-2xl md:text-5xl ">Bloq</h1>
       <div className="flex justify-center items-center flex-wrap gap-6 md:gap-10">
         {cardData.map((card) => (

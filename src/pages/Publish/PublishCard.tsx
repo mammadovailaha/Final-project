@@ -1,5 +1,5 @@
-import React from "react";
 
+import  { useEffect, useRef , useState} from "react";
 interface PublishCardProps {
   src: string;
   alt: string;
@@ -9,10 +9,26 @@ interface PublishCardProps {
 }
 
 const PublishCard = ({ src, alt, title, price, onClick }: PublishCardProps) => {
+    const [visible, setVisible] = useState(false);
+      const ref = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setVisible(true);
+      }
+    });
+    if (ref.current) observer.observe(ref.current);
+    return () => {
+      if (ref.current) observer.observe(ref.current);
+    };
+  }, []);
+
   return (
     <div 
+    ref={ref}
     style={{padding:"20px"}}
-    className="w-40 md:w-78 h-53 md:h-96 bg-white rounded-lg shadow-md flex flex-col items-center justify-center  group hover:bg-[#22caba] transition-all duration-500">
+    className={`w-40 md:w-78 h-53 md:h-96 bg-white rounded-lg shadow-md flex flex-col items-center justify-center  group hover:bg-[#22caba] transition-all duration-700 ease-out transform perspective 
+        ${visible ? "rotate-y-0 opacity-100" : "rotate-y-90 opacity-0"}`}>
     <div className="w-[65%] h-[70%] top-4 flex justify-center items-center">
           <img
         className="w-full h-full object-cover"
