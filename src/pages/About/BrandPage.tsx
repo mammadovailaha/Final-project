@@ -84,8 +84,11 @@ const BrandPage = () => {
         <h2 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">{data?.title}</h2>
         <p className="text-center text-sm md:text-[16px]">{data?.text}</p>
       </div>
-      <div className="w-[98%] bottom-3 md:w-[33%]">
-        <QuickRegistration />
+      <div className="w-[98%] bottom-1 md:w-[33%] flex flex-col justify-center items-center">
+         <h1 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">
+        Sürətli Qeydiyyat
+      </h1>
+        <QuickRegistration text="Göndər" />
       </div>
     </div>
   );

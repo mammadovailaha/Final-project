@@ -5,7 +5,7 @@ interface PublishCardProps {
   alt: string;
   title: string;
   price: number;
-  onClick?: () => void; 
+  onClick: () => void; 
 }
 
 const PublishCard = ({ src, alt, title, price, onClick }: PublishCardProps) => {

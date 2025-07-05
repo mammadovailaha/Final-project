@@ -2,7 +2,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import InputField from "./InputField";
 
-const QuickRegistration = () => {
+interface Props{
+  text:string;
+}
+
+const QuickRegistration:React.FC<Props> = ({text}) => {
   const formik = useFormik({
     initialValues: {
       fullname: "",
@@ -30,9 +34,7 @@ const QuickRegistration = () => {
       onSubmit={formik.handleSubmit}
       className="w-full flex flex-col justify-center items-center gap-4"
     >
-      <h1 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">
-        Sürətli Qeydiyyat
-      </h1>
+     
       <div className="w-full flex flex-col justify-center items-center gap-2">
         <div className="w-[75%] flex flex-col items-start justify-center">
           <InputField
@@ -88,7 +90,7 @@ const QuickRegistration = () => {
             className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
             type="submit"
           >
-            Göndər
+           {text}
           </button>
         </div>
       </div>
