@@ -63,23 +63,25 @@ const books = [
 ];
 const itemsPerPage = 5;
 const Publish = () => {
+
   const [page, setPage] = useState(1);
-
-  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
-  };
-
   const startIndex = (page - 1) * itemsPerPage;
   const PublishItems = books.slice(startIndex, startIndex + itemsPerPage);
   const navigate = useNavigate();
 
+
+  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
   return (
     <div className="w-full flex flex-col items-center justify-center gap-4 ">
       <h1 className="text-2xl font-medium md:text-4xl leading-8 md:leading-14 font-[averta]">
         Nəşrlərimiz
       </h1>
       <Stack spacing={2}>
-        <div className="grid grid-cols-2 lg:grid-cols-3  gap-10 md:gap-20 w-[90%] px-4 md:px-8">
+        <div
+     
+        className={`grid grid-cols-2 lg:grid-cols-3  gap-10 md:gap-20 w-[90%] px-4 md:px-8 `}>
           {PublishItems.map((book) => (
             <PublishCard
               key={book.id}
