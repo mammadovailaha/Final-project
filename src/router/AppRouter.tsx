@@ -22,7 +22,7 @@ export default function AppRouter() {
       <Route path="/contact/branches/:id" element={<BranchesDetail/>}/>
       <Route path="/about/faq" element={<FAQ/>}/>
       <Route path="/publications" element={<Publish/>}/>
-      <Route path="/publications/book/:id" element={<PublishBookDetail/>}/>
+      <Route path="/publications/:id" element={<PublishBookDetail/>}/>
     </Routes>
   );
 }
