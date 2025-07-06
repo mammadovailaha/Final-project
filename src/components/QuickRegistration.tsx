@@ -2,11 +2,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import InputField from "./InputField";
 
-interface Props{
-  text:string;
+interface Props {
+  text: string;
+  onClick: () => void;
 }
 
-const QuickRegistration:React.FC<Props> = ({text}) => {
+const QuickRegistration: React.FC<Props> = ({ text, onClick }) => {
   const formik = useFormik({
     initialValues: {
       fullname: "",
@@ -34,7 +35,6 @@ const QuickRegistration:React.FC<Props> = ({text}) => {
       onSubmit={formik.handleSubmit}
       className="w-full flex flex-col justify-center items-center gap-4"
     >
-     
       <div className="w-full flex flex-col justify-center items-center gap-2">
         <div className="w-[75%] flex flex-col items-start justify-center">
           <InputField
@@ -87,10 +87,11 @@ const QuickRegistration:React.FC<Props> = ({text}) => {
         </div>
         <div className="w-[75%] h-11 flex items-center justify-center">
           <button
+            onClick={onClick}
             className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
             type="submit"
           >
-           {text}
+            {text}
           </button>
         </div>
       </div>
