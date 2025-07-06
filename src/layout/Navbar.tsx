@@ -65,7 +65,7 @@ export default function Navbar() {
             <DropdownMenu title="Haqqımızda" items={AboutItems} />
             <li>
               <Link
-                to="/career"
+                to="/vacancies"
                 className="font-[averta] text-[15px] text-white "
               >
                 Kariyera

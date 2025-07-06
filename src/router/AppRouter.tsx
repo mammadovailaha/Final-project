@@ -10,6 +10,7 @@ import FAQ from "../pages/About/FAQ";
 import Publish from "../pages/Publish/Publish";
 import PublishBookDetail from "../pages/Publish/PublishBookDetail";
 import AboutFilm from "../pages/About/AboutFilm";
+import Career from "../pages/Career/Career";
 
 export default function AppRouter() {
   return (
@@ -25,6 +26,7 @@ export default function AppRouter() {
       <Route path="/publications" element={<Publish/>}/>
       <Route path="/publications/:id" element={<PublishBookDetail/>}/>
       <Route path="/about/film" element={<AboutFilm/>}/>
+      <Route path="/vacancies" element={<Career/>}/>
     </Routes>
   );
 }
