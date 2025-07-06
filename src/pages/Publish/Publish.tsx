@@ -90,7 +90,7 @@ const Publish = () => {
     setPage(value);
   };
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-4 ">
+    <div style={{padding:"20px"}} className="w-full flex flex-col items-center justify-center gap-4  bg-[#f7fcff]">
       <h1 className="text-2xl font-medium md:text-4xl leading-8 md:leading-14 font-[averta]">
         Nəşrlərimiz
       </h1>

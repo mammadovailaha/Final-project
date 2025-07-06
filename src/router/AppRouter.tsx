@@ -9,6 +9,7 @@ import BranchesDetail from "../pages/Contact/BranchesDetail";
 import FAQ from "../pages/About/FAQ";
 import Publish from "../pages/Publish/Publish";
 import PublishBookDetail from "../pages/Publish/PublishBookDetail";
+import AboutFilm from "../pages/About/AboutFilm";
 
 export default function AppRouter() {
   return (
@@ -23,6 +24,7 @@ export default function AppRouter() {
       <Route path="/about/faq" element={<FAQ/>}/>
       <Route path="/publications" element={<Publish/>}/>
       <Route path="/publications/:id" element={<PublishBookDetail/>}/>
+      <Route path="/about/film" element={<AboutFilm/>}/>
     </Routes>
   );
 }
