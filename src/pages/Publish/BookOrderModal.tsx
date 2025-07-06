@@ -23,8 +23,8 @@ const handleOrder=()=>{
 }
   return (
     <div className="w-full fixed inset-0 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm bg-opacity-50 z-[1002] flex justify-center items-center 	transition-transform duration-300 scale-100">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-[70%] h-[400px] lg:h-[500px]  flex flex-col justify-center items-center gap-5  md:gap-8 mx-4 relative ">
-        <div className="w-[90%] h-15 border-b border-gray-400 flex justify-between items-center">
+      <div className="bg-white  rounded-lg shadow-lg w-[70%] h-[400px] lg:h-[450px]  flex flex-col justify-center items-center gap-5  md:gap-8 mx-4 relative ">
+        <div className="w-[90%] h-10 border-b border-gray-400 flex justify-between items-center">
           <p className="text-[16px] md:text-lg font-medium text-[#015715]">
             Sifariş et
           </p>
