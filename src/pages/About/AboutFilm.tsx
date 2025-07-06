@@ -1,7 +1,15 @@
-
+import { CiHome } from "react-icons/ci";
+import { PiBooks } from "react-icons/pi";
+import { RiServiceLine } from "react-icons/ri";
+import { CiPhone } from "react-icons/ci";
 import NavItem from "../../components/NavItem";
 
-
+const menuItems = [
+  { icon: <CiHome />, label: "Əsas səhifə", path: "/" },
+  { icon: <PiBooks />, label: "Nəşirlərimiz", path: "/publications" },
+  { icon: <RiServiceLine />, label: "Xidmətlər", path: "/allServices" },
+  { icon: <CiPhone />, label: "Əlaqə", path: "/contact" },
+];
 const AboutFilm = () => {
   return (
     <div
@@ -11,7 +19,10 @@ const AboutFilm = () => {
       <h1 className="font-medium text-2xl md:text-4xl leading-7 md:leading-14">
         Tanıtım filmi
       </h1>
-      <div style={{padding:"20px"}} className="w-full flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 font-[averta]">
+      <div
+        style={{ padding: "20px" }}
+        className="w-full flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 font-[averta]"
+      >
         <div className="w-full md:w-[60%] flex flex-col justify-center items-start gap-5">
           <p className=" font-[averta] text-xs md:text-[16px] leading-3 md:leading-4">
             "EDU Company" Təhsil Şirkəti olaraq biz inanırıq ki, sağlam,
@@ -25,7 +36,7 @@ const AboutFilm = () => {
           </p>
           <div className="w-full">
             <iframe
-            className="w-[300px] md:w-[400px] lg:w-[560px] h-40 md:h-50 lg:h-[315px]"
+              className="w-[300px] md:w-[400px] lg:w-[560px] h-40 md:h-50 lg:h-[315px]"
               width="560"
               height="315"
               src="https://www.youtube.com/embed/xeL7_t4Etq4?si=Ieq80nAacM4r9V8m"
@@ -37,9 +48,17 @@ const AboutFilm = () => {
             ></iframe>
           </div>
         </div>
-
-          <NavItem className="w-full md:w-[40%] flex flex-col justify-center items-center gap-2" linkClassName="w-[60%] md:w-[70%] lg:w-[45%] h-10"/>
-
+        <div className="w-full md:w-[40%] flex flex-col justify-center items-center gap-2">
+          {menuItems.map((item, index) => (
+            <NavItem
+              className="w-[60%] md:w-[70%] lg:w-[45%] h-10"
+              key={index}
+              path={item.path}
+              icon={item.icon}
+              label={item.label}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
