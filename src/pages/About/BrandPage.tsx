@@ -77,7 +77,9 @@ const brandsİnfo = [
 const BrandPage = () => {
   const { id } = useParams();
   const data = brandsİnfo.find((item) => item.id === Number(id));
-
+const loginInfo=()=>{
+  alert("Məlumat göndərildi!")
+}
   return (
     <div className="w-full md:h-screen flex flex-col md:flex-row justify-center items-start gap-4  bg-[#f7fcff]">
       <div className="w-[98%] md:w-[60%] flex flex-col justify-center items-center gap-4">
@@ -88,7 +90,7 @@ const BrandPage = () => {
          <h1 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">
         Sürətli Qeydiyyat
       </h1>
-        <QuickRegistration text="Göndər" />
+        <QuickRegistration onClick={loginInfo} text="Göndər" />
       </div>
     </div>
   );
