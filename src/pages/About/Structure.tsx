@@ -64,7 +64,7 @@ const Structure = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center gap-10 md:gap-16 bg-[#f7fcff] ">
+    <div style={{padding:"20px"}} className="w-full h-full flex flex-col justify-center items-center gap-10 md:gap-16 bg-[#f7fcff] ">
       <h1 className="text-3xl md:text-5xl font-bold leading-14">Struktur</h1>
       <div className="flex flex-wrap justify-center items-center gap-5">
         {staffData.map((data) => (
