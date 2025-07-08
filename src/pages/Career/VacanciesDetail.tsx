@@ -1,13 +1,19 @@
 import React from "react";
-import NavItem from "../../components/NavItem";
+import { useParams } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa";
 import {
   MdOutlineAssignmentTurnedIn,
   MdOutlineQuestionAnswer,
 } from "react-icons/md";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import VacanciesItem from "./VacanciesItem";
-import { useNavigate } from "react-router-dom";
+import NavItem from "../../components/NavItem";
+import { GiTeacher } from "react-icons/gi";
+import { PiStudentBold } from "react-icons/pi";
+import { MdOutlineLanguage } from "react-icons/md";
+import { LuComputer } from "react-icons/lu";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { LuCalendarCheck2 } from "react-icons/lu";
+import { LuCalendarDays } from "react-icons/lu";
 
 const menuItems = [
   { icon: <FaUserTie />, label: "Vakansiyalar", path: "/vacancies" },
@@ -85,38 +91,84 @@ const vacancies = [
   },
 ];
 
-
-const Career = () => {
-    const navigate = useNavigate();
+const VacanciesDetail = () => {
+  const { id } = useParams();
+  const data = vacancies.find((item) => item.id === Number(id));
   return (
-    <div style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-10 bg-[#F7FCFF]">
-      <h1 className="font-[averta] text-2xl md:text-5xl leading-6 md:leading-14 font-medium">Kariyera</h1>
-      <div className="w-full flex flex-col md:flex-row justify-around items-center gap-10">
-        <div className="w-full md:w-[33%] flex flex-col justify-center items-center gap-2">
-          {menuItems.map((item, index) => (
-            <NavItem
-              key={index}
-              className="w-full lg:w-[70%] h-12"
-              path={item.path}
-              icon={item.icon}
-              label={item.label}
-            />
-          ))}
+    <div>
+      <div>
+        {menuItems.map((item, index) => (
+          <NavItem
+            key={index}
+            className="w-full lg:w-[70%] h-12"
+            path={item.path}
+            icon={item.icon}
+            label={item.label}
+          />
+        ))}
+      </div>
+      <div>
+        <div>
+          <h2>{data?.title}</h2>
+          <p>{data?.description}</p>
+          <p>
+            <strong>Bizim üçün uyğun namizəd:</strong>
+            {data?.requirements}
+          </p>
+          <div>
+            <strong>Hansı işləri görəcəksiniz?</strong>
+            <p>{data?.responsibilities}</p>
+          </div>
+          <div>
+            <strong>Nə əldə edəcəksiniz?</strong>
+            <p>{data?.benefits}</p>
+          </div>
+          <div>
+            <strong>Əlavə Məlumat</strong>
+            <p>{data?.additionalInfo.documentation}</p>
+          </div>
         </div>
-        <div className="w-full md:w-[78%] lg:w-[70%] flex flex-col justify-center items-center gap-5">
-          {vacancies.map((item) => (
-            <VacanciesItem
-              key={item.id}
-              deadline={item.deadline}
-              postedDate={item.postedDate}
-              title={item.title}
-              onClick={()=>navigate(`/vacancies/vacancies-detail/${item.id}`)}
-            />
-          ))}
+        <div>
+          <div>
+            <GiTeacher />
+            <strong>Təcrübə:</strong>{" "}
+            <span>{data?.additionalInfo.experience}</span>
+          </div>
+          <div>
+            <PiStudentBold />
+            <strong>Təhsil:</strong>
+            <span>{data?.additionalInfo.education}</span>
+          </div>
+          <div>
+            <MdOutlineLanguage />
+            <strong>Dil biliyi:</strong>
+            <span>{data?.additionalInfo.languages}</span>
+          </div>
+          <div>
+            <LuComputer />
+            <strong>Kompyuter biliyi:</strong>
+            <span>{data?.additionalInfo.computerSkills}</span>
+          </div>
+          <div>
+            <FaMoneyBillWave />
+            <strong>Əmək haqqı:</strong>
+            <span>{data?.additionalInfo.salary}</span>
+          </div>
+          <div>
+            {" "}
+            <LuCalendarCheck2 className="text-[16px] text-green-800" />
+            <strong> Elanın yerləşdirmə tarix:</strong>
+            <span>{data?.postedDate}</span>
+          </div>
+          <div>
+            <LuCalendarDays className="text-[16px] text-green-800" />
+            <strong>Son müraciət tarixi:</strong>
+            <span>{data?.deadline}</span>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Career;
+export default VacanciesDetail;
