@@ -21,18 +21,18 @@ const SocialMediaLinks = [
 
 export default function Header() {
   return (
-    <div className="w-full h-8 md:h-14 bg-[#F9FCFF] flex justify-center lg:justify-between items-center px-1 md:px-4">
+    <div className="w-full h-8 md:h-14 bg-background shadow-lg flex justify-center lg:justify-between items-center px-1 md:px-4">
       <div className="w-[90%] h-full flex justify-around items-center gap-1 lg:gap-2">
         <div>
-          <Link className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs  lg:text-[16px] text-[#015715] font-[averta]" to={"/"}>
+          <Link className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs  lg:text-[16px] text-black " to={"/"}>
             Sınaq dərs istə
           </Link>
         </div>
         <div className="flex flex-col items-center gap-0.2">
-          <span className="text-[6px] leading-1.5 md:leading-3 lg:leading-4 md:text-xs lg:text-[16px] text-[#015715] font-[averta]">
+          <span className="text-[6px] leading-1.5 md:leading-3 lg:leading-4 md:text-xs lg:text-[16px]  text-black ">
             09:00-21:00
           </span>
-          <span className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs lg:text-[16px] text-[#015715] font-[averta]">
+          <span className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs lg:text-[16px] text-black ">
             iş saatları
           </span>
         </div>
@@ -41,12 +41,12 @@ export default function Header() {
             {HeaderInfo.map((item, index) => (
               <li
                 key={index}
-                className={`flex justify-center items-center w-18 md:w-36 h-4 md:h-8 border-gray-700 border-r px-0.5 md:px-1`}
+                className={`flex justify-center items-center w-18 md:w-40 h-4 md:h-8   px-0.5 md:px-1`}
               >
                 <Link
                   to={item.path}
-                  className={`text-center flex justify-center items-center h-full  w-[97%] text-[8px] md:text-sm lg:text-[16px] text-[#015715] font-[averta] ${
-                    index === 0 ? "bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out text-white" : ""
+                  className={`text-center flex justify-center items-center h-full text-[8px] md:text-sm lg:text-[16px] text-black rounded-lg ${
+                    index === 0 ? "bg-[linear-gradient(to_right,_#4b6043,_#f6e9d9)] bg-[length:200%_100%] bg-[position:left] shadow hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out text-white w-[65%]" : ""
                   }`}
                 >
                   {item.title}

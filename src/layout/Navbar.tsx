@@ -36,21 +36,30 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full h-18 lg:h-22 bg-[#015715] flex justify-center absolute z-[1000] overflow-visible" >
+    <div className="w-full h-18 lg:h-22 bg-background shadow-2xl flex justify-center absolute z-[1000] overflow-visible" >
       <div className="w-[90%] h-full flex justify-between items-center">
     <Link to={"/"}>
-        <div className="flex flex-col gap-1"> 
-          <h1 className="text-white font-[averta] text-[22px] lg:text-[45px] tracking-normal leading-5 lg:leading-9">
+        <div className="flex justify-center items-center gap-2"> 
+            <div className="w-16 h-14">
+            <img
+              className="w-full h-full object-cover"
+              src="https://www.educompany.az/assets/front/image/logo/logo_c.webp"
+              alt="edu compony logo"
+            />
+          </div>
+         <div className="flex flex-col gap-1">
+           <h1 className="text-[#4b6043] text-[22px] lg:text-[45px] tracking-normal leading-5 lg:leading-9 font-bold">
             EDU COMPANY
           </h1>
-          <span className="text-white font-[averta] text-[9px] lg:text-[12px] tracking-normal]">
+          <span className="text-black text-[9px] lg:text-base tracking-normal font-medium">
             Education & Consulting Center
           </span>
+         </div>
         </div>
     </Link>
         <div className="lg:hidden  flex justify-end relative z-90">
           {/* İkona kliklənəndə menyu açılıb bağlanır */}
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-black">
             {isOpen ? <IoMdClose size={28} /> : <IoMdMenu size={28} />}
           </button>
         </div>
@@ -61,12 +70,12 @@ export default function Navbar() {
       ? "opacity-100 scale-y-100 pointer-events-auto"
       : "opacity-0 scale-y-0 pointer-events-none"
   } lg:opacity-100 lg:scale-y-100 lg:pointer-events-auto lg:block`}>
-          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-7  bg-[#015715]   lg:bg-transparent">
+          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-7  bg-[#ffff]  lg:bg-transparent">
             <DropdownMenu title="Haqqımızda" items={AboutItems} />
             <li>
               <Link
                 to="/vacancies"
-                className="font-[averta] text-[15px] text-white "
+                className="text-lg font-medium text-black "
               >
                 Kariyera
               </Link>
@@ -75,7 +84,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/publications"
-                className="font-[averta] text-[15px] text-white"
+                className="text-lg font-medium text-black"
               >
                 Nəşrlər
               </Link>
@@ -83,7 +92,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/study-abroad"
-                className="font-[averta] text-[15px] text-white"
+                className="text-lg font-medium text-black"
               >
                 Xaricdə təhsil
               </Link>
@@ -92,7 +101,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="font-[averta] text-[15px] text-white "
+                className=" text-lg font-medium text-black "
               >
                 Əlaqə
               </Link>
