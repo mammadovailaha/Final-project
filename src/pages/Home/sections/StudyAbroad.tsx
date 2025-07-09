@@ -27,8 +27,8 @@ const StudyAbroad = () => {
     <div className="w-full md:h-screen flex flex-col justify-center items-center gap-5 md:gap-10 ">
       <div className=" w-full flex justify-around items-center">
         <p className="font-bold text-lg md:text-3xl">Bu ölkələrdə təhsil ala bilərsən!</p>
-        <button className="w-22 md:w-34 h-7 md:h-10 bg-[#DB133C] text-white rounded-[7px] flex justify-center items-center  gap-1 md:gap-1.5 text-[10px] md:text-sm hover:bg-[#22caba] hover:scale-120 transition-all duration-700">
-          <FaEye className="w-3.5 h-3" />
+        <button className="w-22 md:w-34 h-7 md:h-10  text-black rounded-[7px] flex justify-center items-center  gap-1 md:gap-1.5 text-[10px] md:text-sm  transition-all duration-700 shadow-lg">
+          <FaEye className="w-3.5 h-3 text-black" />
           Hamısına bax
         </button>
       </div>

@@ -3,7 +3,14 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+ colors:{
+  primary:"#dcfff0",
+  secondary:"#437118",
+   background: "#f5f5f5"
+ }
+
+    },
   },
   plugins: [
     function ({ addUtilities }) {

@@ -6,7 +6,7 @@ import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
+    <div className={ `${"App"} bg-background`}>
       <Header />
      <div className="w-full h-18 lg:h-22"> <Navbar /></div>
       <AppRouter />

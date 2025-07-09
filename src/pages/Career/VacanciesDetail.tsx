@@ -95,7 +95,7 @@ const VacanciesDetail = () => {
   const { id } = useParams();
   const data = vacancies.find((item) => item.id === Number(id));
   return (
-    <div>
+    <div className="w-full flex justify-center items-center" >
       <div>
         {menuItems.map((item, index) => (
           <NavItem
@@ -155,7 +155,6 @@ const VacanciesDetail = () => {
             <span>{data?.additionalInfo.salary}</span>
           </div>
           <div>
-            {" "}
             <LuCalendarCheck2 className="text-[16px] text-green-800" />
             <strong> Elanın yerləşdirmə tarix:</strong>
             <span>{data?.postedDate}</span>

@@ -27,9 +27,9 @@ const VideoGalary = () => {
     navigate("/galary");
   }
   return (
-    <div className=" flex justify-center items-center bg-[#f7fcff]">
-      <div className="flex flex-col justify-center items-start gap-8">
-        <h1 className="text-2xl md:text-4xl ">Video Qaleriya</h1>
+    <div className=" flex justify-center items-center bg-white">
+      <div className="flex flex-col justify-center items-center gap-8">
+        <h1 className="text-2xl md:text-4xl font-medium text-center">Video Qaleriya</h1>
         <div className="flex  flex-wrap justify-center items-center gap-6">
           {videos.map((video) => (
             <div key={video.id}>
