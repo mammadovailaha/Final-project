@@ -63,8 +63,8 @@ const branches = [
 
 export default function Footer() {
   return (
-    <div className="w-full min-h-[350px]">
-      <div className="w-full pt-10 flex flex-col  justify-center  items-center gap-5 bg-[#F7FCFF]">
+    <div style={{paddingTop:"40px"}} className="w-full min-h-[350px]">
+      <div className="w-full pt-10 flex flex-col  justify-center  items-center gap-5 bg-white ">
         <div className="flex flex-col items-center justify-center gap-3.5 p-10">
           <div className="w-40 h-32">
             <img
@@ -77,11 +77,11 @@ export default function Footer() {
             <SosialMedia />
           </div>
           <div className="flex justify-center items-center gap-1.5">
-            <button className="w-24 h-7 rounded-[7px] bg-[#0D6EFD] border-none outline-none text-white flex justify-center items-center gap-1">
-              <FaThumbsUp className="text-[16px] text-white" />
+            <button className="w-24 h-7 rounded-[7px] shadow-lg border-none outline-none text-black flex justify-center items-center gap-1">
+              <FaThumbsUp className="text-[16px] text-[#4b6043]" />
               Bəyən
             </button>
-            <button className="w-24 h-7 rounded-[7px] bg-[#0D6EFD] border-none outline-none text-white flex justify-center items-center gap-1">
+            <button className="w-24 h-7 rounded-[7px] shadow-lg  border-none outline-none text-black flex justify-center items-center gap-1">
               Paylaş
             </button>
           </div>
@@ -95,14 +95,14 @@ export default function Footer() {
                   key={index}
                   className="flex flex-col items-center justify-center gap-2.5 w-43 group"
                 >
-                  <p className="flex justify-center items-center gap-1 text-[16px] tracking-normal font-medium transition-all duration-500 group-hover:text-[#22caba]">
+                  <p className="flex justify-center items-center gap-1 text-base tracking-normal font-medium ">
                     <FaBuildingColumns className="text-lg" />
                     {item.name}
                   </p>
-                  <span className="text-[12px] font-[averta] tracking-normal font-normal transition-all duration-500 group-hover:text-[#22caba]">
+                  <span className="text-xs font-[averta] tracking-normal font-normal ">
                     {item.phone1}
                   </span>
-                  <span className="text-[12px] font-[averta] tracking-normal font-normal transition-all duration-500 group-hover:text-[#22caba]">
+                  <span className="text-xs font-[averta] tracking-normal font-normal">
                     {item.phone2}
                   </span>
                 </div>
@@ -111,20 +111,20 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full h-24 flex justify-center items-center bg-[#008080]">
+      <div  className="w-full h-20 flex justify-center items-center bg-gray-100">
         <div className="w-[96%] flex flex-col md:flex-row md:justify-around">
           <div className="flex justify-start">
-            <p className="text-white text-[16px] font-[averta]">
+            <p className="text-black text-base font-[averta]">
               Məxfilik Siyasəti
             </p>
           </div>
           <div className="flex justify-center">
-            <p className="text-white text-[16px] font-[averta]">
+            <p className="text-black text-base font-[averta]">
               Copyright © All rights reserved | educompany.az
             </p>
           </div>
           <div className="flex justify-end">
-            <p className="text-white text-[16px] font-[averta]">Əlaqə</p>
+            <p className="text-black text-base font-[averta]">Əlaqə</p>
           </div>
         </div>
       </div>
