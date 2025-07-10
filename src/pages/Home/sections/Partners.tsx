@@ -1,4 +1,6 @@
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import PartnersCard from "../../../components/PartnersCard";
 
 const partners = [
@@ -33,19 +35,32 @@ const partners = [
     alt: "Partner 6",
   },
 ];
-
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,             // ✅ Avtomatik keçid
+  autoplaySpeed: 2000,        // ✅ 2 saniyədən bir
+  pauseOnHover: true          // ✅ Hover edəndə dayansın
+};
 const Partners = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center gap-11 md:gap-16 bg-white ">
-      <h1 className="text-4xl md:text-5xl text-black">Partnyorlar</h1>
-      <div className="flex justify-center items-center flex-wrap gap-3">
-        {
-        partners.map((data) => (
-          <PartnersCard key={data.id} src={data.img} alt={data.alt} />
-        ))}
+    <div style={{paddingTop:"40px"}} className="w-full h-75 flex flex-col justify-center items-center gap-8 bg-white">
+      <h1 className="text-3xl md:text-4xl text-black font-semibold">Partnyorlar</h1>
+      <div className="w-full max-w-7xl px-2">
+        <Slider {...settings}>
+          {partners.map((data) => (
+      
+              <PartnersCard key={data.id} src={data.img} alt={data.alt} />
+           
+          ))}
+        </Slider>
       </div>
     </div>
   );
 };
+
 
 export default Partners;

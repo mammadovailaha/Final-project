@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.slick-prev {
-    font-size: larger !important;
 
+.slick-prev {
+  font-size: larger !important;
   left: 0 !important;
   z-index: 2;
   position: absolute;
 }
+
 .slick-next {
-    font-size: larger !important;
-  
+  font-size: larger !important;
   right: 0 !important;
   z-index: 2;
   position: absolute;
 }
+
 .z-negative {
   z-index: -1;
 }
