@@ -90,7 +90,7 @@ const Publish = () => {
     setPage(value);
   };
   return (
-    <div style={{padding:"20px"}} className="w-full flex flex-col items-center justify-center gap-4  bg-[#f7fcff]">
+    <div style={{padding:"20px"}} className="w-full flex flex-col items-center justify-center gap-4  bg-white">
       <h1 className="text-2xl font-medium md:text-4xl leading-8 md:leading-14 font-[averta]">
         Nəşrlərimiz
       </h1>
@@ -104,7 +104,6 @@ const Publish = () => {
               src={book.url}
               alt={book.title}
               title={book.title}
-              price={book.price}
               onClick={() => {
                 navigate(`/publications/${book.id}`);
               }}

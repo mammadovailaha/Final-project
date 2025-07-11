@@ -88,7 +88,7 @@ const QuickRegistration: React.FC<Props> = ({ text, onClick }) => {
         <div className="w-[75%] h-11 flex items-center justify-center">
           <button
             onClick={onClick}
-            className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
+            className="w-full h-full text-white rounded-md  bg-[linear-gradient(to_right,_#4b6043,_#f6e9d9)] bg-[length:200%_100%] bg-[position:left] shadow hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
             type="submit"
           >
             {text}

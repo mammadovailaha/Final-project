@@ -39,8 +39,8 @@ export default function Banner() {
                 <>
                   <TypingText
                     key={`title-slide-${index}-${activeSlide}`} // fərqli key hər dəfə
-                    className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight"
-                    text="Gələcəyini Bizimlə Qur."
+                    className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-normal"
+                    text="G✨ələcəyini Bizimlə Qur."
                     speed={100}
                   />
                   <p   className="text-lg md:text-xl text-white opacity-90 max-w-2xl">Təhsil və Konsaltinq Mərkəzi ilə biliklərinizi təkmilləşdirin və karyeranızda yeni zirvələr fəth edin.</p>
