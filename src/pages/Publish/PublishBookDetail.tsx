@@ -85,12 +85,12 @@ const PublishBookDetail = () => {
   const { id } = useParams();
   const data = books.find((item) => item.id === Number(id));
   return (
-    <div  style={{padding:"20px"}} className="w-full h-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-[#F7FCFF] ">
+    <div  style={{padding:"20px"}} className="w-full h-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-white ">
       <h1 className="text-2xl md:text-4xl leading-8 md:leading-11 font-medium text-black opacity-75 font-[averta]">{data?.title}</h1>
       <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10">
-        <div className="w-[90%] md:w-[35%] flex justify-center items-center">
+        <div className="w-[90%] md:w-[35%] flex justify-center items-center rounded-2xl ">
           <img
-          className="w-[48%] md:h-70 object-cover"
+          className="w-[48%] md:h-70 object-cover rounded-2xl shadow-2xl "
            src={data?.url}
             alt={data?.title} />
         </div>

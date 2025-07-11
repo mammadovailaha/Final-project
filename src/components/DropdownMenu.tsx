@@ -24,7 +24,7 @@ export default function DropdownMenu({ title, items }: Props) {
 
       <ul
         className={`
-          absolute top-full left-1/2 -translate-x-1/2 bg-surface bg-transparent rounded shadow-md z-[999] min-w-[200px] min-h-[170px] flex flex-col justify-center items-center gap-1 lg:gap-2
+          absolute top-full left-1/2 -translate-x-1/2 bg-surface bg-gray-50 rounded shadow-md z-[999] min-w-[200px] min-h-[170px] flex flex-col justify-center items-center gap-1 lg:gap-2
           font-[averta] transition-all duration-300 ease-in-out
           ${isOpen ? "block" : "hidden"} 
           lg:group-hover:block

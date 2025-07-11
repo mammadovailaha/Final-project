@@ -84,11 +84,11 @@ const About = () => {
               return (
                 <div
                   key={item.id}
-                  className="w-50 md:w-70 stat-card text-center border-b border-gray-400 flex justify-center items-center gap-6"
+                  className="w-50 md:w-62 stat-card text-center border-b border-gray-400 flex justify-center items-center gap-6"
                 >
-                  <IconComponent className="text-4xl text-black" />
+                  <IconComponent className="text-4xl text-[#4b6043]" />
                   <div className=" flex flex-col justify-center items-center">
-                    <h3 className="text-lg md:text-xl font-bold text-black">{item.value}</h3>
+                    <h3 className="text-lg md:text-2xl font-bold text-black">{item.value}</h3>
                     <p className="text-sm md:text-sm text-black">{item.label}</p>
                   </div>
                 </div>
