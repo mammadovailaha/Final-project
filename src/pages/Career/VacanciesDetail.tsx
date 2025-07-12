@@ -1,12 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import NavItem from "../../components/NavItem";
+// navItem 
 import { FaUserTie } from "react-icons/fa";
 import {
   MdOutlineAssignmentTurnedIn,
   MdOutlineQuestionAnswer,
 } from "react-icons/md";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import NavItem from "../../components/NavItem";
+// vacanciesDetail icons
 import { GiTeacher } from "react-icons/gi";
 import { PiStudentBold } from "react-icons/pi";
 import { MdOutlineLanguage } from "react-icons/md";
@@ -95,8 +97,8 @@ const VacanciesDetail = () => {
   const { id } = useParams();
   const data = vacancies.find((item) => item.id === Number(id));
   return (
-    <div className="w-full flex justify-center items-center" >
-      <div>
+    <div style={{paddingTop:"40px"}} className="w-full h-screen flex justify-center items-start" >
+      <div className="w-[20%] flex flex-col justify-center items-center gap-2">
         {menuItems.map((item, index) => (
           <NavItem
             key={index}
@@ -107,60 +109,60 @@ const VacanciesDetail = () => {
           />
         ))}
       </div>
-      <div>
-        <div>
-          <h2>{data?.title}</h2>
-          <p>{data?.description}</p>
-          <p>
+      <div className="w-[75%] flex justify-center items-center gap-10">
+        <div style={{padding:"20px"}} className="w-[40%] flex flex-col justify-center items-start gap-2 md:gap-4 shadow">
+          <h2 className="font-bold text-2xl md:text-3xl ">{data?.title}</h2>
+          <p className="text-sm md:text-base">{data?.description}</p>
+          <p className="text-sm md:text-base">
             <strong>Bizim üçün uyğun namizəd:</strong>
             {data?.requirements}
           </p>
           <div>
             <strong>Hansı işləri görəcəksiniz?</strong>
-            <p>{data?.responsibilities}</p>
+            <p className="text-sm md:text-base">{data?.responsibilities}</p>
           </div>
           <div>
             <strong>Nə əldə edəcəksiniz?</strong>
-            <p>{data?.benefits}</p>
+            <p className="text-sm md:text-base">{data?.benefits}</p>
           </div>
           <div>
             <strong>Əlavə Məlumat</strong>
-            <p>{data?.additionalInfo.documentation}</p>
+            <p className="text-sm md:text-base">{data?.additionalInfo.documentation}</p>
           </div>
         </div>
-        <div>
-          <div>
-            <GiTeacher />
+        <div style={{padding:"20px"}} className="w-[35%] flex flex-col justify-center items-start gap-2 md:gap-3 shadow">
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <GiTeacher className="text-base md:text-lg text-[#517741]" />
             <strong>Təcrübə:</strong>{" "}
             <span>{data?.additionalInfo.experience}</span>
           </div>
-          <div>
-            <PiStudentBold />
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <PiStudentBold  className="text-base md:text-lg text-[#517741]"/>
             <strong>Təhsil:</strong>
             <span>{data?.additionalInfo.education}</span>
           </div>
-          <div>
-            <MdOutlineLanguage />
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <MdOutlineLanguage className="text-base md:text-lg text-[#517741]" />
             <strong>Dil biliyi:</strong>
             <span>{data?.additionalInfo.languages}</span>
           </div>
-          <div>
-            <LuComputer />
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <LuComputer className="text-base md:text-lg text-[#517741]"/>
             <strong>Kompyuter biliyi:</strong>
             <span>{data?.additionalInfo.computerSkills}</span>
           </div>
-          <div>
-            <FaMoneyBillWave />
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <FaMoneyBillWave className="text-base md:text-lg text-[#517741]" />
             <strong>Əmək haqqı:</strong>
             <span>{data?.additionalInfo.salary}</span>
           </div>
-          <div>
-            <LuCalendarCheck2 className="text-[16px] text-green-800" />
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <LuCalendarCheck2 className="text-base text-[#517741]" />
             <strong> Elanın yerləşdirmə tarix:</strong>
             <span>{data?.postedDate}</span>
           </div>
-          <div>
-            <LuCalendarDays className="text-[16px] text-green-800" />
+          <div className="flex justify-center items-center gap-1 md:gap-2">
+            <LuCalendarDays className="text-base md:text-lg text-[#517741]" />
             <strong>Son müraciət tarixi:</strong>
             <span>{data?.deadline}</span>
           </div>

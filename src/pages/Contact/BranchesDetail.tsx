@@ -166,7 +166,7 @@ const BranchesDetail = () => {
     },
   });
   return (
-    <div  style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-[#F7FCFF] p-4">
+    <div  style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-white p-4">
       <h2 className="text-2xl md:text-5xl leading-8 md:leading-14">{data?.branch_name}</h2>
 
       <div className="w-[95%] md:w-[90%] flex md:flex-row flex-col justify-center items-center gap-5 md:gap-10">
@@ -183,20 +183,20 @@ const BranchesDetail = () => {
               type="text"
               placeholder="Ad və soyad"
               {...formik.getFieldProps("fullname")}
-              className="outline-none h-9 md:h-11 w-[70%] border border-[#22caba] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-[5px_6px_31px_-5px_rgba(17,159,86,0.31)] placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
+              className="outline-none h-9 md:h-11 w-[70%] border border-[#4b6043] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-xl placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
             />
             <input
               type="text"
               placeholder="Telefon nömrəsi"
               {...formik.getFieldProps("phone")}
-              className="outline-none h-9 md:h-11 w-[70%] border border-[#22caba] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-[5px_6px_31px_-5px_rgba(17,159,86,0.31)] placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
+              className="outline-none h-9 md:h-11 w-[70%] border border-[#4b6043] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-xl placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
             />
             <input
               type="text"
               placeholder="Filial seçin"
               {...formik.getFieldProps("branch")}
               list="branchname"
-              className="outline-none h-9 md:h-11 w-[70%] border border-[#22caba] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-[5px_6px_31px_-5px_rgba(17,159,86,0.31)] placeholder:text-xs  md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
+              className="outline-none h-9 md:h-11 w-[70%] border border-[#4b6043] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-xl placeholder:text-xs  md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
             />
             <datalist id="branchname">
               {BranchData.map((branch) => (
@@ -207,11 +207,11 @@ const BranchesDetail = () => {
               className="flex items-center justify-start gap-2"
               onClick={handleCheckboxChange}
             >
-              {checked ? <ImCheckboxChecked className="text-[#22caba]" /> : <ImCheckboxUnchecked className="text-[#22caba]" />}
+              {checked ? <ImCheckboxChecked className="text-[#4b6043]" /> : <ImCheckboxUnchecked className="text-[#4b6043]" />}
               <p className="text-xs md:text-sm">Nömrəmdə whatssap var</p>
             </div>
             <button
-              className="w-[70%] h-9 md:h-11  text-white  rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
+              className="w-[70%] h-9 md:h-11  text-white  rounded-md bg-[linear-gradient(to_right,_#4b6043,_#f6e9d9)] bg-[length:200%_100%] bg-[position:left] shadow hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
               type="submit"
             >
               Göndər

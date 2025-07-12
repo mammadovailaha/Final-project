@@ -1,5 +1,3 @@
-import React from "react";
-import NavItem from "../../components/NavItem";
 import { FaUserTie } from "react-icons/fa";
 import {
   MdOutlineAssignmentTurnedIn,
@@ -8,17 +6,18 @@ import {
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import VacanciesItem from "./VacanciesItem";
 import { useNavigate } from "react-router-dom";
+import NavItemComponent from "../../components/NavItemComponent";
 
 const menuItems = [
   { icon: <FaUserTie />, label: "Vakansiyalar", path: "/vacancies" },
   {
     icon: <MdOutlineAssignmentTurnedIn />,
-    label: "İmtahan Nəticələri",
+    label: "İmtahan nəticələri",
     path: "/career/exam-results",
   },
   {
     icon: <HiOutlineClipboardDocumentList />,
-    label: "Müsahibə Nəticələri",
+    label: "Müsahibə nəticələri",
     path: "/career/interview-results",
   },
   {
@@ -89,20 +88,14 @@ const vacancies = [
 const Career = () => {
     const navigate = useNavigate();
   return (
-    <div style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-10 bg-[#F7FCFF]">
+    <div style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-10 bg-white">
       <h1 className="font-[averta] text-2xl md:text-5xl leading-6 md:leading-14 font-medium">Kariyera</h1>
       <div className="w-full flex flex-col md:flex-row justify-around items-center gap-10">
-        <div className="w-full md:w-[33%] flex flex-col justify-center items-center gap-2">
-          {menuItems.map((item, index) => (
-            <NavItem
-              key={index}
-              className="w-full lg:w-[70%] h-12"
-              path={item.path}
-              icon={item.icon}
-              label={item.label}
-            />
-          ))}
-        </div>
+<NavItemComponent
+ className="w-full md:w-[20%]"
+ navItem={menuItems}
+ />
+   
         <div className="w-full md:w-[78%] lg:w-[70%] flex flex-col justify-center items-center gap-5">
           {vacancies.map((item) => (
             <VacanciesItem
@@ -110,7 +103,7 @@ const Career = () => {
               deadline={item.deadline}
               postedDate={item.postedDate}
               title={item.title}
-              onClick={()=>navigate(`/vacancies/vacancies-detail/${item.id}`)}
+              onClick={()=>navigate(`/career/vacancies-detail/${item.id}`)}
             />
           ))}
         </div>
