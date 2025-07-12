@@ -86,7 +86,7 @@ const PublishBookDetail = () => {
   const data = books.find((item) => item.id === Number(id));
   return (
     <div  style={{padding:"20px"}} className="w-full h-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-white ">
-      <h1 className="text-2xl md:text-4xl leading-8 md:leading-11 font-medium text-black opacity-75 font-[averta]">{data?.title}</h1>
+      <h1 className="text-2xl md:text-4xl leading-8 md:leading-11 font-medium text-black  font-[averta]">{data?.title}</h1>
       <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="w-[90%] md:w-[35%] flex justify-center items-center rounded-2xl ">
           <img
@@ -100,7 +100,7 @@ const PublishBookDetail = () => {
               <MoreInfoButton 
                onClick={openModal} 
               text="Sifariş et" 
-              className='w-20 md:w-26 h-6 md:h-9 outline-none border border-white  text-white text-sm  md:text-lg rounded-[5px] bg-[#22caba] hover:bg-white hover:text-[#22caba] transition-all duration-500'/>
+              className='w-20 md:w-26 h-6 md:h-9 outline-none  text-black text-sm  md:text-lg rounded-[5px]  border border-[#58a53c] hover:bg-[#58a53c] hover:text-white transition-all duration-500'/>
 
           </div>
           <div><p className="text-sm md:text-[16px] leading-4 md:leading-5 font-[averta] ">{data?.description}</p></div>

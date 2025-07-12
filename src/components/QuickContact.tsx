@@ -134,7 +134,7 @@ const QuickContact = () => {
           </div>
           <div className="w-full h-11 md:h-13 flex justify-center items-center">
             <button
-              className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#22CABA,_#015715)] bg-[length:200%_100%] bg-[position:left] hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
+              className="w-full h-full text-white rounded-md bg-[linear-gradient(to_right,_#4b6043,_#f6e9d9)] bg-[length:200%_100%] bg-[position:left] shadow hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
               type="submit"
             >
               Göndər
