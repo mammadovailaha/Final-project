@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { quickRegistrationShema } from "../../validation/QuickRegistration";
+import { quickRegistrationSchema } from "../../validation/QuickRegistrationSchema";
 import FormikInput from "../../components/FormikInput";
 import MainButton from "../../components/MainButton";
 
@@ -27,7 +27,7 @@ const QuickRegistration = () => {
     <div className="w-full flex flex-col justify-center items-center">
           <Formik
       initialValues={initialValues}
-      validationSchema={quickRegistrationShema}
+      validationSchema={quickRegistrationSchema}
        onSubmit={(values) => {
         console.log("Form dəyərləri:", values);
       }}

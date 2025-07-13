@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import { nameSchema, phoneShema } from "./ValidationShema";
+import { nameSchema, phoneShema } from "./ValidationSchema";
 
 export const getValidationSchema = (allowedValues: string[]) => {
   return Yup.object({
