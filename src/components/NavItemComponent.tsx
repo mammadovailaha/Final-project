@@ -14,7 +14,7 @@ const NavItemComponent:React.FC<Props> = ({navItem, className}) => {
           {navItem.map((item, index) => (
             <NavItem
               key={index}
-              className="w-full lg:w-[70%] h-12"
+              className="w-[70%] md:w-[70%] h-12"
               path={item.path}
               icon={item.icon}
               label={item.label}

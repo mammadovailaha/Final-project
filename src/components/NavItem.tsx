@@ -8,7 +8,7 @@ interface Props {
   icon: React.ReactNode;
 }
 
-const NavItem: React.FC<Props> = ({ className = "", path, label, icon }) => {
+const NavItem: React.FC<Props> = ({ className , path, label, icon }) => {
   return (
     <NavLink
       to={path}
@@ -36,7 +36,7 @@ const NavItem: React.FC<Props> = ({ className = "", path, label, icon }) => {
             {icon}
           </span>
           <span
-            className={`w-[80%] h-10 rounded-[2rem] flex justify-center items-center transition-all duration-500 
+            className={`w-full lg:w-[80%] h-10 rounded-[2rem] flex justify-center items-center transition-all duration-500 text-xs md:text-sm
               ${isActive ? "bg-transparent font-semibold" : "bg-[#f0e4cf] group-hover:bg-transparent"}
             `}
           >

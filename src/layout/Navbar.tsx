@@ -36,7 +36,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full h-18 lg:h-22 bg-background shadow-2xl flex justify-center absolute z-[1000] overflow-visible" >
+    <div className="w-full h-18 lg:h-22 bg-background shadow-lg flex justify-center absolute z-[1000] overflow-visible" >
       <div className="w-[90%] h-full flex justify-between items-center">
     <Link to={"/"}>
         <div className="flex justify-center items-center gap-2"> 
