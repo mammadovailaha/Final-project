@@ -1,9 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { ImCheckboxChecked } from "react-icons/im";
-import { ImCheckboxUnchecked } from "react-icons/im";
+import QuickContact from "../Auth/QuickContact";
+
 
 const BranchData = [
   {
@@ -137,87 +135,18 @@ const BranchData = [
 ];
 
 const BranchesDetail = () => {
-  const [checked, setChecked] = React.useState(false);
-  const handleCheckboxChange = () => {
-    setChecked(!checked);
-  };
+
   const { id } = useParams();
   const data = BranchData.find((item) => item.id === Number(id));
-  const formik = useFormik({
-    initialValues: {
-      fullname: "",
-      phone: "",
-      branch: "",
-    },
-    validationSchema: Yup.object({
-      fullname: Yup.string()
-        .required("Ad və soyad mütləqdir")
-        .min(3, "Çox qısadır"),
-      phone: Yup.string()
-        .required("Telefon nömrəsi mütləqdir")
-        .matches(
-          /^(\+994|0)(50|51|55|70|77)[0-9]{7}$/,
-          "Düzgün nömrə daxil edin"
-        ),
-      note: Yup.string().max(300, "Əlavə qeyd maksimum 300 simvol ola bilər"),
-    }),
-    onSubmit: (values) => {
-      console.log("Form məlumatları:", values);
-    },
-  });
+
   return (
     <div  style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-white p-4">
       <h2 className="text-2xl md:text-5xl leading-8 md:leading-14">{data?.branch_name}</h2>
 
       <div className="w-[95%] md:w-[90%] flex md:flex-row flex-col justify-center items-center gap-5 md:gap-10">
-        <div className="w-full flex flex-col justify-center items-center md:items-baseline gap-4 ">
-          <h2 className="text-2xl md:text-3xl font-medium font-[averta]">Biz sizə zəng edək</h2>
-          <p className="text-sm  md:text-[16px] leading-3.5 md:leading-5 font-[averta] ">
-            Əlaqə nömrənizi qeyd edin, ən qısa müddətdə sizinlə əlaqə saxlayaq
-          </p>
-          <form
-            onSubmit={formik.handleSubmit}
-            className="w-full flex flex-col justify-center items-center md:items-start gap-4"
-          >
-            <input
-              type="text"
-              placeholder="Ad və soyad"
-              {...formik.getFieldProps("fullname")}
-              className="outline-none h-9 md:h-11 w-[70%] border border-[#4b6043] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-xl placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
-            />
-            <input
-              type="text"
-              placeholder="Telefon nömrəsi"
-              {...formik.getFieldProps("phone")}
-              className="outline-none h-9 md:h-11 w-[70%] border border-[#4b6043] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-xl placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
-            />
-            <input
-              type="text"
-              placeholder="Filial seçin"
-              {...formik.getFieldProps("branch")}
-              list="branchname"
-              className="outline-none h-9 md:h-11 w-[70%] border border-[#4b6043] rounded-md text-black pl-2 transition-shadow duration-300 hover:shadow-xl placeholder:text-xs  md:placeholder:text-sm placeholder:text-gray-500 placeholder:left-2.5"
-            />
-            <datalist id="branchname">
-              {BranchData.map((branch) => (
-                <option key={branch.id} value={branch.branch_name} />
-              ))}
-            </datalist>
-            <div
-              className="flex items-center justify-start gap-2"
-              onClick={handleCheckboxChange}
-            >
-              {checked ? <ImCheckboxChecked className="text-[#4b6043]" /> : <ImCheckboxUnchecked className="text-[#4b6043]" />}
-              <p className="text-xs md:text-sm">Nömrəmdə whatssap var</p>
-            </div>
-            <button
-              className="w-[70%] h-9 md:h-11  text-white  rounded-md bg-[linear-gradient(to_right,_#4b6043,_#f6e9d9)] bg-[length:200%_100%] bg-[position:left] shadow hover:bg-[position:right] transition-[background-position] duration-1000 ease-in-out "
-              type="submit"
-            >
-              Göndər
-            </button>
-          </form>
-        </div>
+     <div className="w-full md:w-[80%] lg:w-[60%] flex flex-col justify-center items-center ">
+      <QuickContact/>
+     </div>
 
         <div className="w-full flex justify-center items-center">
           <iframe
@@ -226,7 +155,7 @@ const BranchesDetail = () => {
             height="450"
             style={{ border: 0 }}
             allowFullScreen
-            className="md:max-w-xl w-[95%]"
+            className="md:max-w-lg w-[95%]"
           ></iframe>
         </div>
       </div>

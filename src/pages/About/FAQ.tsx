@@ -1,6 +1,6 @@
 import React from "react";
 import FaqItem from "../../components/FaqItem";
-import QuickContact from "../../components/QuickContact";
+// import QuickContact from "../Auth/QuickContact";
 
 const faqData = [
   {
@@ -102,7 +102,7 @@ const FAQ = () => {
       </div>
     </div>
     <div className="w-[90%] md:w-[80%] lg:w-[30%] flex justify-center items-center">
-      <QuickContact />
+      {/* <QuickContact /> */}
     </div>
     </div>
   );

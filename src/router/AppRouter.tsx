@@ -13,6 +13,7 @@ import AboutFilm from "../pages/About/AboutFilm";
 import Career from "../pages/Career/Career";
 import VacanciesDetail from "../pages/Career/VacanciesDetail";
 import CareerFAQ from "../pages/Career/CareerFAQ";
+// import InterviewResults from "../pages/Career/InterviewResults";
 
 export default function AppRouter() {
   return (
@@ -28,11 +29,10 @@ export default function AppRouter() {
       <Route path="/publications" element={<Publish/>}/>
       <Route path="/publications/:id" element={<PublishBookDetail/>}/>
       <Route path="/about/film" element={<AboutFilm/>}/>
-
-    
       <Route path="/career" element={<Career/>}/>
       <Route path="/career/vacancies-detail/:id" element={<VacanciesDetail/>}/>
       <Route path="/career/faq" element={<CareerFAQ/>}/>
+      {/* <Route path="/career/interviewResults" element={<InterviewResults/>}/> */}
     </Routes>
   );
 }

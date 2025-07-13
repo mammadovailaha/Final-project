@@ -18,7 +18,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ id, question, answer, isOpen, onToggl
     >
       <div
         onClick={() => onToggle(id)}
-        className={`w-full flex justify-center items-center rounded-3xl ${
+        className={`w-full flex justify-center items-center rounded-2xl md:rounded-3xl ${
           isOpen ? "h-10 md:h-18 bg-[#b9ccb3d6]" : "h-full bg-[#e4f4de]"
         } p-4 cursor-pointer transition-colors duration-700 ease-in-out`}
       >

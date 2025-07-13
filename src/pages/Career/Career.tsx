@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import NavItemComponent from "../../components/NavItemComponent";
 
 const menuItems = [
-  { icon: <FaUserTie />, label: "Vakansiyalar", path: "/vacancies" },
+  { icon: <FaUserTie />, label: "Vakansiyalar", path: "/career" },
   {
     icon: <MdOutlineAssignmentTurnedIn />,
     label: "İmtahan nəticələri",
@@ -84,18 +84,19 @@ const vacancies = [
   },
 ];
 
-
 const Career = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
-    <div style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-10 bg-white">
-      <h1 className="font-[averta] text-2xl md:text-5xl leading-6 md:leading-14 font-medium">Kariyera</h1>
+    <div
+      style={{ padding: "20px" }}
+      className="w-full flex flex-col justify-center items-center gap-10 bg-white"
+    >
+      <h1 className="font-[averta] text-2xl md:text-5xl leading-6 md:leading-14 font-medium">
+        Kariyera
+      </h1>
       <div className="w-full flex flex-col md:flex-row justify-around items-center gap-10">
-<NavItemComponent
- className="w-full md:w-[20%]"
- navItem={menuItems}
- />
-   
+        <NavItemComponent className="w-full md:w-[27%]" navItem={menuItems} />
+
         <div className="w-full md:w-[78%] lg:w-[70%] flex flex-col justify-center items-center gap-5">
           {vacancies.map((item) => (
             <VacanciesItem
@@ -103,7 +104,7 @@ const Career = () => {
               deadline={item.deadline}
               postedDate={item.postedDate}
               title={item.title}
-              onClick={()=>navigate(`/career/vacancies-detail/${item.id}`)}
+              onClick={() => navigate(`/career/vacancies-detail/${item.id}`)}
             />
           ))}
         </div>
