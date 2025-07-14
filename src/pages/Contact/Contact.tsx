@@ -1,4 +1,3 @@
-import React from 'react'
 import ContactCard from './ContactCard'
 
 const branches = [
@@ -72,7 +71,7 @@ const branches = [
 
 const Contact = () => {
   return (
-    <div  style={{padding:"25px"}} className='flex flex-col items-center justify-center gap-8 min-h-screen  bg-[#F7FCFF] '>
+    <div  style={{padding:"25px"}} className='flex flex-col items-center justify-center gap-8 min-h-screen  bg-white '>
       <h1 className='text-4xl leading-14 font-medium text-black'>Filiallar</h1>
       <div className='flex flex-wrap justify-center items-center gap-10'>
         {branches.map((branch) => (

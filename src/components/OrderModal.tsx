@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { CgMathPlus } from "react-icons/cg";
 import { CgMathMinus } from "react-icons/cg";
-import QuickRegistration from "../Auth/QuickRegistration";
+import QuickRegistration from "../pages/Auth/QuickRegistration";
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const BookOrderModal: React.FC<Props> = ({ isOpen, onClose }) => {
+const OrderModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [count, setCount] = useState(0);
   const handleIncrement = () => setCount((prev) => prev + 1);
   const handleDecrement = () => {
@@ -69,4 +69,4 @@ const BookOrderModal: React.FC<Props> = ({ isOpen, onClose }) => {
   );
 };
 
-export default BookOrderModal;
+export default OrderModal;

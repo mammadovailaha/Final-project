@@ -14,7 +14,7 @@ const AboutFilm = () => {
   return (
     <div
       style={{ padding: "20px" }}
-      className="w-full flex flex-col justify-center items-center bg-[#f7fcff]"
+      className="w-full flex flex-col justify-center items-center bg-white"
     >
       <h1 className="font-medium text-2xl md:text-4xl leading-7 md:leading-14">
         Tanıtım filmi
