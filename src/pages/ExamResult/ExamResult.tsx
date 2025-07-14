@@ -22,7 +22,7 @@ const ExamResult = () => {
   return (
     <div
       style={{ backgroundImage: `url(${examResultBg})`, paddingTop:"60px" , paddingBottom:"40px"}}
-      className="w-full h-auto bg-cover bg-center relative flex justify-center items-start"
+      className="w-full h-auto lg:h-screen bg-cover bg-center relative flex justify-center items-start"
     >
       <div className="absolute inset-0 bg-[#ffffffc9] z-0" />
       <Formik
@@ -32,7 +32,7 @@ const ExamResult = () => {
           console.log("Form dəyərləri:", values);
         }}
       >
-        <form className="w-[90%] md:w-[70%] flex flex-col justify-center items-center gap-6 md:gap-10 z-10">
+        <form className="w-[90%] md:w-[70%] flex flex-col justify-center items-center gap-6 lg:gap-18 z-10">
           <h1 className="text-2xl md:text-4xl font-bold z-10">İmtahan nəticəsi</h1>
           <div className="w-full md:w-[70%] flex flex-col justify-center items-center gap-5 z-10">
             <FormikInput
