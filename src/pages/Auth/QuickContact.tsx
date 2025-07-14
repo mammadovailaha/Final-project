@@ -7,12 +7,13 @@ import { ImCheckboxChecked } from "react-icons/im";
 import { ImCheckboxUnchecked } from "react-icons/im";
 
 const branchOptions = [
-  { value: "Elmler A", label: "Elmler A" },
-  { value: "Elmler B", lable: "Elmler B" },
-  { value: "N.Nerminaov", lable: "N.Nerminaov" },
-  { value: "Azadliq", lable: "Azadliq" },
-  { value: "Xirdalan", lable: "Xirdalan" },
+  { value: "elmler-a", label: "Elmler A" },
+  { value: "elmler-b", label: "Elmler B" },
+  { value: "nerimanov", label: "N.Nerminaov" },
+  { value: "azadliq", label: "Azadliq" },
+  { value: "xirdalan", label: "Xirdalan" },
 ];
+
 
 const initialValues = {
   fullname: "",
