@@ -8,7 +8,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const MainButton: React.FC<Props> = ({ text, buttonClassName }) => {
   return <button 
 
- className={`${buttonClassName} outline-none text-white text-xs md:text-sm hover:shadow-md  bg-[linear-gradient(to_right,_#606060,_#849561,_#eed690)]
+ className={`${buttonClassName} rounded-4xl outline-none text-white text-xs md:text-sm hover:shadow-md  bg-[linear-gradient(to_right,_#606060,_#849561,_#eed690)]
     bg-[length:200%_200%]
     bg-left
     hover:bg-[linear-gradient(to_left,_#eed690,_#849561,_#606060)]

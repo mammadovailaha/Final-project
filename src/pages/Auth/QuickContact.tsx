@@ -62,7 +62,7 @@ const QuickContact = () => {
               <p className="text-xs md:text-sm">Nömrəmdə whatssap var</p>
             </div>
             <MainButton
-              buttonClassName="w-[90%] lg:w-[70%] h-10 rounded-2xl"
+              buttonClassName="w-[90%] lg:w-[70%] h-10 "
               text="Göndər"
             />
           </div>

@@ -16,7 +16,6 @@ export const emailField = yup
   export const noteSchema = yup
   .string()
   .required("Mesaj daxil edilməlidir")
-  .min(10, "Mesaj ən azı 10 simvol olmalıdır")
   .max(1000, "Mesaj 1000 simvoldan çox olmamalıdır");
 
 
