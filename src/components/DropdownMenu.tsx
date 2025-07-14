@@ -30,12 +30,12 @@ export default function DropdownMenu({ title, items }: Props) {
     <li className="relative group">
       <button
         onClick={toggleDropdown}
-        className="flex items-center gap-1 text-black text-lg font-medium"
+        className="flex items-center gap-1 text-black text-lg font-medium "
       >
         {title}
         {/* İkon dəyişimi */}
         {isOpen || (!isOpen && isDesktop) ? (
-          <RiArrowDropUpLine className={`text-3xl ${!isDesktop ? "" : "hidden group-hover:block"}`} />
+          <RiArrowDropUpLine className={`text-3xl ${!isDesktop ? "" : " group-hover:block"}`} />
         ) : (
           <RiArrowDropDownLine className={`text-3xl ${!isDesktop ? "" : "group-hover:hidden"}`} />
         )}

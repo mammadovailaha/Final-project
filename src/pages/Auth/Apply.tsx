@@ -58,7 +58,7 @@ const Apply = () => {
           console.log("Form dəyərləri:", values);
         }}
       >
-        <form className="w-[70%] flex  flex-col justify-center items-center gap-5 lg:gap-10">
+        <form className="w-[90%] md:w-[63%] flex  flex-col justify-center items-center gap-5 lg:gap-10">
           <h1 className="text-2xl md:text-4xl font-bold">Müraciət et</h1>
           <div className="w-full flex flex-col justify-center items-center gap-3">
             <FormikInput
@@ -87,7 +87,7 @@ const Apply = () => {
             />
             <FormikInput name="note" type="textarea" placeholder="Qeydiniz" />
             <MainButton 
-            buttonClassName="w-[90%] lg:w-[70%] h-10 rounded-2xl"
+            buttonClassName="w-[90%] lg:w-[70%] h-10 rounded-2xl "
             text="Göndər"
             />
           </div>

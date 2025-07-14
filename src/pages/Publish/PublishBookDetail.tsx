@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 // import ShowMoreButton from "../../components/ShowMoreButton";
 import MoreInfoButton from "../../components/MoreInfoButton";
-import BookOrderModal from "./BookOrderModal";
+import OrderModal from "../../components/OrderModal";
 const books = [
   {
     id: 1,
@@ -106,7 +106,7 @@ const PublishBookDetail = () => {
           <div><p className="text-sm md:text-[16px] leading-4 md:leading-5 font-[averta] ">{data?.description}</p></div>
         </div>
       </div>
-       <BookOrderModal isOpen={isModalOpen} onClose={closeModal} />
+       <OrderModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
