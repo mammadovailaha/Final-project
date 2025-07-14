@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { branchSchema, nameSchema, phoneSchema } from "./ValidationSchema";
+import { optionSchema, nameSchema, phoneSchema } from "./ValidationSchema";
 const courseOptions = [
   "İngilis dili",
   "Rus dili",
@@ -28,4 +28,4 @@ const baseSchema = yup.object({
 });
 
 
-export const applySchema = baseSchema.concat(branchSchema(courseOptions));
+export const applySchema = baseSchema.concat(optionSchema(courseOptions));

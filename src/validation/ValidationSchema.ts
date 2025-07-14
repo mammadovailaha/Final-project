@@ -1,6 +1,5 @@
 import * as yup from "yup";
 
-
 const strictEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export const emailField = yup
@@ -13,37 +12,45 @@ export const emailField = yup
     value ? !/\s/.test(value) : true
   );
 
-  export const noteSchema = yup
+export const noteSchema = yup
   .string()
   .required("Mesaj daxil edilməlidir")
   .max(1000, "Mesaj 1000 simvoldan çox olmamalıdır");
-
 
 export const nameSchema = yup
   .string()
   .required("Ad Soyad daxil edilməlidir")
   .matches(/^[A-Za-zƏəÖöÜüÇçĞğİıŞş\s-]+$/, "Yalnız hərflər və boşluq")
-  .min(2, 'Ad və soyad minimum 2 simvol olmalıdır')
-  .max(50, 'Ad və soyad maksimum 50 simvol olmalıdır')
+  .min(2, "Ad və soyad minimum 2 simvol olmalıdır")
+  .max(50, "Ad və soyad maksimum 50 simvol olmalıdır");
 
-  export const phoneSchema = yup
+export const phoneSchema = yup
   .string()
-  .required("Telefon nömrəsi vacibdir")
+  .required("Telefon nömrəsi mütləqdir")
   .matches(
     /^\+994(50|51|55|70|77|99|10)\d{7}$/,
     "Telefon nömrəsi +994 ilə başlamalı və düzgün formatda olmalıdır"
   );
-export const branchSchema = (allowedValues: string[]) => {
+export const bookletNumberSchema = yup
+  .string()
+  .required("İş nömrəsi mütləqdir");
+export const optionSchema = (allowedValues: string[]) => {
   return yup.object({
-    branch: yup.string()
+    branch: yup
+      .string()
       .required("Zəhmət olmasa bir filial seçin")
       .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
-      services:yup.string()
-       .required("Zəhmət olmasa bir xidmət seçin")
+    services: yup
+      .string()
+      .required("Zəhmət olmasa bir xidmət seçin")
       .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
-      	educationType:yup.string()
+    educationType: yup
+      .string()
       .required("Zəhmət olmasa bir tədris forması  seçin")
       .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
-
+    examSchema: yup
+      .string()
+      .required("Zəhmət olmasa bir imtahan  seçin")
+      .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
   });
 };
