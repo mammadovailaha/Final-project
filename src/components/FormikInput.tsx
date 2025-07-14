@@ -6,6 +6,7 @@ interface FormikInputProps {
   type?: "text" | "email" | "password" | "textarea" | "select";
   placeholder?: string;
   options?: { value: string; label: string }[];
+  inputClassName?:string;
 }
 const baseClassName = "w-[90%] lg:w-[70%] h-10 rounded-4xl border border-[#4f813b] hover:shadow-md outline-none   placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500";
 const FormikInput: React.FC<FormikInputProps> = ({
@@ -13,24 +14,26 @@ const FormikInput: React.FC<FormikInputProps> = ({
   type,
   placeholder,
   options,
+  inputClassName
 }) => {
   return (
     <div className="w-full flex flex-col justify-start items-center gap-0.5">
       {type === "textarea" ? (
-        <Field
+
+     <Field
         style={{paddingLeft:"15px", paddingTop:"5px"}}
           as="textarea"
           name={name}
           placeholder={placeholder}
-          className={`${baseClassName} min-h-[100px] `}
+          className={`${baseClassName} min-h-[100px] ${inputClassName} `}
         />
       ) : type === "select" ? (
         <Field 
         style={{paddingLeft:"15px"}}
         name={name}
          as="select"
-          className={`${baseClassName} `}>
-          <option value="">Seçin</option>
+          className={`${baseClassName} ${inputClassName} `}>
+          <option value="" className="text-xs md:text-sm text-gray-500">{placeholder}</option>
           {options?.map((option) => (
             <option
             className="text-black text-xs md:text-sm"
@@ -45,7 +48,7 @@ const FormikInput: React.FC<FormikInputProps> = ({
           type={type}
           name={name}
           placeholder={placeholder}
-          className={`${baseClassName} `}
+          className={`${baseClassName} ${inputClassName} `}
         />
       )}
        <ErrorMessage
