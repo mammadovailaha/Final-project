@@ -27,10 +27,24 @@ export const nameSchema = yup
   .min(2, 'Ad və soyad minimum 2 simvol olmalıdır')
   .max(50, 'Ad və soyad maksimum 50 simvol olmalıdır')
 
-  export const phoneShema = yup
+  export const phoneSchema = yup
   .string()
   .required("Telefon nömrəsi vacibdir")
   .matches(
     /^\+994(50|51|55|70|77|99|10)\d{7}$/,
     "Telefon nömrəsi +994 ilə başlamalı və düzgün formatda olmalıdır"
   );
+export const branchSchema = (allowedValues: string[]) => {
+  return yup.object({
+    branch: yup.string()
+      .required("Zəhmət olmasa bir filial seçin")
+      .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
+      services:yup.string()
+       .required("Zəhmət olmasa bir xidmət seçin")
+      .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
+      	educationType:yup.string()
+      .required("Zəhmət olmasa bir tədris forması  seçin")
+      .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
+
+  });
+};

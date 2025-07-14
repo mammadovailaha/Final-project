@@ -13,6 +13,7 @@ import AboutFilm from "../pages/About/AboutFilm";
 import Career from "../pages/Career/Career";
 import VacanciesDetail from "../pages/Career/VacanciesDetail";
 import CareerFAQ from "../pages/Career/CareerFAQ";
+import Apply from "../pages/Auth/Apply";
 // import InterviewResults from "../pages/Career/InterviewResults";
 
 export default function AppRouter() {
@@ -32,6 +33,7 @@ export default function AppRouter() {
       <Route path="/career" element={<Career/>}/>
       <Route path="/career/vacancies-detail/:id" element={<VacanciesDetail/>}/>
       <Route path="/career/faq" element={<CareerFAQ/>}/>
+      <Route path="/apply" element={<Apply/>}/>
       {/* <Route path="/career/interviewResults" element={<InterviewResults/>}/> */}
     </Routes>
   );

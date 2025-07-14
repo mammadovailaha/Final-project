@@ -7,7 +7,7 @@ interface FormikInputProps {
   placeholder?: string;
   options?: { value: string; label: string }[];
 }
-const baseClassName = "w-[90%] lg:w-[70%] h-10 rounded-2xl border border-[#4f813b] hover:shadow-md outline-none placeholder:text-xs md:placeholder:text-sm";
+const baseClassName = "w-[90%] lg:w-[70%] h-10 rounded-4xl border border-[#4f813b] hover:shadow-md outline-none   placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500";
 const FormikInput: React.FC<FormikInputProps> = ({
   name,
   type,
@@ -22,14 +22,14 @@ const FormikInput: React.FC<FormikInputProps> = ({
           as="textarea"
           name={name}
           placeholder={placeholder}
-          className={`${baseClassName} `}
+          className={`${baseClassName} min-h-[100px] `}
         />
       ) : type === "select" ? (
         <Field 
         style={{paddingLeft:"15px"}}
         name={name}
          as="select"
-          className={baseClassName}>
+          className={`${baseClassName} `}>
           <option value="">Seçin</option>
           {options?.map((option) => (
             <option

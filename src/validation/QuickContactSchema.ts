@@ -1,12 +1,13 @@
-import * as Yup from "yup";
-import { nameSchema, phoneShema } from "./ValidationSchema";
+import * as yup from "yup";
+import { branchSchema, nameSchema, phoneSchema } from "./ValidationSchema";
 
-export const getValidationSchema = (allowedValues: string[]) => {
-  return Yup.object({
-    branch: Yup.string()
-      .required("Zəhmət olmasa bir filial seçin")
-      .oneOf(allowedValues, "Düzgün seçim edin"),
+const branchOptions = ["Elmler A","Elmler B", "N.Nerminaov","Azadliq","Xirdalan"]
+
+
+const baseSchema = yup.object({
+  
       fullname:nameSchema,
-      phone:phoneShema
+      phone:phoneSchema
   });
-};
+
+export const quickContactSchema=baseSchema.concat(branchSchema(branchOptions))
