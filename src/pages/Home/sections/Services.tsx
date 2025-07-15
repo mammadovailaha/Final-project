@@ -1,6 +1,6 @@
-import Card from "../../../components/Card";
+import Card from "../../../components/Cards/Card";
 import { useInView } from "react-intersection-observer";
-import ShowMoreButton from "../../../components/ShowMoreButton";
+import ShowMoreButton from "../../../components/Buttons/ShowMoreButton";
 import { useNavigate } from "react-router-dom";
 
 const images = [

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import StructureCard from "../../components/StructureCard";
+import StructureCard from "../../components/Cards/StructureCard";
 
 const staffData = [
   {

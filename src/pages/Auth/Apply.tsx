@@ -1,8 +1,7 @@
 import { Formik } from "formik";
-import React from "react";
 import { applySchema } from "../../validation/ApplySchema";
 import FormikInput from "../../components/FormikInput";
-import MainButton from "../../components/MainButton";
+import MainButton from "../../components/Buttons/MainButton";
 import applyBg from "../../assets/images/applyBg.jpg";
 import applyImg1 from "../../assets/images/applyImg1.jpg";
 import applyImg2 from "../../assets/images/applyImg2.jpg";

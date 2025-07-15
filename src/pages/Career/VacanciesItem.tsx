@@ -1,7 +1,7 @@
 import React from "react";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { LuCalendarDays } from "react-icons/lu";
-import MoreInfoButton from "../../components/MoreInfoButton";
+import MoreInfoButton from "../../components/Buttons/MoreInfoButton";
 
 
 interface Props{

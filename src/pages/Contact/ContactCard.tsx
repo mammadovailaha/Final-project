@@ -2,7 +2,7 @@ import React from "react";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import SosialMedia from "../../components/SosialMedia";
-import MoreInfoButton from "../../components/MoreInfoButton";
+import MoreInfoButton from "../../components/Buttons/MoreInfoButton";
 
 
 interface ContactCardProps {
