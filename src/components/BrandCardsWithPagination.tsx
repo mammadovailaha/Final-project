@@ -1,7 +1,7 @@
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
-import BrandsCard from "./BrandsCard";
+import BrandsCard from "./Cards/BrandsCard";
 import { useNavigate } from "react-router-dom";
 
 const brandsİnfo = [

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Formik } from "formik";
 import { quickRegistrationSchema } from "../../validation/QuickRegistrationSchema";
 import FormikInput from "../../components/FormikInput";
-import MainButton from "../../components/MainButton";
+import MainButton from "../../components/Buttons/MainButton";
 import { ImCheckboxChecked } from "react-icons/im";
 import { ImCheckboxUnchecked } from "react-icons/im";
 

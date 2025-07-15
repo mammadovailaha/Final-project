@@ -1,5 +1,5 @@
 
-import ShowMoreButton from "../../../components/ShowMoreButton";
+import ShowMoreButton from "../../../components/Buttons/ShowMoreButton";
 import { useNavigate } from "react-router-dom";
 
 const videos = [

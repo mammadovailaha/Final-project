@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 // import ShowMoreButton from "../../components/ShowMoreButton";
-import MoreInfoButton from "../../components/MoreInfoButton";
-import OrderModal from "../../components/OrderModal";
+import MoreInfoButton from "../../components/Buttons/MainButton";
+import OrderModal from "../../components/Modals/OrderModal";
 const books = [
   {
     id: 1,

@@ -1,8 +1,7 @@
 import { Formik } from "formik";
-import React from "react";
 import { examResultSchema } from "../../validation/ExamResultSchema";
 import FormikInput from "../../components/FormikInput";
-import MainButton from "../../components/MainButton";
+import MainButton from "../../components/Buttons/MainButton";
 import examResultBg from "../../assets/images/examResultBg.jpg";
 
 const examOptions = [

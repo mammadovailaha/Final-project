@@ -1,5 +1,5 @@
 import React from "react";
-import MoreInfoButton from "./MoreInfoButton";
+import MoreInfoButton from "../Buttons/MoreInfoButton";
 
 interface Props {
   key: number;

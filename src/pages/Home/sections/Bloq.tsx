@@ -1,6 +1,6 @@
 import React from "react";
-import BloqCard from "../../../components/BloqCard";
-import ShowMoreButton from "../../../components/ShowMoreButton";
+import BloqCard from "../../../components/Cards/BloqCard";
+import ShowMoreButton from "../../../components/Buttons/ShowMoreButton";
 import { useNavigate } from "react-router-dom";
 
 const cardData = [

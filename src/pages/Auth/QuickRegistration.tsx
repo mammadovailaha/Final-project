@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { quickRegistrationSchema } from "../../validation/QuickRegistrationSchema";
 import FormikInput from "../../components/FormikInput";
-import MainButton from "../../components/MainButton";
+import MainButton from "../../components/Buttons/MainButton";
 
 const initialValues = {
   fullname: "",

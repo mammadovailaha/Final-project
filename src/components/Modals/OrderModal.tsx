@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { CgMathPlus } from "react-icons/cg";
 import { CgMathMinus } from "react-icons/cg";
-import QuickRegistration from "../pages/Auth/QuickRegistration";
+import QuickRegistration from "../../pages/Auth/QuickRegistration";
 
 interface Props {
   isOpen: boolean;

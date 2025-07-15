@@ -1,6 +1,6 @@
 import React from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import QuickContact from "../pages/Auth/QuickContact";
+import QuickContact from "../../pages/Auth/QuickContact";
 interface Props {
   isOpen: boolean;
   onClose: () => void;

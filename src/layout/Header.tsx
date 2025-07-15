@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import TrialLessonModal from "../components/TrialLessonModal";
+import TrialLessonModal from "../components/Modals/TrialLessonModal";
 import SosialMedia from "../components/SosialMedia";
 
 const HeaderInfo = [

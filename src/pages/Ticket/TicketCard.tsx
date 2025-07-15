@@ -1,5 +1,5 @@
 import React from 'react'
-import MainButton from '../../components/MainButton';
+import MainButton from '../../components/Buttons/MainButton';
 import { LuClock } from "react-icons/lu";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";

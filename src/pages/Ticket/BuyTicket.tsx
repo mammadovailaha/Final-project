@@ -1,7 +1,7 @@
 import examBg from "../../assets/images/examBg.jpg";
 import TicketCard from "./TicketCard";
 import { useState } from "react";
-import OrderModal from "../../components/OrderModal";
+import OrderModal from "../../components/Modals/OrderModal";
 
 const examTickets = [
   {

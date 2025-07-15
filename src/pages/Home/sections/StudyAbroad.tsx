@@ -1,5 +1,5 @@
 import { FaEye } from "react-icons/fa";
-import StudyAbroadCard from "../../../components/StudyAbroadCard";
+import StudyAbroadCard from "../../../components/Cards/StudyAbroadCard";
 
 const imageData = [
   {
