@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import QuickContact from "../Auth/QuickContact";
 
@@ -145,7 +144,7 @@ const BranchesDetail = () => {
 
       <div className="w-[95%] md:w-[90%] flex md:flex-row flex-col justify-center items-center gap-5 md:gap-10">
      <div className="w-full md:w-[80%] lg:w-[60%] flex flex-col justify-center items-center ">
-      <QuickContact/>
+      <QuickContact title="Sürətli əlaqə"/>
      </div>
 
         <div className="w-full flex justify-center items-center">

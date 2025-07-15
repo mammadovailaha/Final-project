@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import facebookIcon from "../assets/icons/facebook.svg";
-import instagramIcon from "../assets/icons/instagram.svg";
-import youtubeIcon from "../assets/icons/youtube.svg";
+import TrialLessonModal from "../components/TrialLessonModal";
+import SosialMedia from "../components/SosialMedia";
 
 const HeaderInfo = [
   { title: "Bilet al", path: "/ticket" },
@@ -9,25 +9,18 @@ const HeaderInfo = [
   { title: "Imtahan nəticələri", path: "/exam-results" },
 ];
 
-const SocialMediaLinks = [
-  { icon: facebookIcon, title: "Facebook", path: "https://www.facebook.com" },
-  {
-    icon: instagramIcon,
-    title: "Instagram",
-    path: "https://www.instagram.com",
-  },
-  { icon: youtubeIcon, title: "YouTube", path: "https://www.youtube.com" },
-];
-
 export default function Header() {
+   const [isModalOpen, setIsModalOpen]=useState(false);
+    const openModal=()=>setIsModalOpen(true);
+    const closeModal=()=>setIsModalOpen(false);
   return (
     <div className="w-full h-8 md:h-14 bg-background shadow-lg flex justify-center lg:justify-between items-center px-1 md:px-4">
       <div className="w-[90%] h-full flex justify-around items-center gap-1 lg:gap-2">
-        <div>
-          <Link className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs  lg:text-[16px] text-black " to={"/"}>
+        <button style={{padding:"7px"}} className="outline-none border-none shadow rounded-md" onClick={openModal} >
+          <p className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs  lg:text-[16px] text-black " >
             Sınaq dərs istə
-          </Link>
-        </div>
+          </p>
+        </button>
         <div className="flex flex-col items-center gap-0.2">
           <span className="text-[6px] leading-1.5 md:leading-3 lg:leading-4 md:text-xs lg:text-[16px]  text-black ">
             09:00-21:00
@@ -54,22 +47,10 @@ export default function Header() {
               </li>
             ))}
           </ul>
-
-          <ul className="flex items-center justify-center gap-0.5 md:gap-4">
-            {SocialMediaLinks.map((item, index) => (
-              <li key={index}>
-                <Link to={item.path}>
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="w-3 md:w-6 h-3 md:h-6"
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
+         <SosialMedia/>
         </div>
       </div>
+     <TrialLessonModal isOpen={isModalOpen} onClose={closeModal}/>
     </div>
   );
 }
