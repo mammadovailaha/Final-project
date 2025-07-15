@@ -86,7 +86,7 @@ const BrandPage = () => {
         <p className="text-center text-sm md:text-[16px]">{data?.text}</p>
       </div>
       <div className="w-[98%] bottom-1 md:w-[33%] flex flex-col justify-center items-center">
-        <QuickRegistration />
+        <QuickRegistration  title="Sürətli qeydiyyat"/>
 
       </div>
     </div>

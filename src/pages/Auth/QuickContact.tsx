@@ -21,7 +21,8 @@ const initialValues = {
   branch: "",
 };
 
-const QuickContact = () => {
+
+const QuickContact = ({title=""}) => {
   const [checked, setChecked] = useState(false);
   const handleCheckboxChange = () => {
     setChecked(!checked);
@@ -36,7 +37,7 @@ const QuickContact = () => {
         }}
       >
         <form className="w-full flex  flex-col justify-center items-center gap-8">
-          <h1 className="text-xl md:text-3xl font-bold">Sürətli əlaqə</h1>
+          <h1 className="text-xl md:text-3xl font-bold">{title}</h1>
           <div className="w-full flex flex-col justify-center items-center gap-3">
             <FormikInput name="fullname" type="text" placeholder="Ad Soyad" />
             <FormikInput

@@ -22,7 +22,7 @@ const initialValues = {
 //   }
 // }
 
-const QuickRegistration = () => {
+const QuickRegistration = ({title=""}) => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
           <Formik
@@ -33,7 +33,7 @@ const QuickRegistration = () => {
       }}
     >
       <form className="w-full flex flex-col justify-center items-center gap-7">
-        <h1 className="text-xl md:text-3xl font-bold text-center">Sürətli qeydiyyat</h1>
+        <h1 className="text-xl md:text-3xl font-bold text-center">{title}</h1>
         <div className="w-full flex flex-col justify-center items-center gap-3">
           <FormikInput 
           name="fullname"

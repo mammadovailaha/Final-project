@@ -61,7 +61,7 @@ const OrderModal: React.FC<Props> = ({ isOpen, onClose }) => {
             </div>
           </div>
           <div className="w-[97%] md:w-[55%]">
-            <QuickRegistration  />
+            <QuickRegistration  title=""/>
           </div>
         </div>
       </div>
