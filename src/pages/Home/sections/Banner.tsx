@@ -40,10 +40,14 @@ export default function Banner() {
                   <TypingText
                     key={`title-slide-${index}-${activeSlide}`} // fərqli key hər dəfə
                     className="text-xl md:text-5xl font-bold text-white mb-4 tracking-normal"
-                    text="G✨ələcəyini Bizimlə Qur."
+                    text="Gələcəyini Bizimlə Qur."
                     speed={100}
                   />
-                  <p   className="text-xs md:text-xl text-white opacity-90 max-w-2xl">Təhsil və Konsaltinq Mərkəzi ilə biliklərinizi təkmilləşdirin və karyeranızda yeni zirvələr fəth edin.</p>
+                  <TypingText
+                  key={`title-slide-${index}-${activeSlide}`}
+                  text="Təhsil və Konsaltinq Mərkəzi ilə biliklərinizi təkmilləşdirin və karyeranızda yeni zirvələr fəth edin."
+                  speed={100}
+                  className="text-xs md:text-xl text-white opacity-90 max-w-2xl"/>
                 </>
               )}
             </div>
