@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { string } from "yup";
 
 interface Props {
   text: string;
@@ -12,12 +13,14 @@ const TypingText: React.FC<Props> = ({ text, speed = 100, className = "" }) => {
   useEffect(() => {
     setDisplayedText(""); // reset when text changes
     let index = 0;
+    let displayText:string=""
     const interval = setInterval(() => {
       if (index >= text.length) {
         clearInterval(interval);
         return;
       }
-      setDisplayedText((prev) => prev + text.charAt(index));
+      displayText=displayText+text.charAt(index)
+      setDisplayedText(displayText);
       index++;
     }, speed);
 
