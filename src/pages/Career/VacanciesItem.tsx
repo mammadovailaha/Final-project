@@ -16,7 +16,7 @@ const VacanciesItem:React.FC<Props> = ({ title, postedDate, deadline, onClick })
  
 
   return (
-    <div style={{padding:"20px"}} className="w-[95%] md:w-[90%] lg:w-[72%] h-24 flex flex-col justify-center items-start gap-2 bg-[#e4f4de]  rounded-4xl" >
+    <div  className="w-[95%] md:w-[90%] lg:w-[72%] h-24 flex flex-col justify-center items-start gap-2 bg-[#e4f4de]  rounded-4xl p-5" >
       <h2 className="text-sm md:text-lg leading-4  text-black">{title}</h2>
       <div className="flex justify-around items-center gap-2 lg:gap-10">
         <p className="flex justify-center items-center gap-1 md:gap-2">

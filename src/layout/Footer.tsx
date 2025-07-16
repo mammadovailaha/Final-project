@@ -63,7 +63,7 @@ const branches = [
 
 export default function Footer() {
   return (
-    <div style={{paddingTop:"40px"}} className="w-full min-h-[350px]">
+    <div  className="w-full min-h-[350px] pt-10">
       <div className="w-full pt-10 flex flex-col  justify-center  items-center gap-5 bg-white ">
         <div className="flex flex-col items-center justify-center gap-3.5 p-10">
           <div className="w-40 h-32">
@@ -111,20 +111,20 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div  className="w-full h-20 flex justify-center items-center bg-gray-100">
+      <div  className="w-full h-16 md:h-20 flex justify-center items-center bg-gray-100">
         <div className="w-[96%] flex flex-col md:flex-row md:justify-around">
           <div className="flex justify-start">
-            <p className="text-black text-base font-[averta]">
+            <p className="text-black text-xs md:text-base">
               Məxfilik Siyasəti
             </p>
           </div>
           <div className="flex justify-center">
-            <p className="text-black text-base font-[averta]">
+            <p className="text-black text-xs md:text-base">
               Copyright © All rights reserved | educompany.az
             </p>
           </div>
           <div className="flex justify-end">
-            <p className="text-black text-base font-[averta]">Əlaqə</p>
+            <p className="text-black text-xs md:text-base ">Əlaqə</p>
           </div>
         </div>
       </div>

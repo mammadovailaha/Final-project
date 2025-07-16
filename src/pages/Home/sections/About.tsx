@@ -35,7 +35,7 @@ const stats = [
 
 const About = () => {
   return (
-    <div style={{padding:"20px"}} className="w-full   flex justify-center items-center overflow-hidden ">
+    <div className="w-full   flex justify-center items-center overflow-hidden p-5">
       <div className=" w-full flex  flex-col md:flex-row  justify-center items-center gap-10">
         <div className="w-full md:max-w-1/2 flex flex-col justify-around items-center gap-10 ">
           <h1 className="font-bold text-xl md:text-4xl text-white">

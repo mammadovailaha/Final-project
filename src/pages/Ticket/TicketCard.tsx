@@ -14,7 +14,7 @@ interface TicketCardProps{
 
 const TicketCard:React.FC<TicketCardProps> = ({examName,date, examType, examTime, onClick}) => {
   return (
-    <div style={{padding:"5px"}} className='w-52 h-58 shadow-xl rounded-xl bg-white/56 backdrop-blur-md border border-white/50 p-4 text-sm text-black flex flex-col justify-center items-center gap-1.5 md:gap-2.5'>
+    <div className='w-52 h-58 shadow-xl rounded-xl bg-white/56 backdrop-blur-md border border-white/50 p-4 text-sm text-black flex flex-col justify-center items-center gap-1.5 md:gap-2.5 p-1.5'>
       <h2 className='text-base md:text-xl text-[#465133] font-medium text-center'>{examName}</h2>
      <div className='w-[75%] flex flex-col justify-center items-start gap-2'>
          <span className='text-sm text-white hover:text-[#465133] group flex justify-center items-center gap-1.5 transition-all duration-500'><LuCalendarDays className='text-base text-white  group-hover:text-[#465133] transition-all duration-500' />{date}</span>

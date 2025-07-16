@@ -1,26 +1,27 @@
+import type React from "react";
+import { RiChatSmileAiLine } from "react-icons/ri";
+import { PiChatCircleSlash } from "react-icons/pi";
 
-// import { TbBrandWechat } from "react-icons/tb";
-// <TbBrandWechat className="mx-auto text-2xl" />
 
 interface chatButtonProps{
     onClick:()=>void,
     isOpen:boolean
 }
 
-import type React from "react";
-import { FaCommentDots, FaTimes } from "react-icons/fa";
+
+
 
 export const ChatButton:React.FC<chatButtonProps> = ({ isOpen, onClick }) => (
   <button
     onClick={onClick}
-    className={`fixed z-50 bottom-8 right-8 w-16 h-16 rounded-full shadow-xl transition-all flex items-center justify-center ${
-      isOpen ? "bg-red-500 hover:bg-red-600" : "bg-green-600 hover:bg-green-700"
+    className={`fixed z-[1001] bottom-8 right-8 w-12 h-12 md:w-16 md:h-16 rounded-full shadow-xl transition-all flex items-center justify-center ${
+      isOpen ? "bg-red-600 hover:bg-red-700" : "bg-[#576d4ff2] hover:bg-[#424a3ff2]"
     } text-white`}
   >
     {isOpen ? (
-      <FaTimes className="text-2xl" />
+     <PiChatCircleSlash  className="text-2xl md:text-4xl"/>
     ) : (
-      <FaCommentDots className="text-2xl" />
+     <RiChatSmileAiLine  className="mx-auto text-2xl md:text-4xl"/>
     )}
   </button>
 );

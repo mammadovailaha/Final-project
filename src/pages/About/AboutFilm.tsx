@@ -12,19 +12,13 @@ const menuItems = [
 ];
 const AboutFilm = () => {
   return (
-    <div
-      style={{ padding: "20px" }}
-      className="w-full flex flex-col justify-center items-center bg-white"
-    >
+    <div className="w-full flex flex-col justify-center items-center bg-white p-5">
       <h1 className="font-medium text-2xl md:text-4xl leading-7 md:leading-14">
         Tanıtım filmi
       </h1>
-      <div
-        style={{ padding: "20px" }}
-        className="w-full flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 font-[averta]"
-      >
+      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-5">
         <div className="w-full md:w-[60%] flex flex-col justify-center items-start gap-5">
-          <p className=" font-[averta] text-xs md:text-[16px] leading-3 md:leading-4">
+          <p className=" text-xs md:text-base leading-3 md:leading-4">
             "EDU Company" Təhsil Şirkəti olaraq biz inanırıq ki, sağlam,
             təhlükəsiz və firəvan cəmiyyət yüksək təhsil sistemi ilə mümkündür.
             Vətəndaşlarımızın hər zaman biliklərini təkmilləşdirmək,
