@@ -80,7 +80,7 @@ const BrandPage = () => {
   const data = brandsİnfo.find((item) => item.id === Number(id));
 
   return (
-    <div style={{ padding: "20px" }} className="w-full md:h-screen flex flex-col md:flex-row justify-center items-start gap-4  bg-white">
+    <div className="w-full md:h-screen flex flex-col md:flex-row justify-center items-start gap-4  bg-white p-5">
       <div className="w-[98%] md:w-[60%] flex flex-col justify-center items-center gap-4">
         <h2 className="text-2xl leading-11 md:text-3xl md:leading-14 font-medium">{data?.title}</h2>
         <p className="text-center text-sm md:text-[16px]">{data?.text}</p>

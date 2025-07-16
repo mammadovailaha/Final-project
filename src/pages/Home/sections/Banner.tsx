@@ -34,16 +34,16 @@ export default function Banner() {
               alt="slider image"
               className="w-full h-full object-cover filter brightness-50"
             />
-            <div className="absolute inset-0 bg-accent-green bg-opacity-20 flex flex-col justify-center items-center text-center p-4">
+            <div style={{padding:"20px"}} className="absolute inset-0 bg-accent-green bg-opacity-20 flex flex-col justify-center items-center text-center ">
               {index === activeSlide && (
                 <>
                   <TypingText
                     key={`title-slide-${index}-${activeSlide}`} // fərqli key hər dəfə
-                    className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-normal"
+                    className="text-xl md:text-5xl font-bold text-white mb-4 tracking-normal"
                     text="G✨ələcəyini Bizimlə Qur."
                     speed={100}
                   />
-                  <p   className="text-lg md:text-xl text-white opacity-90 max-w-2xl">Təhsil və Konsaltinq Mərkəzi ilə biliklərinizi təkmilləşdirin və karyeranızda yeni zirvələr fəth edin.</p>
+                  <p   className="text-xs md:text-xl text-white opacity-90 max-w-2xl">Təhsil və Konsaltinq Mərkəzi ilə biliklərinizi təkmilləşdirin və karyeranızda yeni zirvələr fəth edin.</p>
                 </>
               )}
             </div>

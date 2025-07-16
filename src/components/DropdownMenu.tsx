@@ -30,7 +30,7 @@ export default function DropdownMenu({ title, items }: Props) {
     <li className="relative group">
       <button
         onClick={toggleDropdown}
-        className="flex items-center gap-1 text-black text-lg font-medium "
+        className="flex items-center gap-1 text-black text-base font-medium "
       >
         {title}
         {/* İkon dəyişimi */}

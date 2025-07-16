@@ -139,7 +139,7 @@ const BranchesDetail = () => {
   const data = BranchData.find((item) => item.id === Number(id));
 
   return (
-    <div  style={{padding:"20px"}} className="w-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-white p-4">
+    <div className="w-full flex flex-col justify-center items-center gap-5 md:gap-10 bg-white p-4 p-5">
       <h2 className="text-2xl md:text-5xl leading-8 md:leading-14">{data?.branch_name}</h2>
 
       <div className="w-[95%] md:w-[90%] flex md:flex-row flex-col justify-center items-center gap-5 md:gap-10">

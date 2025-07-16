@@ -47,7 +47,7 @@ const settings = {
 };
 const Partners = () => {
   return (
-    <div style={{paddingTop:"40px"}} className="w-full h-75 flex flex-col justify-center items-center gap-8 bg-white">
+    <div  className="w-full h-75 flex flex-col justify-center items-center gap-8 bg-white pt-10 overflow-y-hidden">
       <h1 className="text-3xl md:text-4xl text-black font-semibold">Partnyorlar</h1>
       <div className="w-full max-w-7xl px-2">
         <Slider {...settings}>

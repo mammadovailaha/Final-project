@@ -97,7 +97,7 @@ const VacanciesDetail = () => {
   const { id } = useParams();
   const data = vacancies.find((item) => item.id === Number(id));
   return (
-    <div style={{paddingTop:"40px"}} className="w-full h-screen flex justify-center items-start" >
+    <div  className="w-full h-screen flex justify-center items-start pt-10" >
       <div className="w-[20%] flex flex-col justify-center items-center gap-2">
         {menuItems.map((item, index) => (
           <NavItem

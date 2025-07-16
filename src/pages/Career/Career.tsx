@@ -88,8 +88,7 @@ const Career = () => {
   const navigate = useNavigate();
   return (
     <div
-      style={{ padding: "20px" }}
-      className="w-full flex flex-col justify-center items-center gap-10 bg-white"
+      className="w-full flex flex-col justify-center items-center gap-10 bg-white p-5"
     >
       <h1 className="font-[averta] text-2xl md:text-5xl leading-6 md:leading-14 font-medium">
         Kariyera

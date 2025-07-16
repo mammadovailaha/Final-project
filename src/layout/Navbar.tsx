@@ -48,7 +48,7 @@ export default function Navbar() {
             />
           </div>
          <div className="flex flex-col gap-1">
-           <h1 className="text-[#4b6043] text-[22px] lg:text-[45px] tracking-normal leading-5 lg:leading-9 font-bold">
+           <h1 className="text-[#4b6043] text-[22px] lg:text-[40px] tracking-normal leading-5 lg:leading-9 font-bold">
             EDU COMPANY
           </h1>
           <span className="text-black text-[9px] lg:text-base tracking-normal font-medium">
@@ -70,12 +70,12 @@ export default function Navbar() {
       ? "opacity-100 scale-y-100 pointer-events-auto"
       : "opacity-0 scale-y-0 pointer-events-none"
   } lg:opacity-100 lg:scale-y-100 lg:pointer-events-auto lg:block`}>
-          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-7  bg-[#ffff]  lg:bg-transparent">
+          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-5  bg-[#ffff]  lg:bg-transparent py-5 md:py-1   pl-5">
             <DropdownMenu title="Haqqımızda" items={AboutItems} />
             <li>
               <Link
                 to="/career"
-                className="text-lg font-medium text-black "
+                className="text-base font-medium text-black "
               >
                 Kariyera
               </Link>
@@ -84,7 +84,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/publications"
-                className="text-lg font-medium text-black"
+                className="text-base font-medium text-black"
               >
                 Nəşrlər
               </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/study-abroad"
-                className="text-lg font-medium text-black"
+                className="text-base font-medium text-black"
               >
                 Xaricdə təhsil
               </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className=" text-lg font-medium text-black "
+                className="text-base font-medium text-black "
               >
                 Əlaqə
               </Link>

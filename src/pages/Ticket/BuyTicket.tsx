@@ -84,10 +84,8 @@ const BuyTicket = () => {
     <div
       style={{
         backgroundImage: `url(${examBg})`,
-        paddingTop: "40px",
-        paddingBottom: "20px",
       }}
-      className="w-full h-auto bg-cover bg-center relative flex flex-col justify-start items-center gap-10"
+      className="w-full h-auto bg-cover bg-center relative flex flex-col justify-start items-center gap-10 pt-10 pb-5"
     >
       <div className="absolute inset-0 bg-[#00000072] z-0" />
 

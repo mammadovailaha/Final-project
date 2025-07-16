@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 // import ShowMoreButton from "../../components/ShowMoreButton";
-import MoreInfoButton from "../../components/Buttons/MainButton";
+import MoreInfoButton from "../../components/Buttons/MoreInfoButton";
 import OrderModal from "../../components/Modals/OrderModal";
 const books = [
   {

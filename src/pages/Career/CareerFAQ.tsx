@@ -58,8 +58,7 @@ const CareerFAQ = () => {
   };
   return (
     <div
-      style={{paddingTop:"40px"}}
-      className="w-full h-screen flex flex-col justify-center lg:justify-start items-center gap-3 lg:gap-10"
+      className="w-full h-screen flex flex-col justify-center lg:justify-start items-center gap-3 lg:gap-10 pt-10"
     >
       <h1 className="text-2xl md:text-4xl font-bold">
         Tez-tez verilən suallar

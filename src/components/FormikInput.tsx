@@ -21,18 +21,16 @@ const FormikInput: React.FC<FormikInputProps> = ({
       {type === "textarea" ? (
 
      <Field
-        style={{paddingLeft:"15px", paddingTop:"5px"}}
           as="textarea"
           name={name}
           placeholder={placeholder}
-          className={`${baseClassName} min-h-[100px] ${inputClassName} `}
+          className={`${baseClassName} min-h-[100px] ${inputClassName} pl-4 pt-1`}
         />
       ) : type === "select" ? (
         <Field 
-        style={{paddingLeft:"15px"}}
         name={name}
          as="select"
-          className={`${baseClassName} ${inputClassName} `}>
+          className={`${baseClassName} ${inputClassName} pl-4`}>
           <option value="" className="text-xs md:text-sm text-gray-500">{placeholder}</option>
           {options?.map((option) => (
             <option
@@ -44,11 +42,10 @@ const FormikInput: React.FC<FormikInputProps> = ({
         </Field>
       ) : (
         <Field
-        style={{paddingLeft:"15px"}}
           type={type}
           name={name}
           placeholder={placeholder}
-          className={`${baseClassName} ${inputClassName} `}
+          className={`${baseClassName} ${inputClassName} pl-4 `}
         />
       )}
        <ErrorMessage

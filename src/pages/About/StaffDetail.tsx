@@ -70,7 +70,7 @@ const {id}= useParams();
 const  data= staffData.find((item) => item.id === Number(id));
 
   return (
-    <div style={{padding:"20px"}} className="w-full h-screen flex flex-col md:flex-row justify-center items-center gap-10 bg-white ">
+    <div  className="w-full h-screen flex flex-col md:flex-row justify-center items-center gap-10 bg-white p-5 ">
       <div className="w-[80%] h-1/3 md:w-1/4  md:h-2/4 rounded-sm flex justify-center items-center shadow-xl ">
         <img 
         className="w-full h-full object-cover rounded-sm "
