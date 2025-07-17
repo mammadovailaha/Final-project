@@ -66,7 +66,7 @@ const Structure = () => {
   return (
     <div  className="w-full h-full flex flex-col justify-center items-center gap-10 md:gap-16 bg-white p-5">
       <h1 className="text-3xl md:text-5xl font-bold leading-14">Struktur</h1>
-      <div className="flex flex-wrap justify-center items-center gap-5">
+      <div className="w-full flex flex-wrap justify-center items-center gap-5">
         {staffData.map((data) => (
           <StructureCard
             path={data.path}
