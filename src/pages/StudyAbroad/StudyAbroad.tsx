@@ -1,5 +1,7 @@
 import type { FC } from "react";
 import AbroadCard from "./AbroadCard";
+import StudyAbroadStastics from "./StudyAbroadStastics";
+import StudyAbroadForm from "./StudyAbroadForm";
 
 const abroadData = [
   {
@@ -24,13 +26,14 @@ const abroadData = [
 
 const StudyAbroad: FC = () => {
   return (
-    <div className="w-full h-auto flex flex-col justify-around items-center gap-5 pt-5">
+    <div className="w-full h-auto flex flex-col justify-around items-center gap-10 pt-5">
       <div className="flex justify-center items-center gap-5 flex-wrap">
         {abroadData.map((item) => (
           <AbroadCard key={item.id} imgUrl={item.image} country={item.title} />
         ))}
       </div>
-      <div>stastika</div>
+      <div className="w-full flex justify-center items-center"><StudyAbroadStastics/></div>
+      <div className="w-[60%] flex justify-center items-center"><StudyAbroadForm/></div>
     </div>
   );
 };

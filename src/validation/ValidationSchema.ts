@@ -34,6 +34,21 @@ export const phoneSchema = yup
 export const bookletNumberSchema = yup
   .string()
   .required("İş nömrəsi mütləqdir");
+
+  export const admissionYearSchema=yup.object({
+  admissionYear: yup
+    .string()
+    .required("Qəbul ili mütləqdir")
+    .matches(/^\d{4}$/, "Qəbul ili 4 rəqəmdən ibarət olmalıdır"),
+  });
+export const regionSchema = yup
+  .string()
+  .required("Yaşadığınız bölgə mütləqdir")
+  .min(2, "Bölgə adı çox qısadır")
+  .max(100, "Bölgə adı çox uzundur")
+  .matches(/^[A-Za-zƏəÖöÜüÇçĞğİıŞş\s-]+$/, "Yalnız hərflər və boşluq daxil edin");
+
+
 export const optionSchema = (allowedValues: string[]) => {
   return yup.object({
     branch: yup
@@ -46,11 +61,14 @@ export const optionSchema = (allowedValues: string[]) => {
       .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
     educationType: yup
       .string()
-      .required("Zəhmət olmasa bir tədris forması  seçin")
+      .required("Zəhmət olmasa bir tədris forması seçin")
       .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
     examSchema: yup
       .string()
-      .required("Zəhmət olmasa bir imtahan  seçin")
+      .required("Zəhmət olmasa bir imtahan seçin")
       .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun"),
+      StudyAbroadSchema:yup.string()
+      .required("Zəhmət olmasa bir ölkə seçin")
+      .oneOf(allowedValues, "Düzgün seçim etdiyinizdən əmin olun")
   });
 };
