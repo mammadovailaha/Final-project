@@ -9,19 +9,6 @@ const initialValues = {
   note: "",
 };
 
-// const handleCreateUser = async (values: any) => {
-//     const [createUser] = useSignUpMutation()
-
-//   try {
-//     await createUser(values).unwrap()
-//     navigate(`/auth/otp/${values.email}`)
-//   } catch (error: any) {
-//     error?.status === 409
-//       ? Swal.fire('Xəta baş verdi!', 'Siz artıq qeydiyyatdan keçmisiniz', 'error')
-//       : Swal.fire('Xəta baş verdi!', 'Xəta baş verdi!', 'error')
-//   }
-// }
-
 const QuickRegistration = ({title=""}) => {
   return (
     <div className="w-full flex flex-col justify-center items-center">

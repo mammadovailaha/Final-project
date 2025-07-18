@@ -3,9 +3,10 @@ import { useEffect, useRef, useState, type FC } from "react";
 interface Props {
   end: number;
   duration?: number;
+  className:string;
 }
 
-const StatisticsCount: FC<Props> = ({ end, duration = 2 }) => {
+const StatisticsCount: FC<Props> = ({ end, duration = 3, className }) => {
   const [count, setCount] = useState(0);
   const ref = useRef<number>(0);
   const increment = end / (duration * 60);
@@ -24,7 +25,7 @@ const StatisticsCount: FC<Props> = ({ end, duration = 2 }) => {
       return () => clearInterval(interval);
     }, 1000 / 60);
   }, [end, duration, increment]);
-  return <div>{count}</div>;
+  return <p className={className}>{count}</p>;
 };
 
 export default StatisticsCount;
