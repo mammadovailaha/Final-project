@@ -16,15 +16,14 @@ const AbroadCard: FC<Props> = ({ imgUrl, country }) => {
         <div className="absolute inset-0 group-hover:bg-[#0000005d] z-0 rounded-xl transition-all duration-500  " />
 
         <button
-          className="absolute outline-none border-none z-10 w-40 h-20 opacity-0 group-hover:opacity-100 top-[40%] left-[18%] flex  justify-center items-center"
+          className="group/button absolute outline-none border-none z-10 w-40 h-20 opacity-0 group-hover:opacity-100 top-[40%] left-[18%] flex  justify-center items-center"
           onClick={() => {}}
         >
-          <span className=" relative w-30 h-10 bg-white text-black rotate-345 opacity-0 group-hover:opacity-100 rounded-4xl flex justify-center items-center z-10 text-lg">
+          <span className=" relative w-30 h-10 bg-white group-hover/button:bg-[#849561] group-hover/button:text-white text-[#849561] rotate-345 opacity-0 group-hover:opacity-100 rounded-4xl flex justify-center items-center z-10 text-lg">
             Ətraflı
           </span>
-          <span className="w-10 h-10 bg-black rounded-full flex justify-center items-center right-[5%] z-20 absolute">
-            {" "}
-            <IoArrowRedoSharp className="text-3xl text-white " />
+          <span className="w-10 h-10 bg-[#849561] group-hover/button:bg-white rounded-full flex justify-center items-center right-[5%] z-20 absolute">
+            <IoArrowRedoSharp className="text-3xl group-hover/button:text-[#849561] text-white " />
           </span>
         </button>
       </div>
