@@ -1,9 +1,4 @@
-import type { FC } from "react";
-import { useNavigate } from "react-router-dom";
-import AbroadCard from "./AbroadCard";
-import StudyAbroadStastics from "./StudyAbroadStastics";
-import StudyAbroadForm from "./StudyAbroadForm";
-
+// import { useParams } from "react-router-dom";
 const abroadData = [
   {
     id: 1,
@@ -20,8 +15,8 @@ const abroadData = [
     image:
       "https://www.educompany.az/assets/front/image/abroad/f3d80a50841140cf3a2bd6730c41d828.jpg",
     universityLogos: [
-      "	https://www.educompany.az/assets/front/image/abroad_uni/8b11c223bfa1fc643f61f227a1cdbd18.png",
-      "https://www.educompany.az/assets/front/image/abroad_uni/7fa50b2225b99038f5597c5ed1e6c823.png",
+    { logoUrl: "	https://www.educompany.az/assets/front/image/abroad_uni/8b11c223bfa1fc643f61f227a1cdbd18.png"},
+  "https://www.educompany.az/assets/front/image/abroad_uni/7fa50b2225b99038f5597c5ed1e6c823.png",
       "https://www.educompany.az/assets/front/image/abroad_uni/394bb6dfd7d0ac5c0db4d65af57141fa.png",
       "	https://www.educompany.az/assets/front/image/abroad_uni/94dd1ba5dd6a600a3ab33705a08bc537.png",
       "https://www.educompany.az/assets/front/image/abroad_uni/0117483ce7b9c3d1d3deda5d14beb3a1.png",
@@ -57,23 +52,22 @@ const abroadData = [
   },
 ];
 
+const StudyAbroadDetail = () => {
+// const {id}= useParams();
+// const  data= abroadData.find((item) => item.id === Number(id));
 
-const StudyAbroad: FC = () => {
-const navigate=useNavigate();
   return (
-    <div className="w-full h-auto flex flex-col justify-around items-center gap-10 pt-5">
-      <div className="flex justify-center items-center gap-5 flex-wrap">
-        {abroadData.map((item) => (
-          <AbroadCard 
-          id={item.id}
-          onClick={() => navigate(`/study-abroad/country-detail/${item.id}`)}
-          key={item.id} imgUrl={item.image} country={item.title} />
-        ))}
-      </div>
-      <div className="w-full flex justify-center items-center"><StudyAbroadStastics/></div>
-      <div className="w-[90%] md:w-[60%] flex justify-center items-center"><StudyAbroadForm/></div>
+    <div className="w-full h-screen flex justify-center items-center">
+      {abroadData.map((country) => (
+        <div
+          key={country.id}
+          className=""
+          onClick={()=>{}}
+        >
+          <img src={country.image} alt={country.title} width={200} />
+        </div>
+      ))}
     </div>
   );
 };
-
-export default StudyAbroad;
+export default StudyAbroadDetail;

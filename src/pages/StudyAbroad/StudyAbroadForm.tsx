@@ -27,7 +27,7 @@ const StudyAbroadForm = () => {
         }}
       >
         <form className="w-full flex flex-col justify-center items-center gap-6">
-          <h1 className="text-2xl md:text-3xl font-medium">Xaricdə Təhsil Almaq Üçün Müraciət Et</h1>
+          <h1 className="text-2xl md:text-3xl font-medium text-center">Xaricdə Təhsil Almaq Üçün Müraciət Et</h1>
           <div className="w-full flex justify-center items-center">
             <div className="w-full flex  flex-col justify-center items-center gap-5">
               <FormikInput name="fullname" type="text" placeholder="Ad Soyad"   inputClassName="w-[97%]!" />
@@ -74,7 +74,7 @@ const StudyAbroadForm = () => {
              inputClassName="w-[97%]!"
             />
              <MainButton
-              buttonClassName="w-[40%] lg:w-[20%] h-14 text-base md:text-lg "
+              buttonClassName="w-[40%] lg:w-[20%] h-10 md:h-14 text-base md:text-lg "
               text="Göndər"
             />
           </div>
