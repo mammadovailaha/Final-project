@@ -14,4 +14,4 @@ const baseSchema=yup.object({
     bookletNumber:bookletNumberSchema,
 
 });
-export const examResultSchema=baseSchema.concat(optionSchema(examOptions));
+export const examResultSchema=baseSchema.concat(optionSchema(examOptions.map(option => option.value)));

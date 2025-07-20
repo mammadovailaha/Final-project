@@ -9,11 +9,7 @@ import {
   noteSchema,
 } from "./ValidationSchema";
 
-const country = [
-  { label: "Poland", value: "poland" },
-  { label: "Ukraine", value: "ukraine" },
-  { label: "Turkey", value: "turkey" },
-];
+const country = ["poland", "ukraine", "turkey"];
 
 const baseSchema = yup.object({
   fullname: nameSchema,

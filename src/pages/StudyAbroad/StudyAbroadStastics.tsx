@@ -1,6 +1,7 @@
 import { MdSchool, MdPeople, MdHandshake, MdEvent } from "react-icons/md";
 import StatisticsCount from "../../components/StatisticsCount";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const statisticsData = [
   {
     id: 1,

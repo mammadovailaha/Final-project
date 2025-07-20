@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { type FC } from "react";
 import { Info } from "lucide-react"; // Lucide ikonu, istəsən dəyişə bilərik
 import { useNavigate } from "react-router-dom";
 
