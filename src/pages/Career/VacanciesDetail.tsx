@@ -1,6 +1,4 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import NavItem from "../../components/NavItem";
 // navItem 
 import { FaUserTie } from "react-icons/fa";
 import {
@@ -16,20 +14,23 @@ import { LuComputer } from "react-icons/lu";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { LuCalendarDays } from "react-icons/lu";
+import NavItemComponent from "../../components/NavItemComponent";
 
 const menuItems = [
-  { icon: <FaUserTie />, label: "Vakansiyalar", path: "/vacancies" },
+  {id:3, icon: <FaUserTie />, label: "Vakansiyalar", path: "/vacancies" },
   {
+    id:2,
     icon: <MdOutlineAssignmentTurnedIn />,
     label: "İmtahan Nəticələri",
     path: "/career/exam-results",
   },
   {
+    id:1,
     icon: <HiOutlineClipboardDocumentList />,
     label: "Müsahibə Nəticələri",
     path: "/career/interview-results",
   },
-  {
+  {id:4,
     icon: <MdOutlineQuestionAnswer />,
     label: "Tez-tez verilən suallar",
     path: "/career/faq",
@@ -99,15 +100,7 @@ const VacanciesDetail = () => {
   return (
     <div  className="w-full h-screen flex justify-center items-start pt-10" >
       <div className="w-[20%] flex flex-col justify-center items-center gap-2">
-        {menuItems.map((item, index) => (
-          <NavItem
-            key={index}
-            className="w-full lg:w-[70%] h-12"
-            path={item.path}
-            icon={item.icon}
-            label={item.label}
-          />
-        ))}
+        <NavItemComponent  className="w-full " navItem={menuItems} />
       </div>
       <div className="w-[75%] flex justify-center items-center gap-10">
         <div style={{padding:"20px"}} className="w-[40%] flex flex-col justify-center items-start gap-2 md:gap-4 shadow">

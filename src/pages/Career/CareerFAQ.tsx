@@ -10,18 +10,18 @@ import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import NavItemComponent from "../../components/NavItemComponent";
 
 const menuItems = [
-  { icon: <FaUserTie />, label: "Vakansiyalar", path: "/career" },
-  {
+  { id:1, icon: <FaUserTie />, label: "Vakansiyalar", path: "/career" },
+  {id:2,
     icon: <MdOutlineAssignmentTurnedIn />,
     label: "İmtahan Nəticələri",
     path: "/career/exam-results",
   },
-  {
+  {id:3,
     icon: <HiOutlineClipboardDocumentList />,
     label: "Müsahibə Nəticələri",
     path: "/career/interview-results",
   },
-  {
+  {id:4,
     icon: <MdOutlineQuestionAnswer />,
     label: "Tez-tez verilən suallar",
     path: "/career/faq",
@@ -64,7 +64,7 @@ const CareerFAQ = () => {
         Tez-tez verilən suallar
       </h1>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center lg:items-start gap-6 lg:gap-10">
-        <NavItemComponent className="w-[75%] lg:w-[20%]" navItem={menuItems} />
+        <NavItemComponent  className="w-[75%] lg:w-[20%]" navItem={menuItems} />
         <div className="flex flex-col justify-center items-center gap-2">
           {faqData.map((item) => (
             <FaqItem
