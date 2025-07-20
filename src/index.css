@@ -18,3 +18,25 @@
 .z-negative {
   z-index: -1;
 }
+/* index.css və ya Tailwind faylında əlavə et (əgər Tailwind-in @layer istifadə edirsənsə) */
+.overlay {
+  @apply absolute inset-0 bg-black/40 transition-transform duration-300 ease-in-out;
+  transform: translateX(100%);
+}
+
+.from-left {
+  transform: translateX(-100%);
+}
+.from-right {
+  transform: translateX(100%);
+}
+.from-top {
+  transform: translateY(-100%);
+}
+.from-bottom {
+  transform: translateY(100%);
+}
+
+.to-center {
+  transform: translateX(0) translateY(0);
+}

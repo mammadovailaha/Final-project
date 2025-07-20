@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
-import UniversityCard from "./UniversityCard";
+// import { FC } from "react";
 
+import { useParams } from "react-router-dom";
 
 const abroadData = [
   {
@@ -212,23 +212,29 @@ const abroadData = [
   },
 ];
 
-
-
-const StudyAbroadDetail = () => {
-  const { id } = useParams<{ id: string }>();
+const UniversityDetail = () => {
+const { id } = useParams<{ id: string }>();
   const country = abroadData.find((item) => item.id === Number(id));
-
-  if (!country) return <div className="text-red-500">Ölkə tapılmadı</div>;
- return (
-    <div className="w-full flex flex-col items-center gap-10 py-10">
-      <h1 className="text-3xl font-bold">{country.title} Universitetləri</h1>
-
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        {country.universityLogos.map((logoUrl) => (
-      <UniversityCard id={logoUrl.id} key={logoUrl.id} logoUrl={logoUrl.logoUrl} uniTitle={logoUrl.name}/>
+  const data=country?.universityLogos
+  return (
+ <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">{country?.title} Universitetləri</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {data?.map((uni) => (
+          <div key={uni.id} className="border p-4 rounded shadow">
+            <img src={uni.logoUrl} alt={uni.name} className="h-20 mx-auto mb-2" />
+            <h3 className="text-lg font-semibold mb-1">{uni.name}</h3>
+            <p className="text-gray-600 text-sm mb-2">{uni.description}</p>
+            <ul className="list-disc list-inside text-sm text-gray-800">
+              {uni.faculties.map((faculty, index) => (
+                <li key={index}>{faculty}</li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </div>
-  );
-};
-export default StudyAbroadDetail;
+  )
+}
+
+export default UniversityDetail
