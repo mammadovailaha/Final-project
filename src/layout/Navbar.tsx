@@ -1,5 +1,5 @@
 import DropdownMenu from "../components/DropdownMenu";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
@@ -64,47 +64,51 @@ export default function Navbar() {
           </button>
         </div>
         <div
-          className={`w-full h-full absolute z-50 lg:top-[40%] lg:left-[40%] left-0  lg:w-auto  transition-all duration-300 ease-in-out transform origin-top 
+          className={`w-full h-full absolute z-50 lg:top-[30%] lg:left-[40%] left-0  lg:w-auto  transition-all duration-300 ease-in-out transform origin-top flex justify-center items-center
   ${
     isOpen
       ? "opacity-100 scale-y-100 pointer-events-auto"
       : "opacity-0 scale-y-0 pointer-events-none"
   } lg:opacity-100 lg:scale-y-100 lg:pointer-events-auto lg:block`}>
-          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-5  bg-[#ffff]  lg:bg-transparent py-5 md:py-1   pl-5">
+          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-2  bg-[#ffff]  lg:bg-transparent lg:h-14  ">
             <DropdownMenu title="Haqqımızda" items={AboutItems} />
             <li>
-              <Link
+              <NavLink
                 to="/career"
-                className="text-base font-medium text-black "
+                className={({isActive})=>`text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-5 rounded-3xl"}`}
               >
                 Kariyera
-              </Link>
+              </NavLink>
             </li>
             <DropdownMenu title="Xidmətlər" items={XidmetlerItems} />
             <li>
-              <Link
+              <NavLink
                 to="/publications"
-                className="text-base font-medium text-black"
+                className={({isActive})=>`text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-5 rounded-3xl"}`}
               >
                 Nəşrlər
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/study-abroad"
-                className="text-base font-medium text-black"
+                className={({isActive})=>`text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-5 rounded-3xl"}`}
               >
                 Xaricdə təhsil
-              </Link>
+              </NavLink>
             </li>
             <DropdownMenu title="Filiallar" items={FilialItems} />
             <li>
-              <Link
+              <NavLink
                 to="/contact"
-                className="text-base font-medium text-black "
+                className={({isActive})=>`text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-6 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-6 rounded-3xl"}`}
               >
                 Əlaqə
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
