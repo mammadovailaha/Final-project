@@ -9,18 +9,21 @@ import { useNavigate } from "react-router-dom";
 import NavItemComponent from "../../components/NavItemComponent";
 
 const menuItems = [
-  { icon: <FaUserTie />, label: "Vakansiyalar", path: "/career" },
+  { id: 1, icon: <FaUserTie />, label: "Vakansiyalar", path: "/career" },
   {
+    id: 2,
     icon: <MdOutlineAssignmentTurnedIn />,
     label: "İmtahan nəticələri",
     path: "/career/exam-results",
   },
   {
+    id: 3,
     icon: <HiOutlineClipboardDocumentList />,
     label: "Müsahibə nəticələri",
     path: "/career/interview-results",
   },
   {
+    id: 4,
     icon: <MdOutlineQuestionAnswer />,
     label: "Tez-tez verilən suallar",
     path: "/career/faq",
@@ -94,7 +97,7 @@ const Career = () => {
         Kariyera
       </h1>
       <div className="w-full flex flex-col md:flex-row justify-around items-center gap-10">
-        <NavItemComponent className="w-full md:w-[27%]" navItem={menuItems} />
+        <NavItemComponent  className="w-full md:w-[27%]" navItem={menuItems} />
 
         <div className="w-full md:w-[78%] lg:w-[70%] flex flex-col justify-center items-center gap-5">
           {vacancies.map((item) => (
