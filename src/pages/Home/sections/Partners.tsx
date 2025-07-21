@@ -41,15 +41,15 @@ const settings = {
   speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: true,             // ✅ Avtomatik keçid
-  autoplaySpeed: 2000,        // ✅ 2 saniyədən bir
-  pauseOnHover: true          // ✅ Hover edəndə dayansın
+  autoplay: true,             //  Avtomatik keçid
+  autoplaySpeed: 2000,        //  2 saniyədən bir
+  pauseOnHover: true          //  Hover edəndə dayansın
 };
 const Partners = () => {
   return (
     <div  className="w-full h-75 flex flex-col justify-center items-center gap-8 bg-white pt-10 overflow-y-hidden">
       <h1 className="text-3xl md:text-4xl text-black font-semibold">Partnyorlar</h1>
-      <div className="w-full max-w-7xl px-2">
+      <div className="w-full max-w-7xl  mx-4">
         <Slider {...settings}>
           {partners.map((data) => (
       

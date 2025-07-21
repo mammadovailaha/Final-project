@@ -9,7 +9,7 @@ interface Props{
 const PartnersCard:React.FC<Props> = ({src, alt, key}) => {
   return (
     <div
-    className='flex justify-center items-center w-30 h-16 md:w-65 md:h-35 rounded-lg shadow-lg' 
+    className='flex justify-center items-center w-34 h-20 md:w-65 md:h-35 rounded-lg shadow-lg p-4' 
      key={key}>
       <img
       className='w-[95%] h-[90%] object-cover  transition duration-300'

@@ -26,13 +26,13 @@ const StudyAbroad = () => {
   return (
     <div className="w-full md:h-screen flex flex-col justify-center items-center gap-5 md:gap-10 ">
       <div className=" w-full flex justify-around items-center">
-        <p className="font-bold text-lg md:text-3xl">Bu ölkələrdə təhsil ala bilərsən!</p>
-        <button className="w-22 md:w-34 h-7 md:h-10  text-black rounded-[7px] flex justify-center items-center  gap-1 md:gap-1.5 text-[10px] md:text-sm  transition-all duration-700 shadow-lg">
-          <FaEye className="w-3.5 h-3 text-black" />
+        <p className="font-bold text-base md:text-3xl">Bu ölkələrdə təhsil ala bilərsən!</p>
+        <button className="w-20 md:w-34 h-7 md:h-10 px-0.5   text-black rounded-[7px] flex justify-center items-center  gap-0.5 md:gap-1.5 text-[10px] md:text-sm  transition-all duration-700 shadow-lg">
+          <FaEye className="text-xs md:text-sm text-black" />
           Hamısına bax
         </button>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-3 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-3 ">
         {imageData.map((img) => (
           <StudyAbroadCard 
             key={img.id}

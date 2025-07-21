@@ -47,7 +47,7 @@ const Services = () => {
     navigate("/services");
   };
   return (
-    <div className="w-full md:h-screen  flex flex-col justify-center items-center gap-2.5 md:gap-5">
+    <div className="w-full md:h-screen  flex flex-col justify-center items-center gap-7 ">
       <h1 className="text-2xl lg:text-[40px] font-medium  text-black">Xidmətlərimiz</h1>
       <div className="flex justify-center items-center">
         <div
@@ -60,13 +60,15 @@ const Services = () => {
           ))}
         </div>
       </div>
-      <ShowMoreButton
+     <div>
+       <ShowMoreButton
         onClick={navigateServices}
         className={`${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-30"
         }`}
         text="Bütün xidmətləri gör"
       />
+     </div>
     </div>
   );
 };
