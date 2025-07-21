@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {  NavLink } from "react-router-dom";
+import {  NavLink, useLocation } from "react-router-dom";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 
 interface Props {
@@ -25,6 +25,11 @@ export default function DropdownMenu({ title, items }: Props) {
       setIsOpen((prev) => !prev);
     }
   };
+const location = useLocation();
+
+useEffect(() => {
+  setIsOpen(false); // route dəyişəndə dropdown bağlansın
+}, [location.pathname]);
 
   return (
     <li className="relative group">
@@ -47,16 +52,15 @@ export default function DropdownMenu({ title, items }: Props) {
         className={`
           absolute top-full left-1/2 -translate-x-1/2 bg-gray-50 rounded shadow-md z-[999]
           min-w-[200px] min-h-[170px] flex flex-col justify-center items-center gap-1 font-[averta]
-          transition-all duration-300 ease-in-out py-5 md:py-1   pl-5
+          transition-all duration-300 ease-in-out p-5
           ${isDesktop ? "hidden group-hover:flex" : isOpen ? "flex" : "hidden"}
         `}
       >
         {items.map((subItem) => (
           <li key={subItem.path} className="w-full">
             <NavLink
-              style={{ padding: "7px" }}
               to={subItem.path}
-              className="block whitespace-nowrap text-black hover:text-base hover:bg-gray-100 hover:rounded-xl text-sm"
+              className="block whitespace-nowrap text-black  hover:bg-gray-100 hover:rounded-xl text-sm p-2"
               onClick={() => setIsOpen(false)} // mobil klikdən sonra bağlansın
             >
               {subItem.label}
