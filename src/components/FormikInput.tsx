@@ -8,7 +8,7 @@ interface FormikInputProps {
   options?: { value: string; label: string }[];
   inputClassName?:string;
 }
-const baseClassName = "w-[90%] lg:w-[70%] h-10 rounded-4xl border border-[#4f813b] hover:shadow-md outline-none   placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500";
+const baseClassName = "w-[90%] lg:w-[70%] h-10 md:h-12 rounded-4xl border border-[#4f813b] hover:shadow-md outline-none   placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500";
 const FormikInput: React.FC<FormikInputProps> = ({
   name,
   type,

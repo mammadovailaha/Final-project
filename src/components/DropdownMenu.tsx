@@ -36,15 +36,15 @@ useEffect(() => {
       <NavLink
         onClick={toggleDropdown}
                 to=""
-                className="text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
-                 hover:bg-[#c0d2b9] py-2.5 px-5 rounded-3xl"
+                className="text-sm xl:text-base font-medium text-black flex justify-center items-center gap-0.5 md:leading-7  transition-all duration-500
+                 hover:bg-[#c0d2b9] py-2.5 lg:px-0.5 xl:px-2 rounded-3xl"
       >
         {title}
         {/* İkon dəyişimi */}
         {isOpen || (!isOpen && isDesktop) ? (
-          <RiArrowDropUpLine className={`text-[28px] ${!isDesktop ? "group-hover:hidden" : " group-hover:block"}`} />
+          <RiArrowDropUpLine className={`text-2xl xl:text-[28px] ${!isDesktop ? "group-hover:hidden" : " group-hover:block"}`} />
         ) : (
-          <RiArrowDropDownLine className={`text-[28px] ${!isDesktop ? "group-hover:block" : "group-hover:hidden"}`} />
+          <RiArrowDropDownLine className={`text-2xl xl:text-[28px] ${!isDesktop ? "group-hover:block" : "group-hover:hidden"}`} />
         )}
       </NavLink>
 

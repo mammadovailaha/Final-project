@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { IoCloseSharp } from "react-icons/io5";
-import { CgMathPlus } from "react-icons/cg";
-import { CgMathMinus } from "react-icons/cg";
+import { useState } from "react";
+import Modal from "./Modal";
+import type { FC } from "react";
+import { CgMathMinus, CgMathPlus } from "react-icons/cg";
 import QuickRegistration from "../../pages/Auth/QuickRegistration";
 
 interface Props {
@@ -9,27 +9,15 @@ interface Props {
   onClose: () => void;
 }
 
-const OrderModal: React.FC<Props> = ({ isOpen, onClose }) => {
+const OrderModal: FC<Props> = ({ isOpen, onClose }) => {
   const [count, setCount] = useState(0);
   const handleIncrement = () => setCount((prev) => prev + 1);
   const handleDecrement = () => {
     setCount((prev) => (prev > 0 ? prev - 1 : 0));
   };
-
-  if (!isOpen) return null;
-
-
   return (
-    <div className="w-full fixed inset-0 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm bg-opacity-50 z-[1002] flex justify-center items-center 	transition-transform duration-300 scale-100">
-      <div className="bg-white  rounded-lg shadow-lg w-[70%] h-[400px] lg:h-[450px]  flex flex-col justify-center items-center gap-5  md:gap-8 mx-4 relative ">
-        <div className="w-[90%] h-10 border-b border-gray-400 flex justify-between items-center">
-          <p className="text-[16px] md:text-lg font-medium text-black">
-            Sifariş et
-          </p>
-          <button onClick={onClose}>
-            <IoCloseSharp className="text-lg md:text-2xl text-gray-600 " />
-          </button>
-        </div>
+    <div>
+      <Modal title="  Sifariş et" isOpen={isOpen} onClose={onClose}>
         <div className="w-full flex  flex-col md:flex-row justify-around items-center">
           <div className="flex  justify-center items-center gap-4">
             <p className="font-medium font-[averta] text-lg md:text-xl text-[#015715]">
@@ -61,10 +49,10 @@ const OrderModal: React.FC<Props> = ({ isOpen, onClose }) => {
             </div>
           </div>
           <div className="w-[97%] md:w-[55%]">
-            <QuickRegistration  title=""/>
+            <QuickRegistration title="" />
           </div>
         </div>
-      </div>
+      </Modal>
     </div>
   );
 };
