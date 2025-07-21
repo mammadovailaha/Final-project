@@ -14,8 +14,8 @@ export default function Header() {
     const openModal=()=>setIsModalOpen(true);
     const closeModal=()=>setIsModalOpen(false);
   return (
-    <div className="w-full h-8 md:h-14 bg-background shadow-lg flex justify-center lg:justify-between items-center px-1 md:px-4">
-      <div className="w-[95%] h-full flex justify-around items-center gap-2 lg:gap-2">
+    <div className="w-full h-8 md:h-14 bg-background shadow-lg flex justify-center lg:justify-between items-center px-1 lg:px-4">
+      <div className="w-[95%] h-full flex justify-around items-center gap-2 ">
         <button className="outline-none border-none " onClick={openModal} >
           <p className="text-[6px]  leading-1.5 md:leading-3 lg:leading-4 md:text-xs  lg:text-base text-black " >
             Sınaq dərs istə
@@ -34,7 +34,7 @@ export default function Header() {
             {HeaderInfo.map((item, index) => (
               <li
                 key={index}
-                className={`flex justify-center items-center w-11 md:w-40 h-4 md:h-8 md:px-1`}
+                className={`flex justify-center items-center w-11 md:w-25 lg:w-40 h-4 md:h-6 lg:h-8 lg:px-1`}
               >
                 <Link
                   to={item.path}
