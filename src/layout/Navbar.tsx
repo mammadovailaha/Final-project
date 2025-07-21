@@ -36,11 +36,11 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full h-18 lg:h-22 bg-background shadow-lg flex justify-center absolute z-[1000] overflow-visible" >
-      <div className="w-[90%] h-full flex justify-between items-center">
+    <div className="w-full h-18 lg:h-22 bg-background shadow-lg flex justify-center absolute z-[1000] overflow-visible bg-white" >
+      <div className ="w-full lg:w-[90%] h-full flex justify-center lg:justify-between items-center  bg-white">
     <Link to={"/"}>
-        <div className="flex justify-center items-center gap-2"> 
-            <div className="w-16 h-14">
+        <div className="lg:flex justify-center items-center gap-2 hidden " > 
+            <div className="w-10 lg:w-16 h-8 lg:h-14">
             <img
               className="w-full h-full object-cover"
               src="https://www.educompany.az/assets/front/image/logo/logo_c.webp"
@@ -48,7 +48,7 @@ export default function Navbar() {
             />
           </div>
          <div className="flex flex-col gap-1">
-           <h1 className="text-[#4b6043] text-[22px] lg:text-[40px] tracking-normal leading-5 lg:leading-9 font-bold">
+           <h1 className="text-[#4b6043] text-[20px] lg:text-[40px] tracking-normal leading-5 lg:leading-9 font-bold">
             EDU COMPANY
           </h1>
           <span className="text-black text-[9px] lg:text-base tracking-normal font-medium">
@@ -57,26 +57,35 @@ export default function Navbar() {
          </div>
         </div>
     </Link>
-        <div className="lg:hidden  flex justify-end relative z-90">
+        <div className="w-[95%] lg:hidden  flex justify-between relative z-90">
+           <div className="flex flex-col gap-1 lg:hidden">
+           <h1 className="text-[#4b6043] text-[20px] lg:text-[40px] tracking-normal leading-5 lg:leading-9 font-bold">
+            EDU COMPANY
+          </h1>
+          <span className="text-black text-[9px] lg:text-base tracking-normal font-medium">
+            Education & Consulting Center
+          </span>
+         </div>
           {/* İkona kliklənəndə menyu açılıb bağlanır */}
           <button onClick={() => setIsOpen(!isOpen)} className="text-black">
             {isOpen ? <IoMdClose size={28} /> : <IoMdMenu size={28} />}
           </button>
         </div>
         <div
-          className={`w-full h-full absolute z-50 lg:top-[30%] lg:left-[40%] left-0  lg:w-auto  transition-all duration-300 ease-in-out transform origin-top flex justify-center items-center
+          className={`w-full h-full absolute z-50 top-[300%] lg:top-[30%] lg:left-[40%] left-0  lg:w-auto  transition-all duration-300 ease-in-out transform origin-top flex justify-center items-center
   ${
     isOpen
       ? "opacity-100 scale-y-100 pointer-events-auto"
       : "opacity-0 scale-y-0 pointer-events-none"
   } lg:opacity-100 lg:scale-y-100 lg:pointer-events-auto lg:block`}>
-          <ul className="flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-2  bg-[#ffff]  lg:bg-transparent lg:h-14  ">
+
+          <ul className="w-full flex flex-col lg:flex-row lg:justify-end gap-3 lg:gap-2  bg-[#ffff]  lg:bg-transparent lg:h-14  ">
             <DropdownMenu title="Haqqımızda" items={AboutItems} />
             <li>
               <NavLink
                 to="/career"
                 className={({isActive})=>`text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
-                ${isActive? "bg-[#4b6043] text-white py-2.5 px-5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-5 rounded-3xl"}`}
+                ${isActive? "bg-[#4b6043] text-white lg:py-2.5 lg:px-5 rounded-3xl": "hover:bg-[#c0d2b9]  lg:py-2.5 lg:px-5 rounded-3xl"}`}
               >
                 Kariyera
               </NavLink>
