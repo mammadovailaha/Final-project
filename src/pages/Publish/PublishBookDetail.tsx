@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 // import ShowMoreButton from "../../components/ShowMoreButton";
 import MoreInfoButton from "../../components/Buttons/MoreInfoButton";
+//modal
 import OrderModal from "../../components/Modals/OrderModal";
 const books = [
   {
@@ -82,6 +83,7 @@ const PublishBookDetail = () => {
   const [isModalOpen, setIsModalOpen]=useState(false);
   const openModal=()=>setIsModalOpen(true);
   const closeModal=()=>setIsModalOpen(false);
+
   const { id } = useParams();
   const data = books.find((item) => item.id === Number(id));
   return (
@@ -106,7 +108,7 @@ const PublishBookDetail = () => {
           <div><p className="text-sm md:text-[16px] leading-4 md:leading-5 font-[averta] ">{data?.description}</p></div>
         </div>
       </div>
-       <OrderModal isOpen={isModalOpen} onClose={closeModal} />
+     <OrderModal isOpen={isModalOpen} onClose={closeModal}/>
     </div>
   );
 };

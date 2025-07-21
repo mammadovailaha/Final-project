@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import TrialLessonModal from "../components/Modals/TrialLessonModal";
 import SosialMedia from "../components/SosialMedia";
+
+import QuickContact from "../pages/Auth/QuickContact";
+import Modal from "../components/Modals/Modal";
 
 const HeaderInfo = [
   { title: "Bilet al", path: "/ticket" },
@@ -50,7 +52,9 @@ export default function Header() {
          <SosialMedia/>
         </div>
       </div>
-     <TrialLessonModal isOpen={isModalOpen} onClose={closeModal}/>
+  <Modal title="Konsultasiyaya yazil" isOpen={isModalOpen} onClose={closeModal} >
+<QuickContact title=""/>
+  </Modal>
     </div>
   );
 }

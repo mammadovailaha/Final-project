@@ -18,7 +18,6 @@ import BuyTicket from "../pages/Ticket/BuyTicket";
 import ExamResult from "../pages/ExamResult/ExamResult";
 import StudyAbroad from "../pages/StudyAbroad/StudyAbroad";
 import StudyAbroadDetail from "../pages/StudyAbroad/StudyAbroadDetail";
-import UniversityDetail from "../pages/StudyAbroad/UniversityDetail";
 // import InterviewResults from "../pages/Career/InterviewResults";
 
 export default function AppRouter() {
@@ -43,7 +42,6 @@ export default function AppRouter() {
       <Route path="/exam-results" element={<ExamResult/>}/>
       <Route path="/study-abroad" element={<StudyAbroad/>}/>
       <Route path="/study-abroad/country-detail/:id" element={<StudyAbroadDetail/>}/>
-      <Route path="/study-abroad/country-detail/University-detail/:id" element={<UniversityDetail/>}/>
       {/* <Route path="/career/interviewResults" element={<InterviewResults/>}/> */}
     </Routes>
   );

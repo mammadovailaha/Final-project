@@ -1,7 +1,8 @@
 import examBg from "../../assets/images/examBg.jpg";
+import OrderModal from "../../components/Modals/OrderModal";
 import TicketCard from "./TicketCard";
 import { useState } from "react";
-import OrderModal from "../../components/Modals/OrderModal";
+
 
 const examTickets = [
   {
@@ -93,7 +94,7 @@ const BuyTicket = () => {
         İmtahan biletləri
       </h1>
 
-      <div className="w-[55%] md:w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 justify-center items-center  z-10">
+      <div className="w-[55%] md:w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-center items-center  z-10">
         {examTickets.map((data) => (
           <TicketCard
             key={data.id}
@@ -105,7 +106,7 @@ const BuyTicket = () => {
           />
         ))}
       </div>
-      <OrderModal isOpen={isModalOpen} onClose={closeModal} />
+<OrderModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
