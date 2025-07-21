@@ -25,10 +25,10 @@ export default function Banner() {
   };
 
   return (
-    <div className="overflow-hidden w-full h-[calc(100vh-96px)] z-0 relative">
+    <div className="overflow-hidden w-full h-[270px] md:h-[calc(100vh-96px)] z-0 relative">
       <Slider {...settings}>
         {BannerImgs.map((Image, index) => (
-          <div key={index} className="w-full h-[calc(100vh-96px)] relative">
+          <div key={index} className="w-full h-[270px] md:h-[calc(100vh-96px)] relative">
             <img
               src={Image}
               alt="slider image"
