@@ -12,7 +12,7 @@ interface FaqItemProps {
 const FaqItem: React.FC<FaqItemProps> = ({ id, question, answer, isOpen, onToggle }) => {
   return (
     <div
-      className={`w-78 sm:w-134 md:min-w-2xl p-5 flex flex-col items-center bg-[#ffffff] rounded-2xl md:rounded-3xl shadow ${
+      className={`w-78 sm:w-134 md:min-w-2xl flex flex-col items-center bg-[#ffffff] rounded-2xl md:rounded-3xl shadow ${
         isOpen ? "h-auto min-h-35 justify-start" : "h-12 md:h-18 justify-center"
       }`}
     >
