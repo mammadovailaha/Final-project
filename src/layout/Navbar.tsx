@@ -8,9 +8,21 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const XidmetlerItems = [
-    { label: "Xidmət 1", path: "/xidmetler/xidmet1" },
-    { label: "Xidmət 2", path: "/xidmetler/xidmet2" },
-    { label: "Xidmət 3", path: "/xidmetler/xidmet3" },
+    { label: "Şahmat kursları", path: "/course/chess-course" },
+    { label: "Sürücülük kursları", path: "/course/driving-courses" },
+    { label: "Mühasibatlıq kursları", path: "/course/accounting-courses" },
+    { label: "Kompüter  kursları", path: "/course/computer-courses" },
+    { label: "Xarici dil kursları", path: "/course/foreign-language-courses" },
+    { label: "YÖS və ALES hazırlığı", path: "/course/YÖS-and-ALES-preparation" },
+    { label: "Dövlət qulluğuna hazırlıq", path: "/course/civil-service-exam-preparation" },
+    { label: "MİQ hazırlığı", path: "/course/MIQ-Preparation" },
+    { label: "Abituriyent  hazırlığı", path: "/course/university-entrance-exam-preparation" },
+    { label: "Magistratura hazırlığı", path: "/course/masters-degree-exam-preparation" },
+    { label: "Kiber təhlükəsizlik kursları", path: "/course/cybersecurity-courses" },
+    { label: "SQL kursları", path: "/course/SQL-courses" },
+    { label: "Power BI kursları", path: "/course/power-BI-courses" },
+    { label: "SMM kursları", path: "/course/SMM-courses" },
+    {label:"Bütün xidmətlər", path:"/course"},
   ];
 
   const AboutItems = [
