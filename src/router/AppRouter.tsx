@@ -19,6 +19,7 @@ import ExamResult from "../pages/ExamResult/ExamResult";
 import StudyAbroad from "../pages/StudyAbroad/StudyAbroad";
 import StudyAbroadDetail from "../pages/StudyAbroad/StudyAbroadDetail";
 import Services from "../pages/ServicesPage/Services";
+import CourseDetail from "../pages/ServicesPage/CourseDetail";
 // import InterviewResults from "../pages/Career/InterviewResults";
 
 export default function AppRouter() {
@@ -44,6 +45,7 @@ export default function AppRouter() {
       <Route path="/study-abroad" element={<StudyAbroad/>}/>
       <Route path="/study-abroad/country-detail/:id" element={<StudyAbroadDetail/>}/>
       <Route path="/course" element={<Services/>}/>
+      <Route path="/course/course-detail/:id" element={<CourseDetail/>}/>
       {/* <Route path="/career/interviewResults" element={<InterviewResults/>}/> */}
     </Routes>
   );
