@@ -29,20 +29,25 @@ const coursesData = [
 const CourseDetail = () => {
   const { id } = useParams();
   const data = coursesData.find((item) => item.id === Number(id));
-
+  console.log(data);
+  console.log(id);
   return (
     <ScrollAnimation>
-      <div>
-        <div>
-          <h2>{data?.title}</h2>
-          <div>
-            <img src={data?.url} alt={`${data?.title} şəkli`} />
+      <div className="w-full h-screen flex flex-col justify-start items-center gap-10 p-5">
+      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10">
+          <div className="w-[50%] lg:w-[45%] xl:w-[60%] flex flex-col justify-center items-center gap-5">
+          <h2 className="text-2xl md:text-4xl font-medium">{data?.title}</h2>
+          <div className="w-100 xl:w-146 h-70 xl:h-90 rounded-3xl p-5 shadow">
+            <img className="w-full h-full object-cover rounded-3xl" src={data?.url} alt={`${data?.title} şəkli`} />
           </div>
         </div>
-        <div>
+        <div className="w-[90%] md:w-[50%] lg:w-[55%] xl:w-[40%]">
           <QuickContact title="Sürətli əlaqə" />
         </div>
-        <div>{data?.description}</div>
+      </div>
+        <div className="w-full">
+          <p className="text-sm md:text-base ">{data?.description}</p>
+        </div>
       </div>
     </ScrollAnimation>
   );
