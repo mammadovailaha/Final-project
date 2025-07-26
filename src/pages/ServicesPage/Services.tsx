@@ -36,7 +36,7 @@ const Services: FC = () => {
             key={data.id}
             src={data.url}
             title={data.title}
-            onClick={()=>navigate(`/course/course-detail/:id`)}
+            onClick={()=>navigate(`/course/course-detail/${data.id}`)}
           />
         ))}
       </div>
