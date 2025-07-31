@@ -23,12 +23,14 @@ const BranchData = [
       {
         address:
           "Elmlər Akademiyası m/st., Mətbuat pr. 31, köhnə 'Ofko' Göz klinikasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
       {
         address:
           "Elmlər Akademiyası m/st., Zahid Xəlilov 118d., 'Mothercare' mağazasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
     ],
     map_embed:
@@ -55,12 +57,14 @@ const BranchData = [
       {
         address:
           "Elmlər Akademiyası m/st., Mətbuat pr. 31, köhnə 'Ofko' Göz klinikasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
       {
         address:
           "Elmlər Akademiyası m/st., Zahid Xəlilov 118d., 'Mothercare' mağazasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
     ],
     map_embed:
@@ -87,12 +91,14 @@ const BranchData = [
       {
         address:
           "Elmlər Akademiyası m/st., Mətbuat pr. 31, köhnə 'Ofko' Göz klinikasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
       {
         address:
           "Elmlər Akademiyası m/st., Zahid Xəlilov 118d., 'Mothercare' mağazasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
     ],
     map_embed:
@@ -119,12 +125,14 @@ const BranchData = [
       {
         address:
           "Elmlər Akademiyası m/st., Mətbuat pr. 31, köhnə 'Ofko' Göz klinikasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
       {
         address:
           "Elmlər Akademiyası m/st., Zahid Xəlilov 118d., 'Mothercare' mağazasının binası",
-        phones: ["+994 12 539 40 23", "+994 77 412 12 02"],
+        phone1:"+994 12 539 40 23",
+        phone2:"+994 77 412 12 02",
       },
     ],
     map_embed:
@@ -175,7 +183,7 @@ const BranchesDetail = () => {
               className="text-xs md:text-sm font-[averta]"
               key={index}
             >
-              {location.address} - {location.phones.join(", ")}
+              {location.address} - {location.phone1}, {location.phone2}
             </li>
           ))}
         </ul>

@@ -100,7 +100,7 @@ const navigate=useNavigate();
             <BrandsCard
               key={item.id}
               src={item.url}
-              alt={item.alt}
+              alt={`${item.title} sekili`}
               title={item.title}
               text={item.text}
               onClick={() => {
