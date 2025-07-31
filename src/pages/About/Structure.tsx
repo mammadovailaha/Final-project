@@ -69,14 +69,12 @@ const Structure = () => {
       <div className="w-full flex flex-wrap justify-center items-center gap-5">
         {staffData.map((data) => (
           <StructureCard
-            path={data.path}
             key={data.id}
             src={data.src}
-            alt={data.alt}
+            alt={`${data.fullName} şəkli`}
             fullName={data.fullName}
             role={data.role}
-            onClick={() => navigate(`/staffDetail/${data.id}`)}
-          />
+            onClick={() => navigate(`/staffDetail/${data.id}`)} path={""}          />
         ))}
       </div>
     </div>
