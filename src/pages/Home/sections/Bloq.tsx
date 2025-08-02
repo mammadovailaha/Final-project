@@ -1,6 +1,9 @@
 import BloqCard from "../../../components/Cards/BloqCard";
 import ShowMoreButton from "../../../components/Buttons/ShowMoreButton";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const cardData = [
   {
@@ -28,23 +31,45 @@ const cardData = [
     text: "Niyə alman dili öyrənməliyik?",
   },
 ];
-
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480, 
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    }
+  ]
+};
 const Bloq = () => {
   const navigate = useNavigate();
   const navigateBloq = () => {
-    navigate("/bloq");
+    navigate("/blog");
   };
   return (
     <div
-      className="w-full lg:h-screen  flex flex-col justify-around items-center gap-8 md:gap-11 overflow-x-hidden"
+      className="w-full lg:h-screen  flex flex-col justify-around items-center gap-8 md:gap-11 "
     >
-      {/* <div className="w-[98%] flex justify-center items-center absolute  -z-[999] ">
-         <div className="opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#2acac7] to-[rgb(15,161,62)] w-40 md:w-150 h-40 md:h-150  top-[510%] md:top-[325%] right-0 rounded-full  blur-[100px] rotate-45 "/>
-      <div className="opacity-60 bg-gradient-to-r from-[#bbd4d3] via-[#2acac7] to-[#5c896a] w-40 md:w-150 h-40 md:h-150 bottom-0  left-0 top-[700%] md:top-[350%] blur-[100px] rounded-full rotate-45"/>
-      </div> */}
         
       <h1 className="text-[#4b6043]  font-bold text-2xl md:text-5xl ">Bloq</h1>
-      <div className="w-[90%] flex justify-center items-center flex-wrap gap-6 md:gap-10">
+      <div className="w-[90%] flex justify-center items-center flex-wrap gap-6 md:gap-10 " >
+      <Slider {...settings} className="w-full px-10 ">
         {cardData.map((card) => (
           <BloqCard
             src={card.url}
@@ -53,6 +78,7 @@ const Bloq = () => {
             text={card.text}
           />
         ))}
+        </Slider> 
       </div>
       <ShowMoreButton
         className="bg-amber-50 "
