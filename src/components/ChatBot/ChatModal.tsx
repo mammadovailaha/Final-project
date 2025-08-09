@@ -51,8 +51,8 @@ const ChatModal = () => {
             className={`max-w-[80%]  h-auto min-h-8 md:min-h-10 rounded-2xl md:rounded-3xl text-xs md:text-sm flex justify-center items-center
         ${
           msg.sender === "user"
-            ? "bg-[#576d4ff2] text-white self-end rounded-br-none"
-            : "bg-gray-200 text-[#303d2cf2] self-start rounded-bl-none"
+            ? "bg-[#576d4ff2] text-white self-end rounded-br-[2px] rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl md:rounded-bl-3xl rounded-tl-3xl rounded-tr-3xl "
+            : "bg-gray-200 text-[#303d2cf2] self-start rounded-bl-[2px]"
         }`}
           >
             {msg.text}
