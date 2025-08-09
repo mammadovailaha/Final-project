@@ -47,10 +47,10 @@ const faqData = [
 - 90+ bal toplayanlara 1 ay ödənişsiz hazırlıq  
 - Dərs videoları ilə dəstəkləmə  
 - 100% yazılı zəmanət  
-- Ödənişsiz ilk dərslər  
-- Yay aylarında pulsuz dərslər  
-- Yüksək nəticə toplayanlara əməkdaşlıq təklifi  
-- Respublika birincilərinə mükafat`,
+Ödənişsiz ilk dərslər  
+Yay aylarında pulsuz dərslər  
+ Yüksək nəticə toplayanlara əməkdaşlıq təklifi  
+ Respublika birincilərinə mükafat`,
   },
   {
     id: 6,
