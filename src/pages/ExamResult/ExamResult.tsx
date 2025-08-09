@@ -6,12 +6,17 @@ import examResultBg from "../../assets/images/examResultBg.jpg";
 
 const examOptions = [
   { value: "muellim-qebul", label: "Müəllimlərin Kursa Qəbul İmtahanı" },
+  { value: "ada-tedris-merkezi", label: "ADA Tədris Mərkəzi" },
+  { value: "bilik-yarisi", label: "Bilik Yarışı" },
+  { value: "isabet-hazirliq-merkezi", label: "İsabet Hazırlıq Mərkəzi" },
+  { value: "zekali-hazirliq-merkezi", label: "Zəkalı Hazırlıq Mərkəzi" },
   { value: "abituriyent-sinaq", label: "Abituriyent Sınaq İmtahanı" },
   { value: "miq-hazirliq", label: "MİQ Hazırlıq İmtahanı" },
   { value: "sertifikasiya-sinaq", label: "Sertifikasiya Sınaq İmtahanı" },
   { value: "ibtidai-sinaq", label: "İbtidai Müəllimlər üçün Sınaq" },
   { value: "tedris-dizayn", label: "Tədris Dizaynı İmtahanı" },
 ];
+
 const initialValues = {
   exam: "",
   bookletNumber: "",
