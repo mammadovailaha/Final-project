@@ -38,7 +38,7 @@ const QuickContact = ({title=""}) => {
       >
         <form className="w-full flex  flex-col justify-center items-center gap-8">
           <h1 className="text-xl md:text-3xl font-bold">{title}</h1>
-          <div className="w-full flex flex-col justify-center items-center gap-3">
+          <div className="w-full flex flex-col justify-center items-center gap-5">
             <FormikInput name="fullname" type="text" placeholder="Ad Soyad" />
             <FormikInput
               name="phone"
@@ -63,7 +63,7 @@ const QuickContact = ({title=""}) => {
               <p className="text-xs md:text-sm">Nömrəmdə whatssap var</p>
             </div>
             <MainButton
-              buttonClassName="w-[90%] lg:w-[70%] h-10 "
+              buttonClassName="w-[90%] lg:w-[70%] h-12 md:h-14 "
               text="Göndər"
             />
           </div>

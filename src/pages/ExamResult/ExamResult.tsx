@@ -52,7 +52,7 @@ const ExamResult = () => {
               placeholder="İş nömrəsi"
                  inputClassName="z-10 bg-white"
             />
-            <MainButton buttonClassName="w-[90%] lg:w-[28%] h-10 " text="Göndər" />
+            <MainButton buttonClassName="w-[90%] lg:w-[28%] h-12 md:h-14 " text="Göndər" />
           </div>
         </form>
       </Formik>
