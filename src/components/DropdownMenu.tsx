@@ -37,7 +37,7 @@ useEffect(() => {
         onClick={toggleDropdown}
                 to=""
                 className="text-sm xl:text-base font-medium text-black flex justify-center items-center gap-0.5 md:leading-7  transition-all duration-500
-                 hover:bg-[#c0d2b9] py-2.5 lg:px-0.5 xl:px-2 rounded-3xl"
+                 hover:bg-[#c0d2b9] py-2.5 lg:px-0.5 xl:px-3 rounded-3xl"
       >
         {title}
         {/* İkon dəyişimi */}
