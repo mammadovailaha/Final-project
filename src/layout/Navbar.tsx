@@ -97,7 +97,7 @@ export default function Navbar() {
               <NavLink
                 to="/career"
                 className={({isActive})=>`text-sm xl:text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
-                ${isActive? "bg-[#4b6043] text-white py-2.5 lg:px-0.5 xl:px-2 rounded-3xl ": "hover:bg-[#c0d2b9] py-2.5 lg:px-0.5 xl:px-2 rounded-3xl"}`}
+                ${isActive? "bg-[#4b6043] text-white py-2.5 lg:px-0.5 xl:px-3.5 rounded-3xl ": "hover:bg-[#c0d2b9] py-2.5 px-3 xl:px-3.5 rounded-3xl"}`}
               >
                 Kariyera
               </NavLink>
@@ -107,7 +107,7 @@ export default function Navbar() {
               <NavLink
                 to="/publications"
                 className={({isActive})=>`text-sm xl:text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
-                ${isActive? "bg-[#4b6043] text-white py-2.5 px-2 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 lg:px-2  rounded-3xl"}`}
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-3.5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 lg:px-3.5  rounded-3xl"}`}
               >
                 Nəşrlər
               </NavLink>
@@ -116,7 +116,7 @@ export default function Navbar() {
               <NavLink
                 to="/study-abroad"
                 className={({isActive})=>`text-sm xl:text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
-                ${isActive? "bg-[#4b6043] text-white py-2.5 px-2 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-2 rounded-3xl"}`}
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-3.5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-3.5 rounded-3xl"}`}
               >
                 Xaricdə təhsil
               </NavLink>
@@ -126,7 +126,7 @@ export default function Navbar() {
               <NavLink
                 to="/contact"
                 className={({isActive})=>`text-sm xl:text-base font-medium text-black flex justify-center items-center md:leading-7  transition-all duration-500
-                ${isActive? "bg-[#4b6043] text-white py-2.5 px-2 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-2 rounded-3xl"}`}
+                ${isActive? "bg-[#4b6043] text-white py-2.5 px-3.5 rounded-3xl": "hover:bg-[#c0d2b9] py-2.5 px-3.5 rounded-3xl"}`}
               >
                 Əlaqə
               </NavLink>
