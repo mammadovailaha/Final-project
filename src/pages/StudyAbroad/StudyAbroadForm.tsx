@@ -74,7 +74,7 @@ const StudyAbroadForm = () => {
              inputClassName="w-[97%]!"
             />
              <MainButton
-              buttonClassName="w-[40%] lg:w-[20%] h-10 md:h-14 text-base md:text-lg "
+              buttonClassName="w-[40%] lg:w-[20%] h-12 md:h-14 text-base md:text-lg "
               text="Göndər"
             />
           </div>

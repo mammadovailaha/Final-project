@@ -100,11 +100,10 @@ const Apply = () => {
         }}
       >
         <form
-          style={{ paddingTop: "20px" }}
-          className="w-[90%] md:w-[60%] flex  flex-col justify-center items-center gap-5 lg:gap-10"
+          className="w-[90%] md:w-[60%] flex  flex-col justify-center items-center gap-5 lg:gap-10 pt-5"
         >
           <h1 className="text-2xl md:text-4xl font-bold">Müraciət et</h1>
-          <div className="w-full flex flex-col justify-center items-center gap-3">
+          <div className="w-full flex flex-col justify-center items-center gap-5">
             <FormikInput
               name="services"
               type="select"
@@ -131,7 +130,7 @@ const Apply = () => {
             />
             <FormikInput name="note" type="textarea" placeholder="Qeydiniz" />
             <MainButton
-              buttonClassName="w-[90%] lg:w-[70%] h-10 rounded-2xl "
+              buttonClassName="w-[90%] lg:w-[70%] h-12 md:h-14 rounded-2xl "
               text="Göndər"
             />
           </div>

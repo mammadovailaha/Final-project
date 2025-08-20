@@ -21,7 +21,7 @@ const QuickRegistration = ({title=""}) => {
     >
       <form className="w-full flex flex-col justify-center items-center gap-7">
         <h1 className="text-xl md:text-3xl font-bold text-center">{title}</h1>
-        <div className="w-full flex flex-col justify-center items-center gap-3">
+        <div className="w-full flex flex-col justify-center items-center gap-5">
           <FormikInput 
           name="fullname"
           type="text"
@@ -39,7 +39,7 @@ const QuickRegistration = ({title=""}) => {
 
           /> 
           <MainButton  
-          buttonClassName="w-[90%] lg:w-[70%] h-10"
+          buttonClassName="w-[90%] lg:w-[70%] h-12 md:h-14"
           text="Göndər"/>
         </div>
       </form>
