@@ -1,45 +1,54 @@
 import type { FC } from "react";
 import ServicesCard from "../../components/Cards/ServicesCard";
 import { useNavigate } from "react-router-dom";
-const coursesData = [
-  {
-    id: 1,
-    title: "Şahmat Kursları",
-    description:
-      "Şahmat strateji düşüncə, problem həll etmə və analitik bacarıqları inkişaf etdirən bir oyundur. Uşaqlar və böyüklər üçün yararlıdır, diqqət, səbr və planlama qabiliyyətini gücləndirir.",
-    url: "https://www.educompany.az/assets/front/image/course/4cf4e11c876789ecf272eadb281ef9a1.jpg",
-  },
-  {
-    id: 2,
-    title: "İngilis Dili Kursları",
-    description:
-      "İngilis dili beynəlxalq ünsiyyət dilidir. Bu kurs dinləmə, danışıq, oxuma və yazma bacarıqlarını inkişaf etdirmək üçün nəzərdə tutulub və həm akademik, həm də peşəkar üstünlüklər yaradır.",
-    url: "https://i.pinimg.com/736x/c2/98/c1/c298c13859ab4163ba7843438eefd384.jpg",
-  },
-  {
-    id: 3,
-    title: "Robototexnika Kursları",
-    description:
-      "Robototexnika kursları uşaqlara texnologiya ilə işləməyi, robot qurmağı və proqramlaşdırmağı öyrədir. Bu sahə yaradıcılığı və texniki bacarıqları birləşdirir.",
-    url: "https://i.pinimg.com/736x/c2/98/c1/c298c13859ab4163ba7843438eefd384.jpg",
-  },
-];
+import { useGetAllServicesQuery } from "../../services/features/serviceisApi";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import React from "react";
+interface Service {
+  id: number;
+  _id: string;
+  title: string;
+  url: string;
+}
+
+const itemsPerPage = 6;
 
 const Services: FC = () => {
   const navigate = useNavigate();
+  const [page, setPage] = React.useState(1);
+   const { data: services = [] as Service[], error, isLoading } = useGetAllServicesQuery();
+  console.log("data", services);
+    const startIndex = (page - 1) * itemsPerPage;
+    const servicesData = Array.isArray(services) ? services.slice(startIndex, startIndex + itemsPerPage) : [];
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
+
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
   return (
-    <div className="w-full h-screen flex flex-col justify-start items-center gap-10 p-5">
+    <div className="w-full h-auto md:h-screen flex flex-col justify-start items-center gap-10 p-5">
       <h2 className="text-2xl md:text-4xl font-medium">Xidmətlərimiz</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-5">
-        {coursesData.map((data) => (
-          <ServicesCard
-            key={data.id}
-            src={data.url}
-            title={data.title}
-            onClick={()=>navigate(`/course/course-detail/${data.id}`)}
-          />
-        ))}
-      </div>
+  <Stack spacing={2}>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {servicesData.map((data: Service) => (
+      <ServicesCard
+        key={data.id}
+        src={data.url}
+        title={data.title}
+        onClick={() => navigate(`/services/${data._id}`)}
+      />
+    ))}
+    </div>
+  </Stack>
+    <Pagination
+          count={Math.ceil(services?.length / itemsPerPage)}
+          page={page}
+          onChange={handleChange}
+          shape="rounded"
+        />
     </div>
   );
 };
