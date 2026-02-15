@@ -1,8 +1,7 @@
-import { FaFacebook } from "react-icons/fa";
-import { TfiYoutube } from "react-icons/tfi";
-import { FaInstagram } from "react-icons/fa";
+
 import { FaThumbsUp } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
+import SosialMedia from "../components/SosialMedia";
 
 const branches = [
   {
@@ -64,9 +63,9 @@ const branches = [
 
 export default function Footer() {
   return (
-    <div>
-      <div className="w-full min-h-[300px] flex flex-col items-center gap-5 bg-[#F7FCFF] ">
-        <div className="flex flex-col items-center gap-3.5">
+    <div  className="w-full min-h-[350px] pt-10">
+      <div className="w-full pt-10 flex flex-col  justify-center  items-center gap-5 bg-white ">
+        <div className="flex flex-col items-center justify-center gap-3.5 p-10">
           <div className="w-40 h-32">
             <img
               className="w-full h-full object-cover"
@@ -74,21 +73,15 @@ export default function Footer() {
               alt="edu compony logo"
             />
           </div>
-          <div className="flex justify-center gap-1">
-            <FaFacebook className="text-[#1EB2A6] text-[40px]" />
-            <div className="w-10 h-10 bg-[#1EB2A6] flex justify-center items-center rounded-[100%] text-2xl">
-              <TfiYoutube className="text-white" />
-            </div>
-            <div className="w-10 h-10 bg-[#1EB2A6] flex justify-center items-center rounded-[100%] text-2xl">
-              <FaInstagram className="text-white text-2xl" />
-            </div>
+          <div className="">
+            <SosialMedia />
           </div>
           <div className="flex justify-center items-center gap-1.5">
-            <button className="w-24 h-7 rounded-[7px] bg-[#0D6EFD] border-none outline-none text-white flex justify-center items-center gap-1">
-              <FaThumbsUp className="text-[16px] text-white" />
+            <button className="w-24 h-7 rounded-[7px] shadow-lg border-none outline-none text-black flex justify-center items-center gap-1">
+              <FaThumbsUp className="text-[16px] text-[#4b6043]" />
               Bəyən
             </button>
-            <button className="w-24 h-7 rounded-[7px] bg-[#0D6EFD] border-none outline-none text-white flex justify-center items-center gap-1">
+            <button className="w-24 h-7 rounded-[7px] shadow-lg  border-none outline-none text-black flex justify-center items-center gap-1">
               Paylaş
             </button>
           </div>
@@ -100,16 +93,16 @@ export default function Footer() {
               {branches.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center gap-2.5 w-43"
+                  className="flex flex-col items-center justify-center gap-2.5 w-43 group"
                 >
-                  <p className="flex justify-center items-center gap-1 text-[16px] tracking-normal font-medium">
+                  <p className="flex justify-center items-center gap-1 text-base tracking-normal font-medium ">
                     <FaBuildingColumns className="text-lg" />
                     {item.name}
                   </p>
-                  <span className="text-[12px] font-[averta] tracking-normal font-normal">
+                  <span className="text-xs font-[averta] tracking-normal font-normal ">
                     {item.phone1}
                   </span>
-                  <span className="text-[12px] font-[averta] tracking-normal font-normal">
+                  <span className="text-xs font-[averta] tracking-normal font-normal">
                     {item.phone2}
                   </span>
                 </div>
@@ -118,20 +111,20 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full h-24 flex justify-center items-center bg-[#008080]">
+      <div  className="w-full h-16 md:h-20 flex justify-center items-center bg-gray-100">
         <div className="w-[96%] flex flex-col md:flex-row md:justify-around">
           <div className="flex justify-start">
-            <p className="text-white text-[16px] font-[averta]">
+            <p className="text-black text-xs md:text-base">
               Məxfilik Siyasəti
             </p>
           </div>
           <div className="flex justify-center">
-            <p className="text-white text-[16px] font-[averta]">
+            <p className="text-black text-xs md:text-base">
               Copyright © All rights reserved | educompany.az
             </p>
           </div>
           <div className="flex justify-end">
-            <p className="text-white text-[16px] font-[averta]">Əlaqə</p>
+            <p className="text-black text-xs md:text-base ">Əlaqə</p>
           </div>
         </div>
       </div>

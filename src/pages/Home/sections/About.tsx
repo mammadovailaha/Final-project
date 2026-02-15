@@ -1,4 +1,3 @@
-import React from "react";
 import {
   PiStudent,
   PiChalkboardTeacher,
@@ -35,13 +34,13 @@ const stats = [
 
 const About = () => {
   return (
-    <div className="w-full   bg-[#015715] flex justify-center items-center overflow-hidden">
-      <div className=" w-full flex  flex-col md:flex-row  justify-center items-start gap-10">
+    <div className="w-full   flex justify-center items-center overflow-hidden p-5">
+      <div className=" w-full flex  flex-col md:flex-row  justify-center items-center gap-10">
         <div className="w-full md:max-w-1/2 flex flex-col justify-around items-center gap-10 ">
           <h1 className="font-bold text-xl md:text-4xl text-white">
             EDU Company
           </h1>
-          <p className="text-wrap text-center text-sm md:text-lg text-white">
+          <p className="text-wrap leading-relaxed text-base md:text-lg text-black">
             “EDU Company” Təhsil Şirkəti 5 Oktyabr 2013-cü ildə yaradılmışdır.
             Bu gün 11 filialda (Elmlər, Nizami, 28 May, Nərimanov, Neftçilər,
             Xalqlar, Xırdalan, Sumqayıt, Gəncə, Göyçay) fəaliyyətini davam
@@ -73,8 +72,8 @@ const About = () => {
             tənzimləyir.
           </p>
         </div>
-        <div className="w-full md:max-w-1/2 flex flex-col justify-center items-center gap-6 md:gap-10">
-          <h1 className="text-white text-xl md:text-4xl font-bold">
+        <div className=" w-full md:max-w-1/3 h-[400px] flex flex-col justify-center items-center gap-6 md:gap-10 shadow-2xl">
+          <h1 className="text-black text-xl md:text-4xl font-bold">
             Statistika
           </h1>
           <div className="flex flex-col justify-center items-center gap-4">
@@ -84,12 +83,12 @@ const About = () => {
               return (
                 <div
                   key={item.id}
-                  className="w-80 md:w-90 stat-card text-center border-b border-white flex justify-center items-center gap-6"
+                  className="w-50 md:w-62 stat-card text-center border-b border-gray-400 flex justify-center items-center gap-6"
                 >
-                  <IconComponent className="text-4xl text-white" />
+                  <IconComponent className="text-4xl text-[#4b6043]" />
                   <div className=" flex flex-col justify-center items-center">
-                    <h3 className="text-lg md:text-xl font-bold text-white">{item.value}</h3>
-                    <p className="text-[12px] md:text-sm text-white">{item.label}</p>
+                    <h3 className="text-lg md:text-2xl font-bold text-black">{item.value}</h3>
+                    <p className="text-sm md:text-sm text-black">{item.label}</p>
                   </div>
                 </div>
               );

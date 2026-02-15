@@ -1,6 +1,4 @@
-import Footer from "../../layout/Footer";
-import Header from "../../layout/Header"
-import Navbar from "../../layout/Navbar";
+
 import Banner from "./sections/Banner";
 import Services from "../Home/sections/Services"
 import StudyAbroad from "./sections/StudyAbroad";
@@ -10,9 +8,7 @@ import VideoGalary from "./sections/VideoGalary";
 import Partners from "./sections/Partners";
 export default function Home() {
   return (
-    <div className="">
-      <Header />
-      <Navbar/>
+    <div className="overflow-x-hidden">
       <Banner/>
       <Services/>
       <StudyAbroad/>
@@ -20,7 +16,6 @@ export default function Home() {
       <About/>
       <VideoGalary/>
       <Partners/>
-      <Footer/>
     </div>
   );
 }

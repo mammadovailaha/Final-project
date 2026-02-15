@@ -12,8 +12,13 @@
   "dependencies": {
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.3.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.2",
     "@tailwindcss/vite": "^4.1.8",
     "axios": "^1.9.0",
+    "formik": "^2.4.6",
+    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
@@ -21,7 +26,9 @@
     "react-router-dom": "^7.6.2",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "uuid": "^11.1.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

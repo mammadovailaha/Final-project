@@ -1,24 +1,42 @@
 @import "tailwindcss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.slick-prev {
-    font-size: larger !important;
 
+.slick-prev {
+  font-size: larger !important;
   left: 0 !important;
   z-index: 2;
   position: absolute;
 }
+
 .slick-next {
-    font-size: larger !important;
-  
+  font-size: larger !important;
   right: 0 !important;
   z-index: 2;
   position: absolute;
 }
+
 .z-negative {
   z-index: -1;
+}
+/* index.css və ya Tailwind faylında əlavə et (əgər Tailwind-in @layer istifadə edirsənsə) */
+.overlay {
+  @apply absolute inset-0 bg-black/40 transition-transform duration-300 ease-in-out;
+  transform: translateX(100%);
+}
+
+.from-left {
+  transform: translateX(-100%);
+}
+.from-right {
+  transform: translateX(100%);
+}
+.from-top {
+  transform: translateY(-100%);
+}
+.from-bottom {
+  transform: translateY(100%);
+}
+
+.to-center {
+  transform: translateX(0) translateY(0);
 }
